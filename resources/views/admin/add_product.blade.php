@@ -68,7 +68,7 @@
                                                         <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
                                                         <input type="text" class="form-control" name="product_name" placeholder="Product Name" required="">
                                                     </div>
-                                                    <div class="input-group mg-b-pro-edt">
+                                                    <div class="input-group mg-b-pro-edt" >
                                                         <span class="input-group-addon"></i></span>
                                                                   <select class="form-control" id="sel1">
                                                                    <option>Manufacture Name</option>
@@ -79,7 +79,7 @@
                                                     </div>
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="fa fa-usd" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Regular Price">
+                                                        <input type="text" class="form-control" name="product_price" placeholder="Product Price" required="">
                                                     </div>
                                                     <!-- <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-new-file" aria-hidden="true"></i></span>
@@ -87,16 +87,26 @@
                                                     </div> -->
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-favorites" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Quantity">
+                                                        <input type="text" class="form-control" name="product_size" placeholder="Product Size" required="">
                                                     </div>
+
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="icon nalika-favorites" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control" name="product_color" placeholder="Product Colour" required="">
+                                                    </div>
+
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="icon nalika-favorites" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control" placeholder="Quantity">
+                                                    </div> 
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <!-- <div class="review-content-section">
-                                                    <div class="input-group mg-b-pro-edt">
+                                                <div class="review-content-section">
+                                                    <!-- <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
                                                         <input type="text" class="form-control" placeholder="Last Name">
-                                                    </div> -->
+                                                        </div>  -->
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
                                                         <input type="text" class="form-control" placeholder="Product Description" required="">
@@ -109,21 +119,21 @@
                                                         <span class="input-group-addon"><i class="icon nalika-like" aria-hidden="true"></i></span>
                                                         <input type="text" class="form-control" placeholder="Category">
                                                     </div> -->
-                                                    <select name="select" class="form-control pro-edt-select form-control-primary">
+                                                         <select name="select" class="form-control pro-edt-select form-control-primary">
 															<option value="opt1">Product Category</option>
 															<option value="opt2">2</option>
 															<option value="opt3">3</option>
 															<option value="opt4">4</option>
 															<option value="opt5">5</option>
 															<option value="opt6">6</option>
-														</select>
-                                                </div>
+														 </select> 
+                                                </div> 
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="text-center custom-pro-edt-ds">
-                                                    <button type="button" class="btn btn-ctl-bt waves-effect waves-light m-r-10">Save
+                                                    <button type="button" class="btn btn-ctl-bt waves-effect waves-light m-r-10">Add Product
 														</button>
                                                     <button type="button" class="btn btn-ctl-bt waves-effect waves-light">Discard
 														</button>
@@ -138,7 +148,7 @@
                                                     <div class="row">
                                                         <div class="col-lg-4">
                                                             <div class="pro-edt-img">
-                                                                <img src="img/new-product/5-small.jpg" alt="" />
+                                                                <img src="{{asset('backend/img/new-product/5-small.jpg')}}" alt="" />
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-8">
@@ -187,7 +197,7 @@
                                                     <div class="row">
                                                         <div class="col-lg-4">
                                                             <div class="pro-edt-img">
-                                                                <img src="img/new-product/6-small.jpg" alt="" />
+                                                                <img src="{{asset('backend/img/new-product/6-small.jpg')}}" alt="" />
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-8">
@@ -236,7 +246,7 @@
                                                     <div class="row">
                                                         <div class="col-lg-4">
                                                             <div class="pro-edt-img mg-b-0">
-                                                                <img src="img/new-product/7-small.jpg" alt="" />
+                                                                <img src="{{asset('backend/img/new-product/7-small.jpg')}}" alt="" />
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-8">

@@ -57,11 +57,12 @@
                                     </li>
                                 </ul>
                                 <ul class="header-top-style text-capitalize mr-25">
-                                    <li><a href="#"><span class="mr-10">USD</span><i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#"><span class="mr-10">RM</span><i class="fa fa-angle-down"></i></a>
                                         <ul class="ul-style currency box-shadow white-bg">
-                                            <li><a href="#"><i class="fa fa-usd"></i><span>USD</span></a></li>
-                                            <li><a href="#"><i class="fa fa-euro"></i><span>Euro</span></a></li>
-                                            <li><a href="#"><i class="fa fa-gbp"></i><span>GBP</span></a></li>
+                                            <li><a href="#"><i class="fa fa-usd"></i><span>RM</span></a></li>
+                                            <li><a href="#"><i class="fa fa-euro"></i><span>IDR</span></a></li>
+                                            <li><a href="#"><i class="fa fa-gbp"></i><span>SGD</span></a></li>
+                                            <li><a href="#"><i class="fa fa-gbp"></i><span>USD</span></a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -71,7 +72,7 @@
                                         <a href="#"><span class="mr-10">English</span><i class="fa fa-angle-down"></i></a>
                                         <ul class="ul-style language box-shadow white-bg">
                                             <li><a href="#"><img alt="" src="{{asset('frontend/images/header/language/1-min.jpg')}}"><span>English</span></a></li>
-                                            <li><a href="#"><img alt="" src="{{asset('frontend/images/header/language/2-min.jpg')}}"><span>Germani</span></a></li>
+                                            <li><a href="#"><img alt="" src="{{asset('frontend/images/header/language/2-min.png')}}"><span>Malaysia</span></a></li>
                                             <li><a href="#"><img alt="" src="{{asset('frontend/images/header/language/3-min.jpg')}}"><span>French</span></a></li>
                                         </ul>
                                     </li>
@@ -127,7 +128,7 @@
                                 <span class="service-img b-img">
                                     <img alt="" src="{{asset('frontend/images/service.png')}}">
                                 </span>
-                                <span class="service-content ml-15"><strong>+88 (012) 564 979 56</strong><br>We are open 9 am - 10pm</span>
+                                <span class="service-content ml-15"><strong>+60 (016) 6700169</strong><br><!-- We are open 9 am - 10pm --></span>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-4 col-xs-12">
@@ -141,15 +142,15 @@
                                     <span class="shopping-cart-control">
                                         <img alt="" src="{{asset('frontend/images/shop.png')}}">
                                     </span>
-                                    <span class="cart-size-value"><strong>Cart(3)</strong><br>$250</span>
+                                    <span class="cart-size-value"><strong>Cart(3)</strong><br>RM250</span>
                                 </a>
                                 <ul class="shopping-cart-down box-shadow white-bg">
                                     <li class="media">
                                         <a href="#"><img alt="" src="{{asset('frontend/images/cart/1.jpg')}}"></a>
                                         <div class="cart-item-wrapper">
-                                            <a href="#">Zelletria ostma</a>
+                                            <a href="#">Kasut Gucci</a>
                                             <span class="quantity">
-                                                <span class="amount">$195</span>
+                                                <span class="amount">RM 195</span>
                                                  x 2
                                             </span>
                                             <a title="Remove this item" class="remove" href="#">
@@ -160,9 +161,9 @@
                                     <li class="media">
                                         <a href="#"><img alt="" src="{{asset('frontend/images/cart/2.jpg')}}"></a>
                                         <div class="cart-item-wrapper">
-                                            <a href="#">Letria postma</a>
+                                            <a href="#">Motor Y15zr</a>
                                             <span class="quantity">
-                                                <span class="amount">$145</span>
+                                                <span class="amount">RM 145</span>
                                                  x 1
                                             </span>
                                             <a title="Remove this item" class="remove" href="#">
@@ -173,9 +174,9 @@
                                     <li class="media">
                                         <a href="#"><img alt="" src="{{asset('frontend/images/cart/3.jpg')}}"></a>
                                         <div class="cart-item-wrapper">
-                                            <a href="#">Montria jastma</a>
+                                            <a href="#">Sweat pant</a>
                                             <span class="quantity">
-                                                <span class="amount">$155</span>
+                                                <span class="amount">RM 155</span>
                                                  x 2
                                             </span>
                                             <a title="Remove this item" class="remove" href="#">
@@ -185,7 +186,7 @@
                                     </li>
                                     <li class="media">
                                         <span class="total-title pull-left">Sub Total</span>
-                                        <span class="total pull-right">$845</span>
+                                        <span class="total pull-right">RM 845</span>
                                     </li>
                                     <li class="media">
                                         <a class="cart-btn" href="cart.html">VIEW CART</a>
@@ -228,7 +229,7 @@
                                                 <?php }?>
                                             </ul>
                                         </div>
-                                        <div class="mega-inner ptb-40">
+                                        <!-- <div class="mega-inner ptb-40">
                                             <h6 class="mega-title text-uppercase"><strong>materials</strong></h6>
                                             <ul class="text-capitalize forge-list">
                                                 <li><a href="shop.html">cotton</a></li>
@@ -238,7 +239,7 @@
                                                 <li><a href="shop.html">polister blends</a></li>
                                                 <li><a href="shop.html">jeans</a></li>
                                             </ul>
-                                        </div>
+                                        </div> -->
                                         <div class="mega-inner mega-img b-img ptb-40">
                                             <img alt="" src="{{asset('frontend/images/header/header-menu.jpg')}}">
                                         </div>
@@ -246,7 +247,7 @@
                                 </li>
                                 <li>
                                     <a href="#">Pages</a>
-                                    <ul class="ul-style dropdown box-shadow white-bg forge-list text-capitalize">
+                                    <!-- <ul class="ul-style dropdown box-shadow white-bg forge-list text-capitalize">
                                         <li><a href="404.html">404 Page</a></li>
                                         <li><a href="about.html">About</a></li>
                                         <li><a href="cart.html">Cart</a></li>
@@ -258,16 +259,16 @@
                                         <li><a href="login.html">Login</a></li>
                                         <li><a href="product-details.html">Product Details</a></li>
                                         <li><a href="wishlist.html">Wishlist</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <li><a href="shop.html">shop</a></li>
-                                <li>
+                                <!-- <li>
                                     <a href="#">blog</a>
                                     <ul class="ul-style dropdown box-shadow white-bg forge-list text-capitalize">
                                         <li><a href="blog.html">Blog</a></li>
                                         <li><a href="blog-details.html">Single Blog</a></li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <li><a href="contact.html">contact</a></li>
                             </ul>
                         </nav>
@@ -433,39 +434,7 @@
                                             <li><a href="#">january 05</a></li>
                                             <li><a href="#">Fashion</a></li>
                                         </ul>
-                                        <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor ncunt ut labore et dolore na...</p>
-                                        <a class="btn-read-more text-uppercase text-defualt" href="blog-details.html">read mroe</a>
-                                        <ul class="blog-list bottom">
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-comments"></i>
-                                                    12 Comments
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="text-defualt">
-                                                    <i class="fa fa-heart"></i>
-                                                    50 Likes
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="single-blog blog-bg">
-                                    <div class="blog-img b-img">
-                                        <a href="blog-details.html">
-                                            <img alt="" src="{{asset('frontend/images/blog/2.jpg')}}">
-                                        </a>
-                                    </div>
-                                    <div class="blog-text p-20">
-                                        <h4 class="text-uppercase text-defualt">
-                                            <a href="blog-details.html">FASHION &amp; FUSHION</a>
-                                        </h4>
-                                        <ul class="blog-list">
-                                            <li><a href="#">january 05</a></li>
-                                            <li><a href="#">Fashion</a></li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor ncunt ut labore et dolore na...</p>
+                                        <p>SELAMAT MENYAMBUT HARI KEMERDEKA</p>
                                         <a class="btn-read-more text-uppercase text-defualt" href="blog-details.html">read mroe</a>
                                         <ul class="blog-list bottom">
                                             <li>
@@ -497,7 +466,7 @@
                                             <li><a href="#">january 05</a></li>
                                             <li><a href="#">Fashion</a></li>
                                         </ul>
-                                        <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor ncunt ut labore et dolore na...</p>
+                                        <p>SELAMAT MENYAMBUT HARI KEMERDEKA</p>
                                         <a class="btn-read-more text-uppercase text-defualt" href="blog-details.html">read mroe</a>
                                         <ul class="blog-list bottom">
                                             <li>
@@ -518,7 +487,7 @@
                                 <div class="single-blog blog-bg">
                                     <div class="blog-img b-img">
                                         <a href="blog-details.html">
-                                            <img alt="" src="{{asset('frontend/images/blog/2.jpg')}}">
+                                            <img alt="" src="{{asset('frontend/images/blog/1.jpg')}}">
                                         </a>
                                     </div>
                                     <div class="blog-text p-20">
@@ -529,7 +498,39 @@
                                             <li><a href="#">january 05</a></li>
                                             <li><a href="#">Fashion</a></li>
                                         </ul>
-                                        <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor ncunt ut labore et dolore na...</p>
+                                        <p>SELAMAT MENYAMBUT HARI KEMERDEKA</p>
+                                        <a class="btn-read-more text-uppercase text-defualt" href="blog-details.html">read mroe</a>
+                                        <ul class="blog-list bottom">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-comments"></i>
+                                                    12 Comments
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="text-defualt">
+                                                    <i class="fa fa-heart"></i>
+                                                    50 Likes
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="single-blog blog-bg">
+                                    <div class="blog-img b-img">
+                                        <a href="blog-details.html">
+                                            <img alt="" src="{{asset('frontend/images/blog/1.jpg')}}">
+                                        </a>
+                                    </div>
+                                    <div class="blog-text p-20">
+                                        <h4 class="text-uppercase text-defualt">
+                                            <a href="blog-details.html">FASHION &amp; FUSHION</a>
+                                        </h4>
+                                        <ul class="blog-list">
+                                            <li><a href="#">january 05</a></li>
+                                            <li><a href="#">Fashion</a></li>
+                                        </ul>
+                                        <p>SELAMAT MENYAMBUT HARI KEMERDEKA</p>
                                         <a class="btn-read-more text-uppercase text-defualt" href="blog-details.html">read mroe</a>
                                         <ul class="blog-list bottom">
                                             <li>
@@ -564,8 +565,8 @@
                                             </a>
                                         </div>
                                         <div class="testimonial-content">
-                                            <h5 class="text-uppercase text-defualt">THOMAS ALBERT,<span>Head of Ideas</span></h5>
-                                            <p class="m-0">Lorem ipsum dolor s it amet, otetur adipiscing elitamxercon </p>
+                                            <h5 class="text-uppercase text-defualt">TENGKU FAZRINA,<span>Head of Ideas</span></h5>
+                                            <p class="m-0">SELAMAT HARI KEMARDEKAAN </p>
                                         </div>
                                     </div>
                                     <div class="single-testimonial blog-bg">
@@ -576,7 +577,7 @@
                                         </div>
                                         <div class="testimonial-content">
                                             <h5 class="text-uppercase text-defualt">THOMAS ALBERT,<span>Head of Ideas</span></h5>
-                                            <p class="m-0">Lorem ipsum dolor s it amet, otetur adipiscing elitamxercon </p>
+                                            <p class="m-0">SELAMAT HARI KEMARDEKAAN </p>
                                         </div>
                                     </div>
                                 </div>
@@ -589,7 +590,7 @@
                                         </div>
                                         <div class="testimonial-content">
                                             <h5 class="text-uppercase text-defualt">THOMAS ALBERT,<span>Head of Ideas</span></h5>
-                                            <p class="m-0">Lorem ipsum dolor s it amet, otetur adipiscing elitamxercon </p>
+                                            <p class="m-0">SELAMAT HARI KEMARDEKAAN </p>
                                         </div>
                                     </div>
                                     <div class="single-testimonial blog-bg">
@@ -600,7 +601,7 @@
                                         </div>
                                         <div class="testimonial-content">
                                             <h5 class="text-uppercase text-defualt">THOMAS ALBERT,<span>Head of Ideas</span></h5>
-                                            <p class="m-0">Lorem ipsum dolor s it amet, otetur adipiscing elitamxercon </p>
+                                            <p class="m-0">SELAMAT HARI KEMARDEKAAN </p>
                                         </div>
                                     </div>
                                 </div>
@@ -695,7 +696,7 @@
                                 <a href="index.html">
                                     <img src="{{asset('frontend/images/footer/logo.png')}}" alt="">
                                 </a>
-                                <p class="pb-30">Forge is the best ecommerce site lorem ipsum dolor sit amet, consectetur aiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                                <p class="pb-30">The Paddy88 is the best ecommerce site for bundle in the world</p>
                                 <ul class="social-icon">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -719,8 +720,8 @@
                                         <img alt="" src="{{asset('frontend/images/footer/icon/1.png')}}">
                                     </li>
                                     <li class="footer-text text-ash">
-                                        <p>8901 Marmora Raod,</p>
-                                        <p>Glasgow, D04  89GR</p>
+                                        <p>UiTM Arau,</p>
+                                        <p>Perlis</p>
                                     </li>
                                 </ul>
                                 <ul class="footer-contact">
@@ -737,8 +738,8 @@
                                         <img alt="" src="{{asset('frontend/images/footer/icon/3.png')}}">
                                     </li>
                                     <li class="footer-text text-ash">
-                                        <p>Email : info@forge.com</p>
-                                        <p>Web : www.forge.com</p>
+                                        <p>Email : info@thepaddy88.com</p>
+                                        <p>Web : www.thepaddy88.com</p>
                                     </li>
                                 </ul>
                             </div>
@@ -776,7 +777,7 @@
                                     <li class="tweet-inner clearfix">
                                         <div class="tweet-img">
                                             <a href="#">
-                                                <img alt="" src="{{asset('frontend/images/footer/tweet/1.jpg')}}">
+                                                <img alt="" src="{{asset('frontend/images/footer/tweet/2.jpg')}}">
                                             </a>
                                         </div>
                                         <div class="tweet-text">
@@ -800,7 +801,7 @@
                                     <li class="tweet-inner clearfix">
                                         <div class="tweet-img">
                                             <a href="#">
-                                                <img alt="" src="{{asset('frontend/images/footer/tweet/1.jpg')}}">
+                                                <img alt="" src="{{asset('frontend/images/footer/tweet/2.jpg')}}">
                                             </a>
                                         </div>
                                         <div class="tweet-text">

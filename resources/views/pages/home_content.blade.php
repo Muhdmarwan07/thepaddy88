@@ -5,8 +5,8 @@
         <section class="slider-container">
             <!-- Slider Image -->
             <div id="mainSlider" class="nivoSlider slider-image">
-                <img src="{{asset('frontend/images/slider/1.jpg')}}" alt="main slider" title="#htmlcaption1"/>
-                <img src="{{asset('frontend/images/slider/2.jpg')}}" alt="main slider" title="#htmlcaption2"/>
+                <img src="{{asset('frontend/images/slider/4.jpg')}}" alt="main slider" title="#htmlcaption1"/>
+                <img src="{{asset('frontend/images/slider/3.jpg')}}" alt="main slider" title="#htmlcaption2"/>
             </div>
             <!-- Slider Caption 1 -->
             <div id="htmlcaption1" class="nivo-html-caption slider-caption-1">
@@ -20,10 +20,10 @@
                                         <h3>TRENDY DRESS COLLETIONS</h3>
                                     </div>  
                                     <div class="cap-title text-black text-uppercase wow fadeInDown" data-wow-duration="1.5s" data-wow-delay="0.5s">
-                                        <h2>FOR WOMEN - 2016</h2>
+                                        <h2>FOR WOMEN - 2020</h2>
                                     </div>  
                                     <div class="cap-para wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s">
-                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat  vel illum dolore eu feugiat nulla facilisis at vero eros.</p>
+                                        <p>saya anak malaysia </p>
                                     </div>
                                     <div class="cap-shop wow text-uppercase fadeInDown" data-wow-duration="2.5s" data-wow-delay="1.5s">
                                         <a href="#">Shop now</a>
@@ -49,7 +49,7 @@
                                         <h2>OVER COATS FOR MAN</h2>
                                     </div>  
                                     <div class="cap-para wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s">
-                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat  vel illum dolore eu feugiat nulla facilisis at vero eros.</p>
+                                        <p>saya anak malaysia</p>
                                     </div>
                                     <div class="cap-shop wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="1.5s">
                                         <a href="#">Shop now</a>
@@ -114,8 +114,8 @@
                     <div class="row rp-style">
                         <div class="col-sm-4 cp-style">
                             <div class="banner-inner">
-                                <a class="test-popup-link banner-img" href="{{asset('frontend/images/banner/1.jpg')}}">
-                                    <img src="{{asset('frontend/images/banner/1.jpg')}}" alt="">
+                                <a class="test-popup-link banner-img" href="{{asset('frontend/images/banner/1-1.jpg')}}">
+                                    <img src="{{asset('frontend/images/banner/1-1.jpg')}}" alt="">
                                 </a>
                                 <div class="banner-text banner-text-1">
                                     <a href="#" class="banner-heading text-uppercase text-right">new trend for women's</a>
@@ -128,7 +128,7 @@
                                 <div class="col-sm-8 cp-style">
                                     <div class="banner-inner">
                                         <a class="test-popup-link banner-img" href="{{asset('frontend/images/banner/2.jpg')}}">
-                                            <img src="{{asset('frontend/images/banner/2.jpg')}}" alt="">
+                                            <img src="{{asset('frontend/images/banner/2-1.jpg')}}" alt="">
                                         </a>
                                         <div class="banner-text banner-text-2 text-center">
                                             <a href="#" class="banner-heading text-uppercase text-right">man's</a>
@@ -1515,7 +1515,7 @@
                         <div class="col-md-12">
                             <div class="text-white">
                                 <h1>SUBSCRIBE OUR MONTHLY NEWSLETTER</h1>
-                                <p class="mb-40">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>   
+                                <p class="mb-40">SELAMAT MENYAMBUT HARI KEMERDEKAAN</p>   
                             </div>
                             <form class="subscribe-box" action="#">
                                 <div class="subscribe-box">

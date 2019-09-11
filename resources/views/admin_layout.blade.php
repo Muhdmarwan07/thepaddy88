@@ -240,7 +240,7 @@
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
-                                                                        <h2>Advanda Cro</h2>
+                                                                        <h2>Marwan</h2>
                                                                         <p>Please done this project as soon possible.</p>
                                                                     </div>
                                                                 </a>
