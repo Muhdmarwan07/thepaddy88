@@ -49,3 +49,4 @@ Route::get('/active_manufacture/{manufacture_id}','ManufactureController@active_
 //product route
 Route::get('/add-product','ProductController@index');
 Route::post('/save-product','ProductController@save_product');
+Route::get('/all-product','ProductController@all_product');

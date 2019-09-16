@@ -15,6 +15,17 @@ class ProductController extends Controller
     	return view('admin.add_product');
     }
 
+    public function all_product()
+    {
+        $all_product_info=DB::table('tbl_products')->get();
+        $manage_product=view('admin.all_product')
+            ->with('all_product_info',$all_product_info);
+        return view('admin_layout')
+            ->with('admin.all_product',$manage_product);
+
+    }
+
+
     public function save_product(Request $request)
     {
     	$data=array();
@@ -42,10 +53,13 @@ class ProductController extends Controller
         Session::put('message','Product added Sucessfully ');
         return Redirect::to('/add-product');
         }
-
-    	$data['product_image']='';
-            DB::table('tbl_products')->insert($data);
-        Session::put('message','Product added Sucessfully without image ');
-        return Redirect::to('/add-product');
+        else
+        {
+        	$data['product_image']='';
+                DB::table('tbl_products')->insert($data);
+            Session::put('message','Product added Sucessfully without image ');
+            return Redirect::to('/add-product');
+        }
     }
 }
+    

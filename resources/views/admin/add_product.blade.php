@@ -71,7 +71,7 @@
                                                     <div class="input-group mg-b-pro-edt" >
                                                         <span class="input-group-addon"></i></span>
                                                                   <select class="form-control" id="sel1" name="category_id">
-                                                                    <option>Select Category</option>
+                                                                    <option>Select Product Category</option>
 
                                                                     <?php
                                                                         $all_published_category=DB::table('tbl_category')
@@ -79,7 +79,7 @@
                                                                                                 ->get();
                                                                         foreach ($all_published_category as $v_category) {?>
 
-                                                                   <option value="{{$v_category->category_name}}">{{$v_category->category_name}}</option>
+                                                                   <option value="{{$v_category->category_id}}">{{$v_category->category_name}}</option>
                                                                    <?php }?>
                                                                   </select>
                                                     </div>
@@ -129,7 +129,7 @@
                                                                                                 ->get();
                                                                         foreach ($all_published_manufacture as $v_manufacture) {?>
 
-                                                                   <option value="{{$v_manufacture->manufacture_name}}">{{$v_manufacture->manufacture_name}}</option>
+                                                                   <option value="{{$v_manufacture->manufacture_id}}">{{$v_manufacture->manufacture_name}}</option>
                                                                    <?php }?>
 														 </select> 
 
