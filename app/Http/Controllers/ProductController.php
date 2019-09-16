@@ -38,9 +38,10 @@ class ProductController extends Controller
         $data['product_size']=$request->product_size;
         $data['product_color']=$request->product_color;
 
-        $image=$request->file('product_image');
-        if($image)
+
+        if ($request->has('product_image'))
         {
+            $image=$request->file('product_image');
             $image_name=str_random(20);
             $ext=strtolower($image->getClientOriginalExtension());
             $image_full_name=$image_name.'.'.$ext;
@@ -53,13 +54,12 @@ class ProductController extends Controller
         Session::put('message','Product added Sucessfully ');
         return Redirect::to('/add-product');
         }
-        else
-        {
-        	$data['product_image']='';
-                DB::table('tbl_products')->insert($data);
-            Session::put('message','Product added Sucessfully without image ');
-            return Redirect::to('/add-product');
-        }
+//        else
+//        {
+//        	$data['product_image']='';
+//                DB::table('tbl_products')->insert($data);
+//            Session::put('message','Product added Sucessfully without image ');
+//            return Redirect::to('/add-product');
+//        }
     }
 }
-    
