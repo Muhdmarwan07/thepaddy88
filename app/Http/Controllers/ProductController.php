@@ -7,6 +7,7 @@ use DB;
 use App\Http\Requests;
 use Session;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Str;
 session_start();
 class ProductController extends Controller
 {
@@ -28,21 +29,21 @@ class ProductController extends Controller
 
     public function save_product(Request $request)
     {
-    	$data=array();
-    	$data['product_name']=$request->product_name;
-        $data['category_id']=$request->category_id;
-        $data['manufacture_id']=$request->manufacture_id;
-    	$data['product_description']=$request->product_description;
-    	$data['publication_status']=$request->publication_status;
-        $data['product_price']=$request->product_price;
-        $data['product_size']=$request->product_size;
-        $data['product_color']=$request->product_color;
+        $data = array();
+        $data['product_name'] = $request->product_name;
+        $data['category_id'] = $request->category_id;
+        $data['manufacture_id'] = $request->manufacture_id;
+        $data['product_description'] = $request->product_description;
+        $data['publication_status'] = $request->publication_status;
+        $data['product_price'] = $request->product_price;
+        $data['product_size'] = $request->product_size;
+        $data['product_color'] = $request->product_color;
 
+        $image = $request->file('product_image');
 
-        if ($request->has('product_image'))
-        {
-            $image=$request->file('product_image');
-            $image_name=str_random(20);
+        if ($image){
+            $image = $request->file('product_image');
+            $image_name=Str::random(20);
             $ext=strtolower($image->getClientOriginalExtension());
             $image_full_name=$image_name.'.'.$ext;
             $upload_path='image/';
@@ -50,16 +51,16 @@ class ProductController extends Controller
             $success=$image->move($upload_path,$image_full_name);
             if($success)
                 $data['product_image']=$image_url;
-            DB::table('tbl_products')->insert($data);
-        Session::put('message','Product added Sucessfully ');
-        return Redirect::to('/add-product');
+                DB::table('tbl_products')->insert($data);
+            Session::put('message','Product added Sucessfully' . $image_url);
+            return Redirect::to('/add-product');
         }
-//        else
-//        {
-//        	$data['product_image']='';
-//                DB::table('tbl_products')->insert($data);
-//            Session::put('message','Product added Sucessfully without image ');
-//            return Redirect::to('/add-product');
-//        }
+        else
+        {
+        	$data['product_image']='';
+                DB::table('tbl_products')->insert($data);
+            Session::put('message','Product added Sucessfully without image ');
+            return Redirect::to('/add-product');
+        }
     }
 }
