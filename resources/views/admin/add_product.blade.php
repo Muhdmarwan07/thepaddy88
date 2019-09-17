@@ -47,19 +47,19 @@
                                         <?php
                                             $message=Session::get('message');
 
-                                            if ($message) 
+                                            if ($message)
                                             {
                                                 echo $message;
                                                 Session::put('message',NULL);
                                             }
                                             ?>
-                                    </p>    
+                                    </p>
 
 
 
                                 <div id="myTabContent" class="tab-content custom-product-edit">
                                     <div class="product-tab-list tab-pane fade active in" id="description">
-                                     <form action="{{ url('/save-product') }}" method="post" enctype="multipart/from-data">
+                                     <form action="{{ url('/save-product') }}" method="post" enctype="multipart/form-data">
                                             {{csrf_field()}}
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -69,7 +69,7 @@
                                                         <input type="text" class="form-control" name="product_name" placeholder="Product Name" required="">
                                                     </div>
                                                     <div class="input-group mg-b-pro-edt" >
-                                                        <span class="input-group-addon"></i></span>
+                                                        <span class="input-group-addon"><i></i></span>
                                                                   <select class="form-control" id="sel1" name="category_id">
                                                                     <option>Select Product Category</option>
 
@@ -100,7 +100,7 @@
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-favorites" aria-hidden="true"></i></span>
                                                         <input type="text" class="form-control" name="product_quantity" placeholder="Product Quantity" required="">
-                                                    </div> 
+                                                    </div>
 
                                                     <div class>
                                                         <input type="checkbox" name="publication_status" value="1"><font color="white">Publication Status</font>
@@ -131,7 +131,7 @@
 
                                                                    <option value="{{$v_manufacture->manufacture_id}}">{{$v_manufacture->manufacture_name}}</option>
                                                                    <?php }?>
-														 </select> 
+														 </select>
 
                                                 </div>
 
