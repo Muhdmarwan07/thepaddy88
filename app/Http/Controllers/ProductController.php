@@ -49,29 +49,29 @@ class ProductController extends Controller
         $data['product_size']=$request->product_size;
         $data['product_color']=$request->product_color;
 
-
-        if ($request->has('product_image'))
+        $image=$request->file('product_image');
+        if ($image)
         {
-            $image=$request->file('product_image');
+            // $image=$request->file('product_image');
             $image_name=str_random(20);
             $ext=strtolower($image->getClientOriginalExtension());
             $image_full_name=$image_name.'.'.$ext;
             $upload_path='image/';
             $image_url=$upload_path.$image_full_name;
             $success=$image->move($upload_path,$image_full_name);
-            if($success)
+            if($success)  
                 $data['product_image']=$image_url;
             DB::table('tbl_products')->insert($data);
         Session::put('message','Product added Sucessfully ');
         return Redirect::to('/add-product');
         }
-//        else
-//        {
-//        	$data['product_image']='';
-//                DB::table('tbl_products')->insert($data);
-//            Session::put('message','Product added Sucessfully without image ');
-//            return Redirect::to('/add-product');
-//        }
+       else
+       {
+       	$data['product_image']='';
+               DB::table('tbl_products')->insert($data);
+           Session::put('message','Product added Sucessfully without image ');
+           return Redirect::to('/add-product');
+       }
     }
 
     public function unactive_product($product_id)

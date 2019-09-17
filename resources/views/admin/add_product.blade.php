@@ -40,7 +40,7 @@
                             <div class="review-tab-pro-inner">
                                 <ul id="myTab3" class="tab-review-design">
                                     <li class="active"><a href="#description"><i class="icon nalika-edit" aria-hidden="true"></i> Add Product</a></li>
-                                    <!-- <li><a href="#reviews"><i class="icon nalika-picture" aria-hidden="true"></i> Pictures</a></li> -->
+                                    <li><a href="#reviews"><i class="icon nalika-picture" aria-hidden="true"></i> Pictures</a></li>
                                     <!-- <li><a href="#INFORMATION"><i class="icon nalika-chat" aria-hidden="true"></i> Review</a></li> -->
                                 </ul>
                                 <p class="alert-success">
@@ -148,6 +148,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    
                                     <!-- <div class="product-tab-list tab-pane fade" id="reviews">
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -200,8 +201,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div> -->
-                                                    <!-- <div class="row">
+                                                    </div>
+                                                    <div class="row">
                                                         <div class="col-lg-4">
                                                             <div class="pro-edt-img">
                                                                 <img src="{{asset('backend/img/new-product/6-small.jpg')}}" alt="" />
@@ -249,8 +250,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div> -->
-                                                    <!-- <div class="row">
+                                                    </div>
+                                                    <div class="row">
                                                         <div class="col-lg-4">
                                                             <div class="pro-edt-img mg-b-0">
                                                                 <img src="{{asset('backend/img/new-product/7-small.jpg')}}" alt="" />

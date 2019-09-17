@@ -148,8 +148,10 @@
                         <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-table icon-wrap"></i> <span class="mini-click-non">Slider</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Peity Charts" href="static-table.html"><span class="mini-sub-pro">Static Table</span></a></li>
-                                <li><a title="Data Table" href="data-table.html"><span class="mini-sub-pro">Data Table</span></a></li>
+                                <ul class="submenu-angle" aria-expanded="false">
+                                 <li><a title="All Slider" href="{{URL::to('/all-slider')}}"><span class="mini-sub-pro">All Slider</span></a></li>
+                                <li><a title="Add Slider" href="{{URL::to('/add-slider')}}"><span class="mini-sub-pro">Add Slider</span></a></li>
+                            </ul>
                             </ul>
                         </li>
                         <li>

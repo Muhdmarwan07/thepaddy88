@@ -410,7 +410,7 @@
 
 
             <!-- Start Blog Area -->
-            <div class="blog-testimonial-area section-padding">
+            <!-- <div class="blog-testimonial-area section-padding">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
@@ -609,10 +609,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Blog Area -->
+
+
             <!-- Start Brand Area -->
-            <div class="brand-area pb-90">
+           <!--  <div class="brand-area pb-90">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -682,9 +684,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Brand Area -->
         </section>
+
+
+        
         <!-- End page content -->
         <!-- Start footer area -->
         <footer id="footer" class="footer-area">
@@ -771,7 +776,7 @@
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-9">
-                            <h2 class="footer-title">LATEST TWEETS</h2>
+                            <!-- <h2 class="footer-title">LATEST TWEETS</h2>
                             <div class="tweet-list">
                                 <ul class="left-tweet">
                                     <li class="tweet-inner clearfix">
@@ -820,8 +825,8 @@
                                             <p>Jan 25, 2016</p>
                                         </div>
                                     </li>
-                                </ul>
-                            </div>
+                                </ul> -->
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,1 @@
+all_slider.blade.php

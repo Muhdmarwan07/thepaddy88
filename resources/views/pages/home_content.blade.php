@@ -190,8 +190,11 @@
                             </div>
                         </div>
                     </div>
+                     
                     <div class="row rp-style">
+                      
                         <div class="featured-carousel indicator-style">
+                            <?php foreach ($all_published_product as $v_published_product) {?>
                             <div class="product-container cp-style-2">
                                 <div class="product-inner">
                                     <a href="#">
@@ -215,252 +218,25 @@
                                             <li><i class="rated fa fa-star"></i></li>
                                         </ul>
                                         <ul class="pricing list-inline pull-right">
-                                            <li class="text-right c-price">$150</li>
-                                            <li class="text-right p-price">$180</li>
+                                            <li class="text-right c-price">RM {{$v_published_product->product_price}}</li>
+                                            <!-- <li class="text-right p-price">$180</li> -->
                                         </ul>
                                         <div class="clear"></div>
                                         <h6 class="product-name m-0">
-                                            <a title="Eletria ostma" href="#">Eletria ostma</a>
+                                            <a title="Eletria ostma" href="#">{{$v_published_product->product_name}}</a>
                                         </h6>
-                                    </div>
+                                    </div>  
                                 </div>
                             </div>
-                            <div class="product-container cp-style-2">
-                                <div class="product-inner">
-                                    <a href="#">
-                                        <div class="product-img b-img">
-                                            <img alt="" src="{{asset('frontend/images/product/arrival/2.jpg')}}">
-                                        </div>
-                                    </a>
-                                    <span class="product-tag text-uppercase theme-bg">sale</span>
-                                    <ul class="quick-veiw text-center">
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    </ul>   
-                                    <div class="product-text pt-15">
-                                        <ul class="pull-left list-inline ratings">
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                        </ul>
-                                        <ul class="pricing list-inline pull-right">
-                                            <li class="text-right c-price">$130</li>
-                                            <li class="text-right p-price">$150</li>
-                                        </ul>
-                                        <div class="clear"></div>
-                                        <h6 class="product-name m-0">
-                                            <a title="Tletria postma" href="#">Tletria postma</a>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-container cp-style-2">
-                                <div class="product-inner">
-                                    <a href="#">
-                                        <div class="product-img b-img">
-                                            <img alt="" src="{{asset('frontend/images/product/arrival/3.jpg')}}">
-                                        </div>
-                                    </a>
-                                    <ul class="quick-veiw text-center">
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    </ul>   
-                                    <div class="product-text pt-15">
-                                        <ul class="pull-left list-inline ratings">
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                        </ul>
-                                        <ul class="pricing list-inline pull-right">
-                                            <li class="text-right c-price">$120</li>
-                                            <li class="text-right p-price">$130</li>
-                                        </ul>
-                                        <div class="clear"></div>
-                                        <h6 class="product-name m-0">
-                                            <a title="Celletria ostma" href="#">Celletria ostma</a>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-container cp-style-2">
-                                <div class="product-inner">
-                                    <a href="#">
-                                        <div class="product-img b-img">
-                                            <img alt="" src="{{asset('frontend/images/product/arrival/4.jpg')}}">
-                                        </div>
-                                    </a>
-                                    <span class="product-tag text-uppercase orang-bg">-20%</span>
-                                    <ul class="quick-veiw text-center">
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    </ul>   
-                                    <div class="product-text pt-15">
-                                        <ul class="pull-left list-inline ratings">
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                        </ul>
-                                        <ul class="pricing list-inline pull-right">
-                                            <li class="text-right c-price">$150</li>
-                                            <li class="text-right p-price">$180</li>
-                                        </ul>
-                                        <div class="clear"></div>
-                                        <h6 class="product-name m-0">
-                                            <a title="Eletria ostma" href="#">Eletria ostma</a>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-container cp-style-2">
-                                <div class="product-inner">
-                                    <a href="#">
-                                        <div class="product-img b-img">
-                                            <img alt="" src="{{asset('frontend/images/product/arrival/5.jpg')}}">
-                                        </div>
-                                    </a>
-                                    <span class="product-tag text-uppercase orang-bg">-25%</span>
-                                    <ul class="quick-veiw text-center">
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    </ul>   
-                                    <div class="product-text pt-15">
-                                        <ul class="pull-left list-inline ratings">
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                        </ul>
-                                        <ul class="pricing list-inline pull-right">
-                                            <li class="text-right c-price">$150</li>
-                                            <li class="text-right p-price">$180</li>
-                                        </ul>
-                                        <div class="clear"></div>
-                                        <h6 class="product-name m-0">
-                                            <a title="Eletria ostma" href="#">Eletria ostma</a>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-container cp-style-2">
-                                <div class="product-inner">
-                                    <a href="#">
-                                        <div class="product-img b-img">
-                                            <img alt="" src="{{asset('frontend/images/product/arrival/1.jpg')}}">
-                                        </div>
-                                    </a>
-                                    <span class="product-tag text-uppercase black-bg">new</span>
-                                    <ul class="quick-veiw text-center">
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    </ul>   
-                                    <div class="product-text pt-15">
-                                        <ul class="pull-left list-inline ratings">
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                        </ul>
-                                        <ul class="pricing list-inline pull-right">
-                                            <li class="text-right c-price">$150</li>
-                                            <li class="text-right p-price">$180</li>
-                                        </ul>
-                                        <div class="clear"></div>
-                                        <h6 class="product-name m-0">
-                                            <a title="Eletria ostma" href="#">Eletria ostma</a>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-container cp-style-2">
-                                <div class="product-inner">
-                                    <a href="#">
-                                        <div class="product-img b-img">
-                                            <img alt="" src="{{asset('frontend/images/product/arrival/2.jpg')}}">
-                                        </div>
-                                    </a>
-                                    <span class="product-tag text-uppercase theme-bg">sale</span>
-                                    <ul class="quick-veiw text-center">
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    </ul>   
-                                    <div class="product-text pt-15">
-                                        <ul class="pull-left list-inline ratings">
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                        </ul>
-                                        <ul class="pricing list-inline pull-right">
-                                            <li class="text-right c-price">$130</li>
-                                            <li class="text-right p-price">$150</li>
-                                        </ul>
-                                        <div class="clear"></div>
-                                        <h6 class="product-name m-0">
-                                            <a title="Tletria postma" href="#">Tletria postma</a>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-container cp-style-2">
-                                <div class="product-inner">
-                                    <a href="#">
-                                        <div class="product-img b-img">
-                                            <img alt="" src="{{asset('frontend/images/product/arrival/3.jpg')}}">
-                                        </div>
-                                    </a>
-                                    <ul class="quick-veiw text-center">
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    </ul>   
-                                    <div class="product-text pt-15">
-                                        <ul class="pull-left list-inline ratings">
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                        </ul>
-                                        <ul class="pricing list-inline pull-right">
-                                            <li class="text-right c-price">$120</li>
-                                            <li class="text-right p-price">$130</li>
-                                        </ul>
-                                        <div class="clear"></div>
-                                        <h6 class="product-name m-0">
-                                            <a title="Celletria ostma" href="#">Celletria ostma</a>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                        
+                          <?php } ?> 
+                        </div>  
                     </div>
+
                 </div>
             </div>
             <!-- Start Featured product Area -->
             <!-- Start Offer  Area -->
-            <div class="offer-area">
+            <!-- <div class="offer-area">
                 <div class="offer-banner banner-style-1 pull-left">
                     <a href="#">
                         <img src="{{asset('frontend/images/offer/1.jpg')}}" alt="">
@@ -486,10 +262,10 @@
                         <h3 class="blod text-white">FOR <span class="text-defualt">WOMEN</span></h3>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Offer Area -->
             <!-- Start Upcomming Area -->
-            <div class="up-comming-area section-padding">
+            <!-- <div class="up-comming-area section-padding">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
@@ -590,7 +366,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Upcomming Area -->
             <!-- Start New Arrival Area  -->
             <div class="new-arrival-area">
@@ -1117,8 +893,11 @@
                 </div>
             </div>
             <!-- End Of New Arrival Area  -->
+
+
+
             <!-- Start Offer Banner Area -->
-            <div class="offer-banner-area section-padding clearfix">
+            <!-- <div class="offer-banner-area section-padding clearfix">
                 <figure class="single-offer-banner b-img">
                     <img src="{{asset('frontend/images/offer-banner/1.jpg')}}" alt="">
                     <figcaption>
@@ -1156,10 +935,12 @@
                         </div>
                     </figcaption>
                 </figure>
-            </div>
+            </div> -->   
             <!-- End Offer Banner Area -->
+
+
             <!-- Start Best Seller Iteams Area -->
-            <div class="best-saller-iteam-area pb-90">
+            <!-- <div class="best-saller-iteam-area pb-90">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 cp-style-2">
@@ -1506,10 +1287,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Of Best Seller Iteams Area -->
+
+
             <!-- Start Subscribe Area -->
-            <div class="subscribe-area text-center section-padding">
+            <!-- <div class="subscribe-area text-center section-padding">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -1526,7 +1309,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Of Subscribe Area -->
 
 @endsection
