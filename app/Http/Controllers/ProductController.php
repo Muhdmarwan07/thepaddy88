@@ -67,19 +67,20 @@ class ProductController extends Controller
             $upload_path='image/';
             $image_url=$upload_path.$image_full_name;
             $success=$image->move($upload_path,$image_full_name);
-            if($success) 
-                { 
+            if($success)
+                {
                     $data['product_image']=$image_url;
                     DB::table('tbl_products')->insert($data);
                     Session::put('message','Product added Sucessfully' . $image_url);
                     return Redirect::to('/add-product');
                 }
         }
-        
+
         	$data['product_image']='';
                 DB::table('tbl_products')->insert($data);
             Session::put('message','Product added Sucessfully without image ');
             return Redirect::to('/add-product');
+        }
     }
 
     public function unactive_product($product_id)
