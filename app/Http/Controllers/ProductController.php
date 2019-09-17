@@ -7,6 +7,7 @@ use DB;
 use App\Http\Requests;
 use Session;
 use Illuminate\Support\Facades\Redirect;
+
 session_start();
 class ProductController extends Controller
 {
