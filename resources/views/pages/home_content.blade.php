@@ -6,7 +6,7 @@
             <!-- Slider Image -->
             <div id="mainSlider" class="nivoSlider slider-image">
                 <img src="{{asset('frontend/images/slider/4.jpg')}}" alt="main slider" title="#htmlcaption1"/>
-                <img src="{{asset('frontend/images/slider/3.jpg')}}" alt="main slider" title="#htmlcaption2"/>
+                <!-- <img src="{{asset('frontend/images/slider/3.jpg')}}" alt="main slider" title="#htmlcaption2"/> -->
             </div>
             <!-- Slider Caption 1 -->
             <div id="htmlcaption1" class="nivo-html-caption slider-caption-1">
@@ -35,7 +35,7 @@
                 </div>                      
             </div>
             <!-- Slider Caption 2 -->
-            <div id="htmlcaption2" class="nivo-html-caption slider-caption-2">
+            <!-- <div id="htmlcaption2" class="nivo-html-caption slider-caption-2">
                 <div class="slider-progress"></div> 
                 <div class="container slider-height">
                     <div class="row slider-height">
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
         <!-- End of slider area -->
         <!-- Start page content -->

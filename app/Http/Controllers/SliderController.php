@@ -44,6 +44,42 @@ class SliderController extends Controller
     				session::put('message','Slider Added Successfully Without Image');
     				return Redirect::to('/add-slider');
     	}
+    }
 
+    public function all_slider()
+    {
+    	$all_slider=DB::table('tbl_slider')->get();
+    	$manage_slider=view('admin.all_slider')
+    		->with('all_slider',$all_slider);
+    	return view('admin_layout')
+    		->with('admin.all_slider',$manage_slider);
+
+    }
+
+    public function unactive_slider($slider_id)
+    {
+    	DB::table('tbl_slider')
+    		->where('slider_id',$slider_id)
+    		->update(['publication_status' =>0]);
+    		Session::put('message','Slider Unactive Sucessfully ');
+    		return Redirect::to('/all-slider');
+    }
+
+    public function active_slider($slider_id)
+    {
+    	DB::table('tbl_slider')
+            ->where('slider_id',$slider_id)
+            ->update(['publication_status' =>1]);
+            Session::put('message','Slider Active Sucessfully ');
+            return Redirect::to('/all-slider');
+    }
+
+    public function delete_slider($slider_id)
+    {
+    	DB::table('tbl_slider')
+            ->where('slider_id',$slider_id)
+            ->delete();
+            Session::get('message','Slider Delete Successfully !');
+            return Redirect::to('/all-slider');
     }
 }

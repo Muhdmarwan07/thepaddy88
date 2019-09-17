@@ -7,7 +7,6 @@ use DB;
 use App\Http\Requests;
 use Session;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Str;
 session_start();
 class ProductController extends Controller
 {
@@ -50,45 +49,37 @@ class ProductController extends Controller
         $data['product_size'] = $request->product_size;
         $data['product_color'] = $request->product_color;
 
-<<<<<<< HEAD
+
         $image=$request->file('product_image');
         if ($image)
         {
-            // $image=$request->file('product_image');
+            $image=$request->file('product_image');
             $image_name=str_random(20);
-=======
+
         $image = $request->file('product_image');
 
-        if ($image){
+        if ($image)
+        {
             $image = $request->file('product_image');
             $image_name=Str::random(20);
->>>>>>> b361ad677b15b3903d24a613f238b08057e3170b
             $ext=strtolower($image->getClientOriginalExtension());
             $image_full_name=$image_name.'.'.$ext;
             $upload_path='image/';
             $image_url=$upload_path.$image_full_name;
             $success=$image->move($upload_path,$image_full_name);
-            if($success)  
-                $data['product_image']=$image_url;
-                DB::table('tbl_products')->insert($data);
-            Session::put('message','Product added Sucessfully' . $image_url);
-            return Redirect::to('/add-product');
+            if($success) 
+                { 
+                    $data['product_image']=$image_url;
+                    DB::table('tbl_products')->insert($data);
+                    Session::put('message','Product added Sucessfully' . $image_url);
+                    return Redirect::to('/add-product');
+                }
         }
-        else
-        {
+        
         	$data['product_image']='';
                 DB::table('tbl_products')->insert($data);
             Session::put('message','Product added Sucessfully without image ');
             return Redirect::to('/add-product');
-        }
-<<<<<<< HEAD
-       else
-       {
-       	$data['product_image']='';
-               DB::table('tbl_products')->insert($data);
-           Session::put('message','Product added Sucessfully without image ');
-           return Redirect::to('/add-product');
-       }
     }
 
     public function unactive_product($product_id)
@@ -130,7 +121,5 @@ class ProductController extends Controller
         {
             return Redirect::to('/admin')->send();
         }
-=======
->>>>>>> b361ad677b15b3903d24a613f238b08057e3170b
     }
 }

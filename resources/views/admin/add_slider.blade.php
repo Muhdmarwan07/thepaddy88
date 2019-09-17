@@ -66,7 +66,7 @@
                                                 <div class="review-content-section">
                                                 	<div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
-                                                        <label class="control-label" for="fileInput"><font color=white>Slider Image</font></label>
+                                                        <label class="control-label" for="fileInput" name="slider_image"><font color=white>Slider Image</font></label>
                                                         <div class="controls">
                                                             <font color=white><input type="file" class="input-file uniform_on" name="slider_image" id="fileInput" required=""></font>
                                                         </div>
