@@ -51,13 +51,6 @@ class ProductController extends Controller
         $data['product_size'] = $request->product_size;
         $data['product_color'] = $request->product_color;
 
-
-        $image=$request->file('product_image');
-        if ($image)
-        {
-            $image=$request->file('product_image');
-            $image_name=Str::random(20);
-
         $image = $request->file('product_image');
 
         if ($image)
@@ -77,12 +70,10 @@ class ProductController extends Controller
                     return Redirect::to('/add-product');
                 }
         }
-
         	$data['product_image']='';
                 DB::table('tbl_products')->insert($data);
             Session::put('message','Product added Sucessfully without image ');
             return Redirect::to('/add-product');
-        }
     }
 
     public function unactive_product($product_id)
