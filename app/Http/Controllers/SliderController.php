@@ -7,6 +7,7 @@ use DB;
 use App\Http\Requests;
 use Session;
 use Illuminate\Support\Facades\Redirect;
+use Str;
 session_start();
 class SliderController extends Controller
 {

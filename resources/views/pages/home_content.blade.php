@@ -19,12 +19,12 @@
                                     <div class="cap-dec text-black text-uppercase wow fadeInDown" data-wow-duration="0.9s" data-wow-delay="0s">
                                         <h3>TRENDY DRESS COLLETIONS</h3>
                                     </div>  
-                                    <div class="cap-title text-black text-uppercase wow fadeInDown" data-wow-duration="1.5s" data-wow-delay="0.5s">
+                                    <!-- <div class="cap-title text-black text-uppercase wow fadeInDown" data-wow-duration="1.5s" data-wow-delay="0.5s">
                                         <h2>FOR WOMEN - 2020</h2>
-                                    </div>  
-                                    <div class="cap-para wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s">
+                                    </div>  --> 
+                                    <!-- <div class="cap-para wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s">
                                         <p>saya anak malaysia </p>
-                                    </div>
+                                    </div> -->
                                     <div class="cap-shop wow text-uppercase fadeInDown" data-wow-duration="2.5s" data-wow-delay="1.5s">
                                         <a href="#">Shop now</a>
                                     </div>  
