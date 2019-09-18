@@ -199,7 +199,7 @@
                                 <div class="product-inner">
                                     <a href="#">
                                         <div class="product-img b-img">
-                                            <img alt="" src="{{asset('frontend/images/product/arrival/1.jpg')}}">
+                                            <img alt="" src="{{asset($v_published_product->product_image)}}" style="height: 200px;">
                                         </div>
                                     </a>
                                     <span class="product-tag text-uppercase black-bg">new</span>

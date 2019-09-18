@@ -19,32 +19,41 @@ class SliderController extends Controller
     {
     	$data=array();
     	$data['publication_status']=$request->publication_status;
-    	$image=$request->file('slider_image');
-    	if ($image) 
-    	{
-    		$image_name=str_random(20);
-    		$ext=strtolower($image->getClientOriginalExtension());
-    		$image_full_name=$image_name.'.'.$ext;
-    		$upload_path='slider/';
-    		$image_url=$upload_path.$image_full_name;
-    		$success=$image->move($upload_path,$image_full_name);
 
-    		if ($success)
-    	    {
-    			$data['slider_image']=$image_url;
-    				DB::table('tbl_slider')->insert($data);
-    				session::put('message','Slider Added Successfully');
-    				return Redirect::to('/add-slider');
-    		}
-    	}
-    	else
-    	{
-    		$data['slider_image']='';
-    				DB::table('tbl_slider')->insert($data);
-    				session::put('message','Slider Added Successfully Without Image');
-    				return Redirect::to('/add-slider');
-    	}
+    	$image=$request->file('slider_image');
+        if ($image)
+        {
+            $image=$request->file('slider_image');
+            $image_name=Str::random(20);
+        }
+
+        $image = $request->file('slider_image');
+
+
+    	if ($image)
+        {
+            $image = $request->file('slider_image');
+            $image_name=Str::random(20);
+            $ext=strtolower($image->getClientOriginalExtension());
+            $image_full_name=$image_name.'.'.$ext;
+            $upload_path='slider/';
+            $image_url=$upload_path.$image_full_name;
+            $success=$image->move($upload_path,$image_full_name);
+            if($success)
+                {
+                    $data['slider_image']=$image_url;
+                    DB::table('tbl_slider')->insert($data);
+                    Session::put('message','Slider added Sucessfully' . $image_url);
+                    return Redirect::to('/add-slider');
+                }
+
+        }
+	    	$data['slider_image']='';
+	                DB::table('tbl_slider')->insert($data);
+	            Session::put('message','Slider added Sucessfully without image ');
+	    	    return Redirect::to('/add-slider');
     }
+
 
     public function all_slider()
     {
@@ -82,4 +91,5 @@ class SliderController extends Controller
             Session::get('message','Slider Delete Successfully !');
             return Redirect::to('/all-slider');
     }
+
 }
