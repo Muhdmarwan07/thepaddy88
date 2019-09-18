@@ -7,7 +7,6 @@ use DB;
 use App\Http\Requests;
 use Session;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Str;
 
 session_start();
 class ProductController extends Controller
@@ -50,7 +49,14 @@ class ProductController extends Controller
         $data['product_price'] = $request->product_price;
         $data['product_size'] = $request->product_size;
         $data['product_color'] = $request->product_color;
- 
+
+
+        $image=$request->file('product_image');
+        if ($image)
+        {
+            $image=$request->file('product_image');
+            $image_name=str_random(20);
+
 
         $image=$request->file('product_image');
         if ($image)
