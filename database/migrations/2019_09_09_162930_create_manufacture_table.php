@@ -14,9 +14,9 @@ class CreateManufactureTable extends Migration
     public function up()
     {
         Schema::create('tbl_manufacture', function (Blueprint $table) {
-            $table->Increments('manufacutre_id');
-            $table->string('manufacutre_name');
-            $table->string('manufacutre_description');
+            $table->Increments('manufacture_id');
+            $table->string('manufacture_name');
+            $table->string('manufacture_description');
             $table->integer('publication_status');
             $table->timestamps();
         });

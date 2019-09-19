@@ -20,7 +20,7 @@ class SliderController extends Controller
     {
     	$data=array();
     	$data['publication_status']=$request->publication_status;
-
+        $data['slider_title']=$request->slider_title;
     	$image=$request->file('slider_image');
         if ($image)
         {

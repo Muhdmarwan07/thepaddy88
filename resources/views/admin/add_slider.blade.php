@@ -71,6 +71,10 @@
                                                             <font color=white><input type="file" class="input-file uniform_on" name="slider_image" id="fileInput" required=""></font>
                                                         </div>
                                                     </div>
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control" name="slider_title" placeholder="Slider Title" required="">
+                                                    </div>
                                                     <div class>
                                                         <input type="checkbox" name="publication_status" value="1" required=""><font color="white">Publication Status</font>
                                                     </div>
