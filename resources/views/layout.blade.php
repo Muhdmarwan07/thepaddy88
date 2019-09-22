@@ -213,7 +213,7 @@
                                                                         ->get();
                                                 foreach ($all_published_category as $v_category) {                        
                                             ?>
-                                                <li><a href="shop.html">{{$v_category->category_name}}</a></li>
+                                                <li><a href="{{URL::to('/product_by_category/'.$v_category->category_id)}}">{{$v_category->category_name}}</a></li>
                                             <?php }?>
                                             </ul>
                                         </div>
@@ -225,7 +225,7 @@
                                                                         ->where('publication_status',1)
                                                                         ->get();
                                                     foreach ($all_published_manufacture as $v_manufacture) {?>
-                                                    <li><a href="shop.html">{{$v_manufacture->manufacture_name}}</a></li>
+                                                    <li><a href="{{URL::to('/product_by_manufacture/'.$v_manufacture->manufacture_id)}}">{{$v_manufacture->manufacture_name}}</a></li>
                                                 <?php }?>
                                             </ul>
                                         </div>

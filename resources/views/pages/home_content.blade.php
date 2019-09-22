@@ -5,8 +5,14 @@
         <section class="slider-container">
             <!-- Slider Image -->
             <div id="mainSlider" class="nivoSlider slider-image">
-                <img src="{{asset('frontend/images/slider/4.jpg')}}" alt="main slider" title="#htmlcaption1"/>
+                <?php
+                     $all_published_slider=DB::table('tbl_slider')
+                                    ->where('publication_status',1)
+                                     ->get();
+                     foreach ($all_published_slider as $v_slider) {?>
+                <img src="{{URL::to($v_slider->slider_image)}}"alt="main slider" title="#htmlcaption1"/>
                 <!-- <img src="{{asset('frontend/images/slider/3.jpg')}}" alt="main slider" title="#htmlcaption2"/> -->
+                <?php }?>
             </div>
             <!-- Slider Caption 1 -->
             <div id="htmlcaption1" class="nivo-html-caption slider-caption-1">
@@ -17,7 +23,15 @@
                             <div class="slide-text">
                                 <div class="middle-text">
                                     <div class="cap-dec text-black text-uppercase wow fadeInDown" data-wow-duration="0.9s" data-wow-delay="0s">
-                                        <h3>TRENDY DRESS COLLETIONS</h3>
+                                         <?php
+                                        $all_published_slider=DB::table('tbl_slider')
+                                            ->where('publication_status',1)
+                                            ->get();
+                                         foreach ($all_published_slider as $v_slider) {?>
+
+                                        <h3>{{$v_slider->slider_title}}</h3>
+
+                                        <?php }?>
                                     </div>  
                                     <!-- <div class="cap-title text-black text-uppercase wow fadeInDown" data-wow-duration="1.5s" data-wow-delay="0.5s">
                                         <h2>FOR WOMEN - 2020</h2>
@@ -205,17 +219,18 @@
                                     <span class="product-tag text-uppercase black-bg">new</span>
                                     <ul class="quick-veiw text-center">
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="{{URL::to('/view_product/'.$v_published_product->product_id)}}"><i class="fa fa-eye"></i></a></li>
                                         <li><a href="#"><i class="fa fa-refresh"></i></a></li>
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     </ul>   
                                     <div class="product-text pt-15">
                                         <ul class="pull-left list-inline ratings">
+                                            <!-- <li><i class="rated fa fa-star"></i></li>
                                             <li><i class="rated fa fa-star"></i></li>
                                             <li><i class="rated fa fa-star"></i></li>
                                             <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
+                                            <li><i class="rated fa fa-star"></i></li> -->
+                                            <li>{{$v_published_product->manufacture_name}}</li>
                                         </ul>
                                         <ul class="pricing list-inline pull-right">
                                             <li class="text-right c-price">RM {{$v_published_product->product_price}}</li>
@@ -223,7 +238,7 @@
                                         </ul>
                                         <div class="clear"></div>
                                         <h6 class="product-name m-0">
-                                            <a title="Eletria ostma" href="#">{{$v_published_product->product_name}}</a>
+                                            <a title="Eletria ostma" href="{{URL::to('/view_product/'.$v_published_product->product_id)}}">{{$v_published_product->product_name}}</a>
                                         </h6>
                                     </div>  
                                 </div>

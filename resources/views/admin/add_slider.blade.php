@@ -59,7 +59,7 @@
 
                                 <div id="myTabContent" class="tab-content custom-product-edit">
                                     <div class="product-tab-list tab-pane fade active in" id="description">
-                                     <form action="{{ url('/save-slider') }}" method="post" enctype="multipart/from-data">
+                                     <form action="{{ url('/save-slider') }}" method="post" enctype="multipart/form-data">
                                             {{csrf_field()}}
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">

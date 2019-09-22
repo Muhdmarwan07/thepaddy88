@@ -73,6 +73,7 @@
                                                 
                                                 <th data-field="price" data-editable="true"><font color="white">Slider Image</font></th>
 												<!-- <th data-field="date" data-editable="true"><font color="white">Date</font></th> -->
+                                                 <th data-field="name" data-editable="true"><font color="white">Slider Title</font></th>
 												 <th data-field="task" data-editable="true"><font color="white">Publication Status</font></th>
                                                 <!--  <th data-field="task" data-editable="true"><font color="white">Status</font></th> -->
 												<!-- <th data-field="email" data-editable="true"><font color="white">Total Sales</font></th> -->
@@ -85,6 +86,7 @@
                                                 <td>{{$v_slider->slider_id}}</td>
                                                 
 												<td><img src="{{$v_slider->slider_image}}" style="height: 80; width: 200;"></td>
+                                                <td>{{$v_slider->slider_title}}</td>
                                                 <td class="center">
                                                     @if($v_slider->publication_status==1)
                                                         <span class="label label-success">Active</span>
