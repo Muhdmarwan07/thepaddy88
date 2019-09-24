@@ -106,13 +106,16 @@
                                 <ul class="pricing pricing-list">
                                     <li class="text-right c-price text-defualt text-center">RM {{$product_by_detail->product_price}}</li>
                                 </ul>
-                                <div class="clear"></div>
-                                <ul class="quick-veiw-list">
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                </ul>
+	                                <div class="clear"></div>
+	                                
+		                                <ul class="quick-veiw-list">
+		                                	<form action="{{URL::to('add-to-cart')}}" method="Post">
+                                				{{csrf_field()}}
+		                                    	<!-- <li><a href="{{URL::to('add-to-cart')}}"><i class="fa fa-shopping-cart"></i></a></li> -->
+		                                    	<button style="Submit" class="btn btn-fefault cart"><i class="fa fa-shopping-cart"></i></button>
+		                                    </form>
+		                                </ul>
+	                            	
                                 <div class="socailsharing-product mt-40">
                                     <label>Share :</label>
                                     <ul>
@@ -130,7 +133,7 @@
                             <div class="p-details-tab gray-ash-bg mt-50">
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li role="presentation" class="active"><a href="#more-info" aria-controls="more-info" role="tab" data-toggle="tab">MORE INFO</a></li>
-                                    <li role="presentation"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">DATA SHEET</a></li>
+                                    <!-- <li role="presentation"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">DATA SHEET</a></li> -->
                                     <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">REVIEWS</a></li>
                                 </ul>
                             </div>
@@ -139,7 +142,7 @@
                                 <div role="tabpanel" class="tab-pane active p-30" id="more-info">
                                     {{$product_by_detail->product_description}}
                                 </div>
-                                <div role="tabpanel" class="tab-pane p-30" id="data">
+                                <!-- <div role="tabpanel" class="tab-pane p-30" id="data">
                                     <table class="table-data-sheet m-0">
                                         <tbody>
                                             <tr class="odd">
@@ -156,7 +159,7 @@
                                             </tr>
                                         </tbody>
                                    </table>
-                                </div>
+                                </div> -->
                                 <div role="tabpanel" class="tab-pane p-30" id="reviews">
                                     <div id="product-comments-block-tab">
                                         <a href="#" class="comment-btn"><span>Be the first to write your review!</span></a>
@@ -454,16 +457,18 @@
                 </div>
             </div>
             <!-- End Of Related Product -->
+
+            
             <!-- Start Brand Area -->
             <div class="brand-area section-padding">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="section-title text-center mb-35">
+                            <!-- <div class="section-title text-center mb-35">
                                 <h2 class="text-uppercase"><strong>OUR BRAND</strong></h2>
                                 <p class="text-defualt">BRAND</p>
                                 <img alt="" src="images/section-border.png">
-                            </div>
+                            </div> -->
                             <div class="brand-carousel">
                                 <div class="col-md-12">
                                     <div class="single-brand text-center">

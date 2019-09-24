@@ -31,7 +31,7 @@
                                     <span class="product-tag text-uppercase orang-bg">-20%</span>
                                     <ul class="quick-veiw text-center">
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="{{URL::to('/view_product/'.$v_category_by_product->product_id)}}"><i class="fa fa-eye"></i></a></li>
                                         <li><a href="#"><i class="fa fa-refresh"></i></a></li>
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     </ul>
@@ -48,7 +48,7 @@
                                         </ul>
                                         <div class="clear"></div>
                                         <h6 class="product-name">
-                                            <a href="#" title="Eletria ostma">{{$v_category_by_product->product_name}}</a>
+                                            <a href="{{URL::to('/view_product/'.$v_category_by_product->product_id)}}" title="{{$v_category_by_product->product_name}}">{{$v_category_by_product->product_name}}</a>
                                         </h6>
                                     </div>
                                 </div>

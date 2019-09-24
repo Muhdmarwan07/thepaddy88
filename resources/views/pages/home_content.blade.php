@@ -238,7 +238,7 @@
                                         </ul>
                                         <div class="clear"></div>
                                         <h6 class="product-name m-0">
-                                            <a title="Eletria ostma" href="{{URL::to('/view_product/'.$v_published_product->product_id)}}">{{$v_published_product->product_name}}</a>
+                                            <a title="{{$v_published_product->product_name}}" href="{{URL::to('/view_product/'.$v_published_product->product_id)}}">{{$v_published_product->product_name}}</a>
                                         </h6>
                                     </div>  
                                 </div>

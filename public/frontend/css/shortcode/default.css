@@ -1020,7 +1020,7 @@ textarea:focus {
   .theme-bg { background: #CD6289;}
   .blog-bg { background: #ebebeb;}
   .footer-bg { background: #252525;}
-  .breadcrumbs-bg {background: #E1E1E1}
+  .breadcrumbs-bg {background: radial-gradient(black, transparent);}
   .transparent-bg { background: transparent !important; }
   .gray-ash-bg { background: #F5F5F5; }
 
