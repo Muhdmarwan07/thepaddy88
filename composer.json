@@ -6,9 +6,24 @@
         "framework",
         "laravel"
     ],
+    "repositories": [
+        {
+            "type":"package",
+            "package": {
+                "name": "gloudemans/shoppingcart",
+                "version":"master",
+                "source": {
+                    "url": "https://github.com/laravel-creative/LaravelShoppingcart.git",
+                    "type": "git",
+                    "reference":"master"
+                }
+            }
+        }
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "gloudemans/shoppingcart": "master",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0"
