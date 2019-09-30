@@ -17,6 +17,7 @@
                 </div>
             </div>
         </div>  
+        
 <!-- Start Product Details -->
             <div class="product-details-area section-padding">
                 <div class="container">
@@ -109,7 +110,7 @@
 	                                <div class="clear"></div>
 	                                
 		                                <ul class="quick-veiw-list">
-		                                	<form action="{{URL::to('add-to-cart')}}" method="Post">
+		                                	<form action="{{URL::to('add-to-cart')}}" method="POST">
                                 				{{csrf_field()}}
 		                                    	<!-- <li><a href="{{URL::to('add-to-cart')}}"><i class="fa fa-shopping-cart"></i></a></li> -->
 		                                    	<button style="Submit" class="btn btn-fefault cart"><i class="fa fa-shopping-cart"></i></button>
