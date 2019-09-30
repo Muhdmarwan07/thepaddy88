@@ -110,10 +110,10 @@
 	                                <div class="clear"></div>
 	                                
 		                                <ul class="quick-veiw-list">
-		                                	<form action="{{URL::to('add-to-cart')}}" method="POST">
-                                				{{csrf_field()}}
+		                                	<form action="{{URL::to('/add-to-cart')}}" method="post">
+                                				{{ csrf_field() }}
 		                                    	<!-- <li><a href="{{URL::to('add-to-cart')}}"><i class="fa fa-shopping-cart"></i></a></li> -->
-		                                    	<button style="Submit" class="btn btn-fefault cart"><i class="fa fa-shopping-cart"></i></button>
+		                                    	<button style="Submit" class="btn btn-fefault cart"><i class="fa fa-shopping-cart"></i>Add Cart</button>
 		                                    </form>
 		                                </ul>
 	                            	
