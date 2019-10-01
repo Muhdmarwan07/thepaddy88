@@ -87,7 +87,7 @@
                                                 <option value="small">{{$product_by_detail->product_size}}</option>
                                             </select>
                                         </div>
-                                        <div class="show-label showing">
+                                        <div class="show-label showing" name="qty">
                                             <label>Quantity : </label>
                                             <select>
                                                 <option selected="selected" value="position">1</option>
@@ -113,6 +113,7 @@
 		                                	<form action="{{URL::to('/add-to-cart')}}" method="post">
                                 				{{ csrf_field() }}
 		                                    	<!-- <li><a href="{{URL::to('add-to-cart')}}"><i class="fa fa-shopping-cart"></i></a></li> -->
+                                                <input type="hidden" name="product_id" value="{{$product_by_detail->product_id}}">
 		                                    	<button style="Submit" class="btn btn-fefault cart"><i class="fa fa-shopping-cart"></i>Add Cart</button>
 		                                    </form>
 		                                </ul>

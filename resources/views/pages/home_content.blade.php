@@ -218,7 +218,7 @@
                                     </a>
                                     <span class="product-tag text-uppercase black-bg">new</span>
                                     <ul class="quick-veiw text-center">
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="{{URL::to('/view_product/'.$v_published_product->product_id)}}"><i class="fa fa-shopping-cart"></i></a></li>
                                         <li><a href="{{URL::to('/view_product/'.$v_published_product->product_id)}}"><i class="fa fa-eye"></i></a></li>
                                         <li><a href="#"><i class="fa fa-refresh"></i></a></li>
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
