@@ -21,6 +21,14 @@
                                 <div role="tabpanel" class="tab-pane fade in active" id="cart">
                                     <form action="#">
                                         <div class="table-content table-responsive text-uppercase mb-50">
+                                            <?php
+
+                                                    $contents=Cart::content();
+                                                    // echo "<pre>";
+                                                    //     print_r($contents);
+                                                    // echo "</pre>";
+
+                                            ?>
                                             <table>
                                                 <thead>
                                                     <tr>
@@ -33,98 +41,44 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+
+                                                    <?php foreach ($contents as $v_contents) {?>
+
                                                     <tr>
                                                         <td class="product-thumbnail">
-                                                            <a href="#"><img src="images/cart/cart-table/1.jpg" alt=""></a>
+                                                            <a href="#"><img src="{{URL::to($v_contents->options->image)}}" height="150px" width="150px" alt=""></a>
                                                         </td>
                                                         <td class="cart-product-name">
-                                                            <a href="#"><h6><strong>Zelletria ostma</strong></h6></a>
-                                                            <p>Lorem ipsum dolor sit amet <br> consectetur adipiscing </p>
+                                                            <a href="#"><h6><strong>{{$v_contents->name}}</strong></h6></a>
+                                                            
                                                             <label>
                                                                 Size :
                                                                 <span> L</span>
                                                             </label>
                                                         </td>
                                                         <td class="cart-product-size text-center">
-                                                            <h6><strong>$195</strong></h6>
+                                                            <h6><strong>RM {{$v_contents->price}}</strong></h6>
                                                         </td>
                                                         <td class="cart-product-price text-center">
                                                             <span class="quantity-wanted-p pull-left">
                                                                 <span class="dec qtybutton">-</span>
-                                                                <input type="text" class="cart-plus-minus-box" value="2">
+                                                                <input type="text" class="cart-plus-minus-box" value="{{$v_contents->qty}}">
                                                                 <span class="inc qtybutton">+</span>    
                                                             </span>
                                                         </td>
                                                         <td class="cart-product-total text-center">
-                                                            <h6><strong>$390</strong></h6>
+                                                            <h6><strong>RM {{$v_contents->total}}</strong></h6>
                                                         </td>
                                                         <td class="cart-trash text-center">
                                                             <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                                                         </td>
                                                     </tr>
-                                                    <tr>
-                                                        <td class="product-thumbnail">
-                                                            <a href="#"><img src="images/cart/cart-table/2.jpg" alt=""></a>
-                                                        </td>
-                                                        <td class="cart-product-name">
-                                                            <a href="#"><h6><strong>Letria postma</strong></h6></a>
-                                                            <p>Lorem ipsum dolor sit amet <br> consectetur adipiscing </p>
-                                                            <label>
-                                                                Size :
-                                                                <span> xl</span>
-                                                            </label>
-                                                        </td>
-                                                        <td class="cart-product-size text-center">
-                                                            <h6><strong>$145</strong></h6>
-                                                        </td>
-                                                        <td class="cart-product-price text-center">
-                                                            <span class="quantity-wanted-p pull-left">
-                                                                <span class="dec qtybutton">-</span>
-                                                                <input type="text" class="cart-plus-minus-box" value="1">
-                                                                <span class="inc qtybutton">+</span>    
-                                                            </span>
-                                                        </td>
-                                                        <td class="cart-product-total text-center">
-                                                            <h6><strong>$145</strong></h6>
-                                                        </td>
-                                                        <td class="cart-trash text-center">
-                                                            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="product-thumbnail">
-                                                            <a href="#"><img src="images/cart/cart-table/3.jpg" alt=""></a>
-                                                        </td>
-                                                        <td class="cart-product-name">
-                                                            <a href="#"><h6><strong>Montria jastma</strong></h6></a>
-                                                            <p>Lorem ipsum dolor sit amet <br> consectetur adipiscing </p>
-                                                            <label>
-                                                                Size :
-                                                                <span> xl</span>
-                                                            </label>
-                                                        </td>
-                                                        <td class="cart-product-size text-center">
-                                                            <h6><strong>$155</strong></h6>
-                                                        </td>
-                                                        <td class="cart-product-price text-center">
-                                                            <span class="quantity-wanted-p pull-left">
-                                                                <span class="dec qtybutton">-</span>
-                                                                <input type="text" class="cart-plus-minus-box" value="2">
-                                                                <span class="inc qtybutton">+</span>    
-                                                            </span>
-                                                        </td>
-                                                        <td class="cart-product-total text-center">
-                                                            <h6><strong>$310</strong></h6>
-                                                        </td>
-                                                        <td class="cart-trash text-center">
-                                                            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                        </td>
-                                                    </tr>
+                                                   <?php }?>
                                                 </tbody>
                                             </table>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm-6">
+                                            <!-- <div class="col-sm-6">
                                                 <div class="cart-calculate">
                                                     <h6 class="cart-title text-uppercase mb-30"><strong>CALCULATE SHIPPING</strong></h6>
                                                     <select class="mr-25">
@@ -162,8 +116,8 @@
                                                     <input type="text">
                                                     <button class="cart-button">Apply Code</button>
                                                 </div>
-                                            </div>
-                                            <div class="col-sm-6">
+                                            </div> -->
+                                            <div class="col-sm-7">
                                                 <div class="cart-total clearfix">
                                                     <h6 class="cart-title text-uppercase mb-30"><strong>CART TOTAL</strong></h6>
                                                     <div class="table-content-total table-responsive mb-20">
@@ -172,19 +126,19 @@
                                                                 <tr class="cart-subtotal">
                                                                     <th>Subtotal</th>
                                                                     <td>
-                                                                        <h6 class="amount"><strong>$8450.00</strong></h6>
+                                                                        <h6 class="amount"><strong>RM {{Cart::subtotal()}}</strong></h6>
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="cart-subtotal">
                                                                     <th>Shipping</th>
                                                                     <td>
-                                                                        <h6 class="amount"><strong>$0.00</strong></h6>
+                                                                        <h6 class="amount"><strong>RM 0.00</strong></h6>
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="cart-grand-total">
                                                                     <th>Grand Total</th>
                                                                     <td>
-                                                                        <h5 class="amount"><strong>$845.00</strong></h5>
+                                                                        <h5 class="amount"><strong>RM {{Cart::total()}}</strong></h5>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -199,6 +153,7 @@
                                         </div>
                                     </form>
                                 </div>
+                                <br>
                                 <div role="tabpanel" class="tab-pane fade in" id="checkout">
                                     <div class="col-sm-6">
                                         <div class="checkbox-form">

@@ -23,8 +23,9 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
-        "gloudemans/shoppingcart": "master",
+        "bumbummen99/shoppingcart": "^2.8",
         "fideloper/proxy": "^4.0",
+        "gloudemans/shoppingcart": "master",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0"
     },

@@ -87,7 +87,7 @@
                                                 <option value="small">{{$product_by_detail->product_size}}</option>
                                             </select>
                                         </div>
-                                        <div class="show-label showing" name="qty">
+                                        <!-- <div class="show-label showing" name="qty">
                                             <label>Quantity : </label>
                                             <select>
                                                 <option selected="selected" value="position">1</option>
@@ -101,7 +101,7 @@
                                                 <option>8</option>
                                                 <option>9</option>
                                             </select>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                                 <ul class="pricing pricing-list">
@@ -113,6 +113,22 @@
 		                                	<form action="{{URL::to('/add-to-cart')}}" method="post">
                                 				{{ csrf_field() }}
 		                                    	<!-- <li><a href="{{URL::to('add-to-cart')}}"><i class="fa fa-shopping-cart"></i></a></li> -->
+                                              <div>
+                                                <label>Quantity : </label>
+                                                <select name="qty">
+                                                    <option selected="selected" value="position">0</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                    <option>9</option>
+                                                </select>
+                                              </div>
+                                              <br></br>
                                                 <input type="hidden" name="product_id" value="{{$product_by_detail->product_id}}">
 		                                    	<button style="Submit" class="btn btn-fefault cart"><i class="fa fa-shopping-cart"></i>Add Cart</button>
 		                                    </form>

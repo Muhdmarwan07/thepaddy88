@@ -51,7 +51,7 @@
                                             <li><a href="login.html">Login</a></li>
                                             <li><a href="my-account.html">My Account</a></li>
                                             <li><a href="wishlist.html">My Wishlist</a></li>
-                                            <li><a href="cart.html">My Cart</a></li>
+                                            <li><a href="{{URL::to('/show-cart')}}">My Cart</a></li>
                                             <li><a href="checkout.html">Checkout</a></li>
                                         </ul>
                                     </li>
@@ -133,7 +133,7 @@
                         </div>
                         <div class="col-md-2 col-sm-4 col-xs-12">
                             <div class="header-logo text-center">
-                                <a href="index.html"><img alt="" src="{{asset('frontend/images/logo.png')}}"></a>
+                                <a href="{{URL::to('/')}}"><img alt="" src="{{asset('frontend/images/logo.png')}}"></a>
                             </div>
                         </div>
                         <div class="col-md-offset-0 col-md-5 col-sm-offset-0 col-sm-4 col-xs-offset-3 col-xs-6">
@@ -172,7 +172,7 @@
                                         </div>
                                     </li>
                                     <li class="media">
-                                        <a href="#"><img alt="" src="{{asset('frontend/images/cart/3.jpg')}}"></a>
+                                        <a href="{{URL::to('/show-cart')}}"><img alt="" src="{{asset('frontend/images/cart/3.jpg')}}"></a>
                                         <div class="cart-item-wrapper">
                                             <a href="#">Sweat pant</a>
                                             <span class="quantity">
@@ -189,7 +189,7 @@
                                         <span class="total pull-right">RM 845</span>
                                     </li>
                                     <li class="media">
-                                        <a class="cart-btn" href="cart.html">VIEW CART</a>
+                                        <a class="cart-btn" href="{{URL::to('/show-cart')}}">VIEW CART</a>
                                         <a class="cart-btn" href="checkout.html">CHECKOUT</a>
                                     </li>
                                 </ul>                           
