@@ -65,7 +65,7 @@
                                                                       {{ csrf_field() }}  
                                                                     <input type="text" class="cart-quantity-input" name="quantity" value="{{$v_contents->qty}}">
                                                                     <input type="hidden" name="rowId" value="{{$v_contents->rowId}}">
-                                                                    <input type="submit" name="submit" value="Update" class="btn btn-sm btn-default">
+                                                                    <input type="submit" value="Update" class="btn btn-sm btn-default">
                                                                 </form>  
                                                             </div>
                                                         </td>
