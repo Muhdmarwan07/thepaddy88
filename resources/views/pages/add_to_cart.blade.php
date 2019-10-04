@@ -12,7 +12,7 @@
                                     <li><a data-toggle="pill" href="#checkout"><span>2</span> CHECKOUT</a></li>
                                     <li><a data-toggle="pill" href="#order"><span>3</span> ORDER COMPLETE</a></li>
                                 </ul>
-                            </div>                            
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -21,8 +21,8 @@
                                 <div role="tabpanel" class="tab-pane fade in active" id="cart">
                                     <form action="#">
                                         <div class="table-content table-responsive text-uppercase mb-50">
-                                            
-                                            
+
+
                                             <table>
                                                 <thead>
                                                     <tr>
@@ -44,7 +44,7 @@
                                                         </td>
                                                         <td class="cart-product-name">
                                                             <a href="#"><h6><strong>{{$row->name}}</strong></h6></a>
-                                                            
+
                                                             <label>
                                                                 Size :
                                                                 <span> L</span>
@@ -55,12 +55,12 @@
                                                         </td>
                                                         <td class="cart-product-price text-center">
                                                             <div class="cart-quantity-button">
-                                                                
-                                                                      {{ csrf_field() }}  
+
+                                                                      {{ csrf_field() }}
                                                                     <input type="text" class="cart-quantity-input" name="qty" value="{{$row->qty}}">
                                                                     <input type="hidden" name="rowId" value="{{$row->rowId}}">
                                                                     <input type="submit" value="Update" class="btn btn-sm btn-default">
-                                                                  
+
                                                             </div>
                                                         </td>
                                                         <td class="cart-product-total text-center">
@@ -76,6 +76,7 @@
                                                     </form>
                                                    <?php endforeach;?>
                                                 </tbody>
+                                                <p><?php echo Cart::count() ?></p>
                                             </table>
                                         </div>
                                         <div class="row">
@@ -143,11 +144,11 @@
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
-                                                        </table>                                    
+                                                        </table>
                                                     </div>
                                                     <div class="update-checkout pull-right">
                                                         <a href="#">Update</a>
-                                                        <a data-toggle="pill" href="#checkout">CHECKOUT</a>                     
+                                                        <a data-toggle="pill" href="#checkout">CHECKOUT</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -175,7 +176,7 @@
                                                             <option>Canada</option>
                                                             <option>Pakistan</option>
                                                         </select>
-                                                    </div>                                                
+                                                    </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="shop-select">
@@ -184,7 +185,7 @@
                                                             <span class="required">*</span>
                                                         </label>
                                                         <input type="text" placeholder="First name">
-                                                    </div>                                                
+                                                    </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="shop-select">
@@ -193,7 +194,7 @@
                                                             <span class="required">*</span>
                                                         </label>
                                                         <input type="text" placeholder="Last name">
-                                                    </div>                                                
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="shop-select mtb-30">
@@ -201,7 +202,7 @@
                                                             Company name
                                                         </label>
                                                         <input type="text" placeholder="Company name">
-                                                    </div>                                                
+                                                    </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="shop-select">
@@ -210,7 +211,7 @@
                                                             <span class="required">*</span>
                                                         </label>
                                                         <input type="email" placeholder="Email address">
-                                                    </div>                                                
+                                                    </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="shop-select">
@@ -219,7 +220,7 @@
                                                             <span class="required">*</span>
                                                         </label>
                                                         <input type="text" placeholder="Phone no.">
-                                                    </div>                                                
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="shop-select address-input mtb-30">
@@ -229,7 +230,7 @@
                                                         </label>
                                                         <input type="text" placeholder="Address line 1">
                                                         <input type="text" placeholder="Address line 2">
-                                                    </div>                                                
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="shop-select mb-30">
@@ -238,7 +239,7 @@
                                                             <span class="required">*</span>
                                                         </label>
                                                         <input type="text" placeholder="Address line 1">
-                                                    </div>                                                
+                                                    </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="shop-select">
@@ -247,7 +248,7 @@
                                                             <span class="required">*</span>
                                                         </label>
                                                         <input type="email" placeholder="State">
-                                                    </div>                                                
+                                                    </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="shop-select">
@@ -256,7 +257,7 @@
                                                             <span class="required">*</span>
                                                         </label>
                                                         <input type="text" placeholder="Zip code">
-                                                    </div>                                                
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="shop-radio mt-40 pr-50">
@@ -264,13 +265,13 @@
                                                             <input type="radio">
                                                             Create an Account?
                                                         </label>
-                                                    </div> 
+                                                    </div>
                                                     <div class="shop-radio mt-40">
                                                         <label>
                                                             <input type="radio">
                                                             Ship to Different Address
                                                         </label>
-                                                    </div>                                                
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -299,7 +300,7 @@
                                                             </tr>
                                                             <tr class="check-product-list">
                                                                 <td class="singel-check">
-                                                                    Letria postma 
+                                                                    Letria postma
                                                                     <span>X 01</span>
                                                                 </td>
                                                                 <td class="singel-check pull-right">
@@ -411,4 +412,4 @@
 
 
 
-@endsection 
+@endsection
