@@ -36,7 +36,7 @@
                                                 </thead>
                                                 <tbody>
 
-                                                    <?php foreach (Cart::content()as $row) :?>
+                                                    <?php foreach (Cart::content() as $row) :?>
                                                     <form action="{{URL('/update-cart')}}" method="post">
                                                     <tr>
                                                         <td class="product-thumbnail">
