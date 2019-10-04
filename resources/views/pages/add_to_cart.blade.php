@@ -60,17 +60,23 @@
                                                             <h6><strong>RM {{$v_contents->price}}</strong></h6>
                                                         </td>
                                                         <td class="cart-product-price text-center">
-                                                            <span class="quantity-wanted-p pull-left">
-                                                                <span class="dec qtybutton">-</span>
-                                                                <input type="text" class="cart-plus-minus-box" value="{{$v_contents->qty}}">
-                                                                <span class="inc qtybutton">+</span>    
-                                                            </span>
+                                                            <div class="cart-quantity-button">
+                                                                <form action="{{URL('/update-cart')}}" method="post">
+                                                                      {{ csrf_field() }}  
+                                                                    <input type="text" class="cart-quantity-input" name="quantity" value="{{$v_contents->qty}}">
+                                                                    <input type="hidden" name="rowId" value="{{$v_contents->rowId}}">
+                                                                    <input type="submit" name="submit" value="Update" class="btn btn-sm btn-default">
+                                                                </form>  
+                                                            </div>
                                                         </td>
                                                         <td class="cart-product-total text-center">
                                                             <h6><strong>RM {{$v_contents->total}}</strong></h6>
                                                         </td>
-                                                        <td class="cart-trash text-center">
-                                                            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+
+                                                        <td class="cart_delete">
+
+                                                            <a href="{{URL::to('/delete-to-cart/'.$v_contents->rowId)}}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+
                                                         </td>
                                                     </tr>
                                                    <?php }?>

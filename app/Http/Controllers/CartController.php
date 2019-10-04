@@ -38,5 +38,21 @@ class CartController extends Controller
         return view('layout')
             ->with('pages.add_to_cart',$manage_published_category);
     }
+
+    public function delete_to_cart($rowId)
+    {
+        Cart::update($rowId,0);
+        return Redirect::to('/show-cart');
+    }
+
+    public function update_cart(Request $request)
+    {
+        $qty=$request->qty;
+        $rowId=$request->rowId;
+
+        echo $qty;
+        echo "<br>";
+        echo $rowId;
+    }
 }
 
