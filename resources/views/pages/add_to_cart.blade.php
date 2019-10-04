@@ -21,14 +21,8 @@
                                 <div role="tabpanel" class="tab-pane fade in active" id="cart">
                                     <form action="#">
                                         <div class="table-content table-responsive text-uppercase mb-50">
-                                            <?php
-
-                                                    $contents=Cart::content();
-                                                    // echo "<pre>";
-                                                    //     print_r($contents);
-                                                    // echo "</pre>";
-
-                                            ?>
+                                            
+                                            
                                             <table>
                                                 <thead>
                                                     <tr>
@@ -42,14 +36,14 @@
                                                 </thead>
                                                 <tbody>
 
-                                                    <?php foreach ($contents as $v_contents) {?>
-
+                                                    <?php foreach (Cart::content()as $row) :?>
+                                                    <form action="{{URL('/update-cart')}}" method="post">
                                                     <tr>
                                                         <td class="product-thumbnail">
-                                                            <a href="#"><img src="{{URL::to($v_contents->options->image)}}" height="150px" width="150px" alt=""></a>
+                                                            <a href="#"><img src="{{URL::to($row->options->image)}}" height="150px" width="150px" alt=""></a>
                                                         </td>
                                                         <td class="cart-product-name">
-                                                            <a href="#"><h6><strong>{{$v_contents->name}}</strong></h6></a>
+                                                            <a href="#"><h6><strong>{{$row->name}}</strong></h6></a>
                                                             
                                                             <label>
                                                                 Size :
@@ -57,29 +51,30 @@
                                                             </label>
                                                         </td>
                                                         <td class="cart-product-size text-center">
-                                                            <h6><strong>RM {{$v_contents->price}}</strong></h6>
+                                                            <h6><strong>RM {{$row->price}}</strong></h6>
                                                         </td>
                                                         <td class="cart-product-price text-center">
                                                             <div class="cart-quantity-button">
-                                                                <form action="{{URL('/update-cart')}}" method="post">
+                                                                
                                                                       {{ csrf_field() }}  
-                                                                    <input type="text" class="cart-quantity-input" name="quantity" value="{{$v_contents->qty}}">
-                                                                    <input type="hidden" name="rowId" value="{{$v_contents->rowId}}">
+                                                                    <input type="text" class="cart-quantity-input" name="qty" value="{{$row->qty}}">
+                                                                    <input type="hidden" name="rowId" value="{{$row->rowId}}">
                                                                     <input type="submit" value="Update" class="btn btn-sm btn-default">
-                                                                </form>  
+                                                                  
                                                             </div>
                                                         </td>
                                                         <td class="cart-product-total text-center">
-                                                            <h6><strong>RM {{$v_contents->total}}</strong></h6>
+                                                            <h6><strong>RM {{$row->total}}</strong></h6>
                                                         </td>
 
                                                         <td class="cart_delete">
 
-                                                            <a href="{{URL::to('/delete-to-cart/'.$v_contents->rowId)}}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                            <a href="{{URL::to('/delete-to-cart/'.$row->rowId)}}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 
                                                         </td>
                                                     </tr>
-                                                   <?php }?>
+                                                    </form>
+                                                   <?php endforeach;?>
                                                 </tbody>
                                             </table>
                                         </div>
