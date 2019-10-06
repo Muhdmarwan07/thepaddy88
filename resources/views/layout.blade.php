@@ -48,6 +48,7 @@
                                             <li><a href="wishlist.html">My Wishlist</a></li>
                                             <li><a href="{{URL::to('/show-cart')}}">My Cart</a></li>
                                             <li><a href="{{URL::to('/login-check')}}">Checkout</a></li>
+                                             
                                         </ul>
                                     </li>
                                 </ul>
