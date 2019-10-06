@@ -47,33 +47,7 @@
                         </div>
                     </div>
                 </div>                      
-            </div>
-            <!-- Slider Caption 2 -->
-            <!-- <div id="htmlcaption2" class="nivo-html-caption slider-caption-2">
-                <div class="slider-progress"></div> 
-                <div class="container slider-height">
-                    <div class="row slider-height">
-                        <div class="col-xs-offset-5 col-xs-7 slider-height">
-                            <div class="slide-text">
-                                <div class="middle-text">
-                                    <div class="cap-dec text-black text-uppercase wow fadeInDown" data-wow-duration="0.9s" data-wow-delay="0s">
-                                        <h3>EXCLUSIVE COLLETIONS</h3>
-                                    </div>  
-                                    <div class="cap-title text-black text-uppercase wow fadeInDown" data-wow-duration="1.5s" data-wow-delay="0.5s">
-                                        <h2>OVER COATS FOR MAN</h2>
-                                    </div>  
-                                    <div class="cap-para wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s">
-                                        <p>saya anak malaysia</p>
-                                    </div>
-                                    <div class="cap-shop wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="1.5s">
-                                        <a href="#">Shop now</a>
-                                    </div>  
-                                </div>  
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+            </div>  
         </section>
         <!-- End of slider area -->
         <!-- Start page content -->
@@ -225,11 +199,6 @@
                                     </ul>   
                                     <div class="product-text pt-15">
                                         <ul class="pull-left list-inline ratings">
-                                            <!-- <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li>
-                                            <li><i class="rated fa fa-star"></i></li> -->
                                             <li>{{$v_published_product->manufacture_name}}</li>
                                         </ul>
                                         <ul class="pricing list-inline pull-right">
@@ -249,140 +218,6 @@
 
                 </div>
             </div>
-            <!-- Start Featured product Area -->
-            <!-- Start Offer  Area -->
-            <!-- <div class="offer-area">
-                <div class="offer-banner banner-style-1 pull-left">
-                    <a href="#">
-                        <img src="{{asset('frontend/images/offer/1.jpg')}}" alt="">
-                    </a>
-                    <div class="offer-banner-text text-uppercase text-white">
-                        <h2>coats</h2>
-                        <h3>FOR <span class="text-defualt"> MEN</span></h3>
-                    </div>
-                </div>
-                <div class="offer-inner top-right-sale ">
-                    <h3>BIG SALE </h3>
-                    <h1>OFFER</h1>
-                    <h2>35% <span>off</span></h2>
-                    <span class="bottom-border-style"></span>
-                </div>
-                <div class="offer-banner banner-style-2 pull-right">
-                    <a href="#">
-                        <img alt="" src="{{asset('frontend/images/offer/2.jpg')}}">
-                    </a>
-                    <div class="offer-banner-text-2 text-uppercase">
-                        <h2 class="text-defualt">WINTER</h2>
-                        <h3 class="medium text-white">COLLECTION</h3>
-                        <h3 class="blod text-white">FOR <span class="text-defualt">WOMEN</span></h3>
-                    </div>
-                </div>
-            </div> -->
-            <!-- End Offer Area -->
-            <!-- Start Upcomming Area -->
-            <!-- <div class="up-comming-area section-padding">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-up-comming ash-bg">
-                                <div class="product-cuntdown pull-left">
-                                    <div class="timer p-20">
-                                        <div data-countdown="2017/06/01"></div>
-                                    </div>                                    
-                                </div> 
-                                <div class="product-inner pull-right">
-                                    <a href="#">
-                                        <div class="product-img b-img">
-                                            <img src="{{asset('frontend/images/cuntdown/1.jpg')}}" alt="">
-                                        </div>
-                                    </a>
-                                    <ul class="quick-veiw text-center">
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    </ul>   
-                                </div>
-                                <div class="clear"></div>
-                                <div class="product-text white-bg pt-15">
-                                    <ul class="pricing list-inline pull-right">
-                                        <li class="text-defualt c-price">$130</li>
-                                        <li class="text-right p-price">$150</li>
-                                    </ul>
-                                    <h6 class="product-name">
-                                        <a href="#" title="Eletria ostma">Tletria postma</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-up-comming ash-bg">
-                                <div class="product-cuntdown pull-left">
-                                    <div class="timer p-20">
-                                        <div data-countdown="2018/06/01"></div>
-                                    </div>                                    
-                                </div> 
-                                <div class="product-inner pull-right">
-                                    <a href="#">
-                                        <div class="product-img b-img">
-                                            <img src="{{asset('frontend/images/cuntdown/2.jpg')}}" alt="">
-                                        </div>
-                                    </a>
-                                    <ul class="quick-veiw text-center">
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    </ul>   
-                                </div>
-                                <div class="clear"></div>
-                                <div class="product-text white-bg pt-15">
-                                    <ul class="pricing list-inline pull-right">
-                                        <li class="text-defualt c-price">$150</li>
-                                        <li class="text-right p-price">$180</li>
-                                    </ul>
-                                    <h6 class="product-name">
-                                        <a href="#" title="Restalomen Santiloma">Restalomen Santiloma</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 hidden-sm">
-                            <div class="single-up-comming ash-bg m-0">
-                                <div class="product-cuntdown pull-left">
-                                    <div class="timer p-20">
-                                        <div data-countdown="2018/06/01"></div>
-                                    </div>                                    
-                                </div> 
-                                <div class="product-inner pull-right">
-                                    <a href="#">
-                                        <div class="product-img b-img">
-                                            <img src="{{asset('frontend/images/cuntdown/3.jpg')}}" alt="">
-                                        </div>
-                                    </a>
-                                    <ul class="quick-veiw text-center">
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    </ul>   
-                                </div>
-                                <div class="clear"></div>
-                                <div class="product-text white-bg pt-15">
-                                    <ul class="pricing list-inline pull-right">
-                                        <li class="text-defualt c-price">$180</li>
-                                        <li class="text-right p-price">$200</li>
-                                    </ul>
-                                    <h6 class="product-name">
-                                        <a href="#" title="Eletriaostma Santiloma">Eletriaostma Santiloma</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- End Upcomming Area -->
             <!-- Start New Arrival Area  -->
             <div class="new-arrival-area">
                 <div class="container">

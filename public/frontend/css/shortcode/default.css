@@ -607,7 +607,7 @@ input {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 select {
-    width: 10%;
+    width: 30%;
     background: #eceff8;
     border: 2px solid #eceff8;
     height: 30px;

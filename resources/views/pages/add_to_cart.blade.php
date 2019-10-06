@@ -147,8 +147,8 @@
                                                         </table>
                                                     </div>
                                                     <div class="update-checkout pull-right">
-                                                        <a href="#">Update</a>
-                                                        <a data-toggle="pill" href="#checkout">CHECKOUT</a>
+                                                        <a href="#">UPDATE</a>
+                                                        <a  href="{{URL::to('/login-check')}}   ">CHECKOUT</a>
                                                     </div>
                                                 </div>
                                             </div>

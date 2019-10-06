@@ -32,10 +32,6 @@
 </head>
 
 <body>
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->  
-
     <!-- Body main wrapper start -->
     <div class="wrapper">
         <!-- Start of header area -->
@@ -48,11 +44,10 @@
                                 <ul class="header-top-style text-capitalize mr-25">
                                     <li><a href="#"><span class="mr-10">My Account</span><i class="fa fa-angle-down"></i></a>
                                         <ul class="ul-style my-account box-shadow white-bg">
-                                            <li><a href="login.html">Login</a></li>
                                             <li><a href="my-account.html">My Account</a></li>
                                             <li><a href="wishlist.html">My Wishlist</a></li>
                                             <li><a href="{{URL::to('/show-cart')}}">My Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
+                                            <li><a href="{{URL::to('/login-check')}}">Checkout</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -83,30 +78,18 @@
                             <div class="header-top-middle">
                                 <ul class="header-top-style">
                                     <li>
-                                        <a href="login.html">
-                                            <span>Login or Register</span>
-                                        </a>
-                                        <div class="ul-style login-register box-shadow white-bg p-30">
-                                            <h6 class="mb-20"><strong>Login</strong></h6>
-                                            <input type="text" name="s" class="pl-30" placeholder="user name" id="user-name">
-                                            <input type="password" name="d" class="pl-30" placeholder="Password" id="password">
-                                            <label class="remmember">
-                                                <input type="checkbox">
-                                                remember me
-                                            </label>
-                                            <button value="submit" class="btn-default">Login</button>
-                                            <h6 class="mb-20"><strong>or Register</strong></h6>
-                                            <input type="email" name="s" placeholder="Your mail" id="user-email">
-                                            <input type="password" name="d" placeholder="Password" id="c-password">
-                                            <button value="submit" class="btn-default">Login</button>
-                                            <h6 class="mb-20"><strong>or register to</strong></h6>
-                                            <ul class="login-social">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            </ul>
-                                        </div>
+                                        <?php
+                                            $customer_id=Session::get('customer_id');
+                                        ?>
+
+                                       <?php if($customer_id !=NULL){?>
+                                            <a href="login.html"><i class="fa fa-lock"></i>
+                                                <span>Logout</span>
+                                            </a>
+                                        <?php }else{?>
+                                           <a href="login.html"><i class="fa fa-lock"></i>
+                                                <span>Login</span>
+                                            </a> <?php } ?>
                                     </li>
                                 </ul>
                             </div>
@@ -190,7 +173,7 @@
                                     </li>
                                     <li class="media">
                                         <a class="cart-btn" href="{{URL::to('/show-cart')}}">VIEW CART</a>
-                                        <a class="cart-btn" href="checkout.html">CHECKOUT</a>
+                                        <a class="cart-btn" href="{{URL::to('/login-check')}}">CHECKOUT</a>
                                     </li>
                                 </ul>                           
                             </div>
@@ -283,11 +266,6 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul>
-                                        <li><a href="index.html">Home</a>
-                                            <ul>
-                                                <li><a href="index-2.html">Home Version 2</a></li>
-                                            </ul>
-                                        </li>
                                         <li><a href="about.html">about</a></li>
                                         <li><a href="shop.html">Man</a>
                                             <ul>
