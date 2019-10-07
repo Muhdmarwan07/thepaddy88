@@ -47,7 +47,17 @@
                                             <li><a href="my-account.html">My Account</a></li>
                                             <li><a href="wishlist.html">My Wishlist</a></li>
                                             <li><a href="{{URL::to('/show-cart')}}">My Cart</a></li>
-                                            <li><a href="{{URL::to('/login-check')}}">Checkout</a></li>
+                                            
+                                            <?php
+                                            $customer_id=Session::get('customer_id');
+                                             ?>   
+                                             <?php if($customer_id !=NULL){?>
+                                                    <li><a href="{{URL::to('/checkout')}}">Checkout</a></li>
+                                            <?php }else{?>
+                                                    <li><a href="{{URL::to('/login-check')}}">Checkout</a></li>
+                                            <?php } ?>
+
+                                            
                                              
                                         </ul>
                                     </li>

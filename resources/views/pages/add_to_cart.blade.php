@@ -148,15 +148,25 @@
                                                     </div>
                                                     <div class="update-checkout pull-right">
                                                         <a href="#">UPDATE</a>
-                                                        <a  href="{{URL::to('/login-check')}}   ">CHECKOUT</a>
-                                                    </div>
+
+                                                         <?php
+                                                             $customer_id=Session::get('customer_id');
+                                                          ?> 
+                                                         <?php if($customer_id !=NULL){?>
+                                                                 <!-- <a data-toggle="pill" href="{{URL::to('/checkout')}}">CHECKOUT</a> -->
+                                                                 <a href="{{URL::to('/checkout')}}">CHECKOUT</a>
+                                                         <?php }else{?>
+                                                            <!-- <a data-toggle="pill" href="{{URL::to('/login-check')}}">CHECKOUT</a> -->
+                                                            <a href="{{URL::to('/login-check')}}">CHECKOUT</a>
+                                                         <?php } ?>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                                 <br>
-                                <div role="tabpanel" class="tab-pane fade in" id="checkout">
+                                <!-- <div role="tabpanel" class="tab-pane fade in" id="checkout">
                                     <div class="col-sm-6">
                                         <div class="checkbox-form">
                                             <h5 class="text-uppercase mb-40"><strong>BILING ADDRESS</strong></h5>
@@ -402,7 +412,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

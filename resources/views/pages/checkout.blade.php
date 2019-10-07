@@ -18,25 +18,10 @@
 				 <div role="tabpanel" class="tab-pane fade in active" id="checkout">
                                 <div class="col-sm-6">
                                     <div class="checkbox-form">
-                                        <h5 class="text-uppercase mb-40"><strong>BILING ADDRESS</strong></h5>
+                                        <h5 class="text-uppercase mb-40"><strong>SHIPPING DETAIL</strong></h5>
                                         <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="shop-select mb-30">
-                                                    <label>
-                                                        Country
-                                                        <span class="required">*</span>
-                                                    </label>
-                                                    <select class="">
-                                                        <option>Country</option>
-                                                        <option>Bangladesh</option>
-                                                        <option>India</option>
-                                                        <option>Austrolia</option>
-                                                        <option>Spain</option>
-                                                        <option>Canada</option>
-                                                        <option>Pakistan</option>
-                                                    </select>
-                                                </div>                                                
-                                            </div>
+                                          <form action="{{url('/save-shipping-details')}}" method="post">
+                                          	{{csrf_field()}}
                                             <div class="col-sm-6">
                                                 <div class="shop-select">
                                                     <label>
@@ -109,6 +94,7 @@
                                                     </label>
                                                 </div>                                                
                                             </div>
+                                          </form>
                                         </div>
                                     </div>
                                 </div>
