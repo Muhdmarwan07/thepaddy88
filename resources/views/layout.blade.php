@@ -94,11 +94,11 @@
                                         ?>
 
                                        <?php if($customer_id !=NULL){?>
-                                            <a href="login.html"><i class="fa fa-lock"></i>
+                                            <a href="{{URL::to('/customer-logout')}}"><i class="fa fa-lock"></i>
                                                 <span>Logout</span>
                                             </a>
                                         <?php }else{?>
-                                           <a href="login.html"><i class="fa fa-lock"></i>
+                                           <a href="{{URL::to('/login-check')}}"><i class="fa fa-lock"></i>
                                                 <span>Login</span>
                                             </a> <?php } ?>
                                     </li>
@@ -184,7 +184,17 @@
                                     </li>
                                     <li class="media">
                                         <a class="cart-btn" href="{{URL::to('/show-cart')}}">VIEW CART</a>
-                                        <a class="cart-btn" href="{{URL::to('/login-check')}}">CHECKOUT</a>
+
+                                        <?php
+                                            $customer_id=Session::get('customer_id');
+                                             ?>   
+                                             <?php if($customer_id !=NULL){?>
+                                                    <a class="cart-btn" href="{{URL::to('/checkout')}}">CHECKOUT</a>
+                                            <?php }else{?>
+                                                    <a class="cart-btn" href="{{URL::to('/login-check')}}">CHECKOUT</a>
+                                            <?php } ?>
+
+                                        <!-- <a class="cart-btn" href="{{URL::to('/login-check')}}">CHECKOUT</a> -->
                                     </li>
                                 </ul>                           
                             </div>

@@ -6,7 +6,8 @@
                         <div class="col-md-6">
                             <div class="registered-customers">
                                 <h4 class="text-uppercase mb-20"><strong>REGISTERED CUSTOMERS</strong></h4><BR>
-                                <form action="#" method="post">
+                                <form action="{{URL('/customer-login')}}" method="post">
+                                    {{ csrf_field() }}
                                     <div class="login-account p-30 box-shadow">
                                         <p>If you have an account with us, Please log in.</p>
                                         <input type="text" placeholder="Email Address" required="" name="customer_email">

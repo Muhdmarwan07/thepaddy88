@@ -31,7 +31,11 @@ Route::post('/customer_registration','CheckoutController@customer_registration')
 Route::get('/checkout','CheckoutController@checkout');
 Route::post('/save-shipping-details','CheckoutController@save_shipping_details');
 
+//customer login & logout
+Route::post('/customer-login','CheckoutController@customer_login');
+Route::get('/customer-logout','CheckoutController@customer_logout');
 
+Route::get('/payment','CheckoutController@payment');
 
 
 

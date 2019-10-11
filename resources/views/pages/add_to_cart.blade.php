@@ -21,8 +21,6 @@
                                 <div role="tabpanel" class="tab-pane fade in active" id="cart">
                                     <form action="#">
                                         <div class="table-content table-responsive text-uppercase mb-50">
-
-
                                             <table>
                                                 <thead>
                                                     <tr>
@@ -76,7 +74,7 @@
                                                     </form>
                                                    <?php endforeach;?>
                                                 </tbody>
-                                                <p><?php echo Cart::count() ?></p>
+                                                <p></p>
                                             </table>
                                         </div>
                                         <div class="row">
