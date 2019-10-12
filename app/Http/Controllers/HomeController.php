@@ -76,6 +76,22 @@ class HomeController extends Controller
             ->with('pages.product_detail',$manage_product_by_detail);
     }
 
+    public function shop()
+    {
+        $all_published_product=DB::table('tbl_products')
+                        ->join('tbl_category','tbl_products.category_id','=','tbl_category.category_id')
+                        ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')
+                        ->select('tbl_products.*','tbl_category.category_name','tbl_manufacture.manufacture_name')
+                        ->where('tbl_products.publication_status',1)
+                        ->limit(9)
+                        ->get();
+
+        $manage_published_product=view('pages.shop')
+            ->with('all_published_product',$all_published_product);
+        return view('layout')
+            ->with('pages.shop',$manage_published_product);
+    }
+
 
 
 }

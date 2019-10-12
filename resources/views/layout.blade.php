@@ -202,7 +202,7 @@
                         <nav class="primary-menu">
                             <ul class="header-top-style text-uppercase">
                                 <li>
-                                    <a href="#">home</a>
+                                    <a href="{{URL::to('/')}}">home</a>
                                 </li>
                                 <li><a href="about.html">about</a></li>
                                 <li class="mega-container">
@@ -251,7 +251,7 @@
                                 </li>
                                 <li>
                                     <a href="#">Pages</a>
-                                    <!-- <ul class="ul-style dropdown box-shadow white-bg forge-list text-capitalize">
+                                    <ul class="ul-style dropdown box-shadow white-bg forge-list text-capitalize">
                                         <li><a href="404.html">404 Page</a></li>
                                         <li><a href="about.html">About</a></li>
                                         <li><a href="cart.html">Cart</a></li>
@@ -263,9 +263,9 @@
                                         <li><a href="login.html">Login</a></li>
                                         <li><a href="product-details.html">Product Details</a></li>
                                         <li><a href="wishlist.html">Wishlist</a></li>
-                                    </ul> -->
+                                    </ul>
                                 </li>
-                                <li><a href="shop.html">shop</a></li>
+                                <li><a href="{{URL::to('/shop')}}">shop</a></li>
                                 <!-- <li>
                                     <a href="#">blog</a>
                                     <ul class="ul-style dropdown box-shadow white-bg forge-list text-capitalize">
@@ -273,7 +273,7 @@
                                         <li><a href="blog-details.html">Single Blog</a></li>
                                     </ul>
                                 </li> -->
-                                <li><a href="contact.html">contact</a></li>
+                                <!-- <li><a href="contact.html">contact</a></li> -->
                             </ul>
                         </nav>
                     </div>

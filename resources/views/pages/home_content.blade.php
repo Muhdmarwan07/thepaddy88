@@ -10,7 +10,7 @@
                                     ->where('publication_status',1)
                                      ->get();
                      foreach ($all_published_slider as $v_slider) {?>
-                <img src="{{URL::to($v_slider->slider_image)}}"alt="main slider" title="#htmlcaption1"/>
+                <img src="{{URL::to($v_slider->slider_image)}}" alt="main slider" title="#htmlcaption1"/>
                 <!-- <img src="{{asset('frontend/images/slider/3.jpg')}}" alt="main slider" title="#htmlcaption2"/> -->
                 <?php }?>
             </div>
@@ -29,7 +29,7 @@
                                             ->get();
                                          foreach ($all_published_slider as $v_slider) {?>
 
-                                        <h3>{{$v_slider->slider_title}}</h3>
+                                        <!-- <h3>{{$v_slider->slider_title}}</h3> -->
 
                                         <?php }?>
                                     </div>  
@@ -40,7 +40,7 @@
                                         <p>saya anak malaysia </p>
                                     </div> -->
                                     <div class="cap-shop wow text-uppercase fadeInDown" data-wow-duration="2.5s" data-wow-delay="1.5s">
-                                        <a href="#">Shop now</a>
+                                        <<!-- a href="#">Shop now</a> -->
                                     </div>  
                                 </div>  
                             </div>
@@ -269,7 +269,9 @@
             <br>
             <div class="col-md-12">
                 <div class="shop-select mb-10">
+                    <a href="{{URL::to('/shop')}}">
                      <center><input type="submit" class="btn btn-warning" value="More"></center>
+                    </a>
                  </div>                                                
             </div>
             <br>
