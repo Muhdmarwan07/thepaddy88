@@ -91,13 +91,12 @@ Route::post ( '/payment', function (Request $request)
 	\Stripe\Stripe::setApiKey ( 'sk_test_9EjIb0s1ijfAQMsI8bEZctfY00fQ89Csk2' );
 	try {
 			\Stripe\Charge::create ( array (
-<<<<<<< HEAD
+
 				"amount" => 300 * 100,
-				"currency" => "myr",
-=======
+				"currency" => "usd",
+
 				"amount" => $request->input('amount'),
 				"currency" => "usd",
->>>>>>> 4d95d207561048b181ceaab8c912d64b562ab63f
 				"source" => $request->input ( 'stripeToken' ), // obtained with Stripe.js
 				"description" => "Test payment."
 			) );

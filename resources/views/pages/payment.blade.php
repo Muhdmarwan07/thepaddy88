@@ -150,12 +150,12 @@
 													<div class='form-row'>
 														<div class='col-md-12'>
 															<div class='form-control total btn btn-info'>
-<<<<<<< HEAD
+
 																Total: <span class='amount'>RM <?php echo Cart::total(); ?></span>
-=======
-                                                                Total: <span class='amount'>RM <?php echo Cart::total() ?></span>
-                                                                <input type="hidden" name="amount" value="<?php echo Cart::total() ?>">
->>>>>>> 4d95d207561048b181ceaab8c912d64b562ab63f
+
+                                                                Total: <span class='amount'>RM <?php echo Cart::total(); ?></span>
+                                                                <input type="hidden" name="amount" value="<?php echo Cart::total(); ?>">
+
 															</div>
 														</div>
 													</div>
