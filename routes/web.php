@@ -80,3 +80,24 @@ Route::get('/all-slider','SliderController@all_slider');
 Route::get('/unactive_slider/{slider_id}','SliderController@unactive_slider');
 Route::get('/active_slider/{slider_id}','SliderController@active_slider');
 Route::get('/delete-slider/{slider_id}','SliderController@delete_slider');
+
+//stripe payment
+Route::post ( '/payment', function (Request $request) 
+{
+	\Stripe\Stripe::setApiKey ( 'sk_test_yourSecretkey' );
+	try {
+			\Stripe\Charge::create ( array (
+				"amount" => 300 * 100,
+				"currency" => "usd",
+				"source" => $request->input ( 'stripeToken' ), // obtained with Stripe.js
+				"description" => "Test payment." 
+			) );
+			Session::flash ( 'success-message', 'Payment done successfully !' );
+			return Redirect::back ();
+		}
+	 catch ( \Exception $e ) 
+	{
+		Session::flash ( 'fail-message', "Error! Please Try again." );
+		return Redirect::back ();
+	}
+});

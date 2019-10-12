@@ -78,45 +78,6 @@
                                             </table>
                                         </div>
                                         <div class="row">
-                                            <!-- <div class="col-sm-6">
-                                                <div class="cart-calculate">
-                                                    <h6 class="cart-title text-uppercase mb-30"><strong>CALCULATE SHIPPING</strong></h6>
-                                                    <select class="mr-25">
-                                                        <option>Country</option>
-                                                        <option>Bangladesh</option>
-                                                        <option>India</option>
-                                                        <option>Austrolia</option>
-                                                        <option>Spain</option>
-                                                        <option>Canada</option>
-                                                        <option>Pakistan</option>
-                                                    </select>
-                                                    <select>
-                                                        <option>State</option>
-                                                        <option>Dhaka</option>
-                                                        <option>Magura</option>
-                                                        <option>Manikgonge</option>
-                                                        <option>Kushtia</option>
-                                                        <option>Khulna</option>
-                                                        <option>Padna</option>
-                                                    </select>
-                                                    <select class="mr-25">
-                                                        <option>Postcode/Zip</option>
-                                                        <option>1200</option>
-                                                        <option>1201</option>
-                                                        <option>1202</option>
-                                                        <option>1203</option>
-                                                        <option>1204</option>
-                                                        <option>1205</option>
-                                                        <option>1206</option>
-                                                    </select>
-                                                    <button class="cart-button">Estimate</button>
-                                                </div>
-                                                <div class="cart-discount">
-                                                    <h6 class="cart-title text-uppercase mb-30"><strong>DISCOUNT COUPON CODE</strong></h6>
-                                                    <input type="text">
-                                                    <button class="cart-button">Apply Code</button>
-                                                </div>
-                                            </div> -->
                                             <div class="col-sm-7">
                                                 <div class="cart-total clearfix">
                                                     <h6 class="cart-title text-uppercase mb-30"><strong>CART TOTAL</strong></h6>
@@ -151,10 +112,8 @@
                                                              $customer_id=Session::get('customer_id');
                                                           ?> 
                                                          <?php if($customer_id !=NULL){?>
-                                                                 <!-- <a data-toggle="pill" href="{{URL::to('/checkout')}}">CHECKOUT</a> -->
                                                                  <a href="{{URL::to('/checkout')}}">CHECKOUT</a>
                                                          <?php }else{?>
-                                                            <!-- <a data-toggle="pill" href="{{URL::to('/login-check')}}">CHECKOUT</a> -->
                                                             <a href="{{URL::to('/login-check')}}">CHECKOUT</a>
                                                          <?php } ?>
                                                     
