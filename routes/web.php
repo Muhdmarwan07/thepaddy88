@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 //frontend site.................................................................
 Route::get('/', 'HomeController@index');
 
@@ -83,9 +85,10 @@ Route::get('/active_slider/{slider_id}','SliderController@active_slider');
 Route::get('/delete-slider/{slider_id}','SliderController@delete_slider');
 
 //stripe payment
+use Illuminate\Http\Request;
 Route::post ( '/payment', function (Request $request) 
 {
-	\Stripe\Stripe::setApiKey ( 'sk_test_yourSecretkey' );
+	\Stripe\Stripe::setApiKey ( 'sk_test_9EjIb0s1ijfAQMsI8bEZctfY00fQ89Csk2' );
 	try {
 			\Stripe\Charge::create ( array (
 				"amount" => 300 * 100,

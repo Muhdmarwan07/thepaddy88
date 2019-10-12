@@ -89,8 +89,4 @@
             </div>
             <!-- End Of New Arrival Area  -->  
 
-
-
-            
-
 @endsection
