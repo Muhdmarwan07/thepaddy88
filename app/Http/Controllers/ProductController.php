@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use Str;
 
 session_start();
-class ProductController extends Controller
+class   ProductController extends Controller
 {
     public function index()
     {

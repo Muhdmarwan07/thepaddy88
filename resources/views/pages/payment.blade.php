@@ -150,7 +150,7 @@
 													<div class='form-row'>
 														<div class='col-md-12'>
 															<div class='form-control total btn btn-info'>
-																Total: <span class='amount'>RM {{$row->total}}</span>
+																Total: <span class='amount'>RM <?php echo Cart::total() ?></span>
 															</div>
 														</div>
 													</div>
@@ -181,7 +181,7 @@
 
 
 
-                                 
+
                                 </div>
                             </div>
                         </div>
