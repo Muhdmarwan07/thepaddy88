@@ -120,6 +120,38 @@ class   ProductController extends Controller
             return Redirect::to('/all-product');
     }
 
+    public function edit_product($product_id)
+    {
+        $product_info=DB::table('tbl_products')
+                        ->where('product_id',$product_id)
+                        ->first();
+            $product_info=view('admin.edit_product')
+            ->with('product_info',$product_info);
+        return view('admin_layout')
+            ->with('admin.edit_product',$product_info);
+        // return view('admin.edit_product');
+    }
+
+     public function update_product(Request $request,$product_id)
+    {
+        $data=array();
+        $data['product_name'] = $request->product_name;
+        $data['category_id'] = $request->category_id;
+        $data['manufacture_id'] = $request->manufacture_id;
+        $data['product_description'] = $request->product_description;
+        $data['publication_status'] = $request->publication_status;
+        $data['product_price'] = $request->product_price;
+        $data['product_size'] = $request->product_size;
+        $data['product_color'] = $request->product_color;
+
+        DB::table('tbl_products')
+            ->where('product_id',$product_id)
+            ->update($data);
+
+            Session::get('message','product Update Successfully !');
+            return Redirect::to('/all-product');
+    }
+
     // public function AdminAuthCheck()
     // {
     //     $admin_id=Session::get('admin_id');

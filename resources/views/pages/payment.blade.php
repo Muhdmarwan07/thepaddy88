@@ -114,6 +114,7 @@
 												<script src='https://js.stripe.com/v2/' type='text/javascript'></script>
 												<form accept-charset="UTF-8" action="/payment" class="require-validation"
 													data-cc-on-file="false"
+
 													data-stripe-publishable-key="pk_test_ktxhUaQNTYSNw2QiYHDXkqSn00TxxwSxh8"
 													id="payment-form" method="post">
 													{{ csrf_field() }}
@@ -152,10 +153,10 @@
 															<div class='form-control total btn btn-info'>
 
 																Total: <span class='amount'>RM <?php echo Cart::total(); ?></span>
-
-                                                                Total: <span class='amount'>RM <?php echo Cart::total(); ?></span>
-                                                                <input type="hidden" name="amount" value="<?php echo Cart::total(); ?>">
-
+															
+																
+																<input type="hidden" name="amount" value={{floatval(Cart::total())}}>
+                       
 															</div>
 														</div>
 													</div>
@@ -195,13 +196,13 @@
             </div>
 
 				</form>
-				@if ((Session::has('success-message')))
+				<!-- @if ((Session::has('success-message')))
 				<div class="alert alert-success col-md-12">{{
 					Session::get('success-message') }}</div>
 				@endif @if ((Session::has('fail-message')))
 				<div class="alert alert-danger col-md-12">{{
 					Session::get('fail-message') }}</div>
-				@endif
+				@endif -->
 			</div>
 			<div class='col-md-4'></div>
 		</div>

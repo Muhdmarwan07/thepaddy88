@@ -10,7 +10,7 @@
                                 <ul>
                                     <li><a data-toggle="pill" href="{{url('/show-cart')}}"><span>1</span> SHOPPING CART</a></li>
                                     <li class="active"><a data-toggle="pill" href="#checkout"><span>2</span> CHECKOUT</a></li>
-                                    <li class="active"><a data-toggle="pill" href="#checkout"><span>3</span> PAYMENT</a></li>
+                                    <li class="pill"><a data-toggle="pill" href="#checkout"><span>3</span> PAYMENT</a></li>
                                     <li><a data-toggle="pill" href="#order"><span>4</span> ORDER COMPLETE</a></li>
                                 </ul>
                             </div>                            
@@ -118,7 +118,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-offset-1 col-sm-offset-1 col-sm-5">
+                                <!-- <div class="col-md-offset-1 col-sm-offset-1 col-sm-5">
                                     <div class="checkout-total mb-60">
                                         <h5 class="text-uppercase mb-40"><strong>CART TOTAL</strong></h5>
                                         <form action="#">
@@ -185,10 +185,11 @@
                                             </div>
                                         </form>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- End Cart Area -->
+@endsection

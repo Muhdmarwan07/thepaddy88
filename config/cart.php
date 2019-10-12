@@ -60,8 +60,6 @@ return [
 
         'decimal_point' => '.',
 
-        'thousand_separator' => ',',
-
     ],
 
 ];

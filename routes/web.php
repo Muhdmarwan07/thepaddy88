@@ -75,6 +75,8 @@ Route::get('/all-product','ProductController@all_product');
 Route::get('/unactive_product/{product_id}','ProductController@unactive_product');
 Route::get('/active_product/{product_id}','ProductController@active_product');
 Route::get('/delete-product/{product_id}','ProductController@delete_product');
+Route::get('/edit-product/{product_id}','ProductController@edit_product');
+Route::post('/update-product/{product_id}','ProductController@update_product');
 
 //slider route
 Route::get('/add-slider','SliderController@index');
@@ -88,14 +90,12 @@ Route::get('/delete-slider/{slider_id}','SliderController@delete_slider');
 use Illuminate\Http\Request;
 Route::post ( '/payment', function (Request $request)
 {
+
 	\Stripe\Stripe::setApiKey ( 'sk_test_9EjIb0s1ijfAQMsI8bEZctfY00fQ89Csk2' );
 	try {
 			\Stripe\Charge::create ( array (
 
-				"amount" => 300 * 100,
-				"currency" => "usd",
-
-				"amount" => $request->input('amount'),
+				"amount" => $request->input('amount')*100,
 				"currency" => "usd",
 				"source" => $request->input ( 'stripeToken' ), // obtained with Stripe.js
 				"description" => "Test payment."
@@ -107,5 +107,5 @@ Route::post ( '/payment', function (Request $request)
 	{
 		Session::flash ( 'fail-message', "Error! Please Try again." );
 		return Redirect::back ();
-	}
+	 }
 });
