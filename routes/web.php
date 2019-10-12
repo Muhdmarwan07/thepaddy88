@@ -86,20 +86,25 @@ Route::get('/delete-slider/{slider_id}','SliderController@delete_slider');
 
 //stripe payment
 use Illuminate\Http\Request;
-Route::post ( '/payment', function (Request $request) 
+Route::post ( '/payment', function (Request $request)
 {
 	\Stripe\Stripe::setApiKey ( 'sk_test_9EjIb0s1ijfAQMsI8bEZctfY00fQ89Csk2' );
 	try {
 			\Stripe\Charge::create ( array (
+<<<<<<< HEAD
 				"amount" => 300 * 100,
 				"currency" => "myr",
+=======
+				"amount" => $request->input('amount'),
+				"currency" => "usd",
+>>>>>>> 4d95d207561048b181ceaab8c912d64b562ab63f
 				"source" => $request->input ( 'stripeToken' ), // obtained with Stripe.js
-				"description" => "Test payment." 
+				"description" => "Test payment."
 			) );
 			Session::flash ( 'success-message', 'Payment done successfully !' );
 			return Redirect::back ();
 		}
-	 catch ( \Exception $e ) 
+	 catch ( \Exception $e )
 	{
 		Session::flash ( 'fail-message', "Error! Please Try again." );
 		return Redirect::back ();
