@@ -92,7 +92,7 @@ Route::post ( '/payment', function (Request $request)
 	try {
 			\Stripe\Charge::create ( array (
 				"amount" => 300 * 100,
-				"currency" => "usd",
+				"currency" => "myr",
 				"source" => $request->input ( 'stripeToken' ), // obtained with Stripe.js
 				"description" => "Test payment." 
 			) );

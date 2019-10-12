@@ -62,7 +62,7 @@
                                                             </div>
                                                         </td>
                                                         <td class="cart-product-total text-center">
-                                                            <h6><strong>RM {{$row->total}}</strong></h6>
+                                                            <h6><strong>RM {{$row->subtotal}}</strong></h6>
                                                         </td>
 
                                                         <td class="cart_delete">
