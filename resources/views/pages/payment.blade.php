@@ -7,8 +7,9 @@
                         <div class="col-md-12">
                             <div class="cart-tab-pill text-center text-uppercase mb-50">
                                 <ul>
-                                    <li class="active"><a data-toggle="pill" href="#cart"><span>1</span> SHOPPING CART</a></li>
+                                    <li class="pill"><a data-toggle="pill" href="#cart"><span>1</span> SHOPPING CART</a></li>
                                     <li><a data-toggle="pill" href="#checkout"><span>2</span> CHECKOUT</a></li>
+                                    <li><a data-toggle="active" href="#order"><span>3</span> PAYMENT</a></li>
                                     <li><a data-toggle="pill" href="#order"><span>3</span> ORDER COMPLETE</a></li>
                                 </ul>
                             </div>
@@ -27,7 +28,7 @@
                                                         <th class="product-name"></th>
                                                         <th class="product-price text-center">UNIT PRICE</th>
                                                         <th class="product-quantity text-center">QUANTITY</th>
-                                                        <th class="product-subtotal text-center">Total</th>
+                                                        <th class="product-subtotal text-center">TOTAL</th>
                                                         <th class="product-remove"></th>
                                                     </tr>
                                                 </thead>

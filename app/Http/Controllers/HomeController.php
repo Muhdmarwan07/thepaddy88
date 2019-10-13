@@ -15,7 +15,7 @@ class HomeController extends Controller
                         ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')
                         ->select('tbl_products.*','tbl_category.category_name','tbl_manufacture.manufacture_name')
                         ->where('tbl_products.publication_status',1)
-                        ->limit(9)
+                        ->limit(10)
                         ->get();
 
         $manage_published_product=view('pages.home_content')
@@ -83,7 +83,6 @@ class HomeController extends Controller
                         ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')
                         ->select('tbl_products.*','tbl_category.category_name','tbl_manufacture.manufacture_name')
                         ->where('tbl_products.publication_status',1)
-                        ->limit(9)
                         ->get();
 
         $manage_published_product=view('pages.shop')
@@ -91,6 +90,19 @@ class HomeController extends Controller
         return view('layout')
             ->with('pages.shop',$manage_published_product);
     }
+
+    // public function AdminAuthCheck()
+    // {
+    //     $admin_id=Session::get('admin_id');
+    //     if ($admin_id)
+    //     {
+    //         return;
+    //     }
+    //     else
+    //     {
+    //         return Redirect::to('/admin')->send();
+    //     }
+    // }
 
 
 

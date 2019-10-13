@@ -19,7 +19,7 @@
                                         <ul class="breadcome-menu">
                                             <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                             </li>
-                                            <li><span class="bread-blod">Data Table</span>
+                                            <li><span class="bread-blod">All product</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -48,7 +48,7 @@
                         <div class="sparkline13-list">
                             <div class="sparkline13-hd">
                                 <div class="main-sparkline13-hd">
-                                    <h1><font color="white">Products</font> <span class="table-project-n"><font color="white">Data</font></span> <font color="white">Table</font></h1>
+                                    <h1><font color="white">All</font> <span class="table-project-n"><font color="white">Product</font></span> </h1>
                                 </div>
                             </div>
 

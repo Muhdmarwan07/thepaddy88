@@ -42,10 +42,10 @@
                         <div class="col-sm-5 hidden-xs">
                             <div class="header-top-left">
                                 <ul class="header-top-style text-capitalize mr-25">
-                                    <li><a href="#"><span class="mr-10">My Account</span><i class="fa fa-angle-down"></i></a>
+                                    <li><a href="{{URL::to('/show-cart')}}"><span class="mr-10">My Cart</span><i class="fa fa-angle-down"></i></a>
                                         <ul class="ul-style my-account box-shadow white-bg">
-                                            <li><a href="my-account.html">My Account</a></li>
-                                            <li><a href="wishlist.html">My Wishlist</a></li>
+                                            <!-- <li><a href="my-account.html">My Account</a></li>
+                                            <li><a href="wishlist.html">My Wishlist</a></li> -->
                                             <li><a href="{{URL::to('/show-cart')}}">My Cart</a></li>
                                             
                                             <?php
@@ -62,27 +62,12 @@
                                         </ul>
                                     </li>
                                 </ul>
-                                <ul class="header-top-style text-capitalize mr-25">
-                                    <li><a href="#"><span class="mr-10">RM</span><i class="fa fa-angle-down"></i></a>
-                                        <ul class="ul-style currency box-shadow white-bg">
-                                            <li><a href="#"><i class="fa fa-usd"></i><span>RM</span></a></li>
-                                            <li><a href="#"><i class="fa fa-euro"></i><span>IDR</span></a></li>
-                                            <li><a href="#"><i class="fa fa-gbp"></i><span>SGD</span></a></li>
-                                            <li><a href="#"><i class="fa fa-gbp"></i><span>USD</span></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <ul class="header-top-style pl-10">
+                                <!-- <ul class="header-top-style pl-10">
                                     <li>
-                                        <span class="mr-10"><img alt="" src="images/header/language/1-min.jpg"></span>
-                                        <a href="#"><span class="mr-10">English</span><i class="fa fa-angle-down"></i></a>
-                                        <ul class="ul-style language box-shadow white-bg">
-                                            <li><a href="#"><img alt="" src="{{asset('frontend/images/header/language/1-min.jpg')}}"><span>English</span></a></li>
-                                            <li><a href="#"><img alt="" src="{{asset('frontend/images/header/language/2-min.png')}}"><span>Malaysia</span></a></li>
-                                            <li><a href="#"><img alt="" src="{{asset('frontend/images/header/language/3-min.jpg')}}"><span>French</span></a></li>
-                                        </ul>
+                                        
+                                        <a href="#"><span class="mr-10">{{Session::get('customer_name')}}</span><i class="fa fa-angle-down"></i></a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                         <div class="col-sm-3 col-xs-6">
@@ -132,71 +117,12 @@
                         </div>
                         <div class="col-md-offset-0 col-md-5 col-sm-offset-0 col-sm-4 col-xs-offset-3 col-xs-6">
                             <div class="shopping-cart">
-                                <a href="#">
+                                <a href="{{url('/show-cart')}}">
                                     <span class="shopping-cart-control">
                                         <img alt="" src="{{asset('frontend/images/shop.png')}}">
                                     </span>
-                                    <span class="cart-size-value"><strong>Cart(3)</strong><br>RM250</span>
-                                </a>
-                                <ul class="shopping-cart-down box-shadow white-bg">
-                                    <li class="media">
-                                        <a href="#"><img alt="" src="{{asset('frontend/images/cart/1.jpg')}}"></a>
-                                        <div class="cart-item-wrapper">
-                                            <a href="#">Kasut Gucci</a>
-                                            <span class="quantity">
-                                                <span class="amount">RM 195</span>
-                                                 x 2
-                                            </span>
-                                            <a title="Remove this item" class="remove" href="#">
-                                                <i class="fa fa-trash-o"></i>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <a href="#"><img alt="" src="{{asset('frontend/images/cart/2.jpg')}}"></a>
-                                        <div class="cart-item-wrapper">
-                                            <a href="#">Motor Y15zr</a>
-                                            <span class="quantity">
-                                                <span class="amount">RM 145</span>
-                                                 x 1
-                                            </span>
-                                            <a title="Remove this item" class="remove" href="#">
-                                                <i class="fa fa-trash-o"></i>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <a href="{{URL::to('/show-cart')}}"><img alt="" src="{{asset('frontend/images/cart/3.jpg')}}"></a>
-                                        <div class="cart-item-wrapper">
-                                            <a href="#">Sweat pant</a>
-                                            <span class="quantity">
-                                                <span class="amount">RM 155</span>
-                                                 x 2
-                                            </span>
-                                            <a title="Remove this item" class="remove" href="#">
-                                                <i class="fa fa-trash-o"></i>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <span class="total-title pull-left">Sub Total</span>
-                                        <span class="total pull-right">RM 845</span>
-                                    </li>
-                                    <li class="media">
-                                        <a class="cart-btn" href="{{URL::to('/show-cart')}}">VIEW CART</a>
-
-                                        <?php
-                                            $customer_id=Session::get('customer_id');
-                                             ?>   
-                                             <?php if($customer_id !=NULL){?>
-                                                    <a class="cart-btn" href="{{URL::to('/checkout')}}">CHECKOUT</a>
-                                            <?php }else{?>
-                                                    <a class="cart-btn" href="{{URL::to('/login-check')}}">CHECKOUT</a>
-                                            <?php } ?>
-
-                                        <!-- <a class="cart-btn" href="{{URL::to('/login-check')}}">CHECKOUT</a> -->
-                                    </li>
-                                </ul>                           
+                                    <!-- <span class="cart-size-value"><strong>Cart</strong><br></span> -->
+                                </a>                          
                             </div>
                         </div>
                         <nav class="primary-menu">
@@ -204,11 +130,11 @@
                                 <li>
                                     <a href="{{URL::to('/')}}">home</a>
                                 </li>
-                                <li><a href="about.html">about</a></li>
+                                 <li><a href="about.html">about</a></li>
                                 <li class="mega-container">
                                     <a href="#" class="menu-tag">OUR PRODUCT</a>
                                     <div class="megamenu-area ul-style box-shadow white-bg">
-                                        <div class="mega-inner ptb-40">
+                                        <div class="mega-inner ptb-30">
                                             <h6 class="mega-title text-uppercase"><strong>category</strong></h6>
                                             <ul class="text-capitalize forge-list">
                                                 <?php
@@ -221,7 +147,7 @@
                                             <?php }?>
                                             </ul>
                                         </div>
-                                        <div class="mega-inner ptb-40">
+                                        <div class="mega-inner ptb-30">
                                             <h6 class="mega-title text-uppercase"><strong>brands</strong></h6>
                                             <ul class="text-capitalize forge-list">
                                                <?php
@@ -233,6 +159,7 @@
                                                 <?php }?>
                                             </ul>
                                         </div>
+
                                         <!-- <div class="mega-inner ptb-40">
                                             <h6 class="mega-title text-uppercase"><strong>materials</strong></h6>
                                             <ul class="text-capitalize forge-list">
@@ -244,28 +171,38 @@
                                                 <li><a href="shop.html">jeans</a></li>
                                             </ul>
                                         </div> -->
-                                        <div class="mega-inner mega-img b-img ptb-40">
+                                        <!-- <div class="mega-inner mega-img b-img ptb-40">
                                             <img alt="" src="{{asset('frontend/images/header/header-menu.jpg')}}">
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </li>
+                               
+                                <li><a href="{{URL::to('/shop')}}">shop</a></li>
                                 <li>
                                     <a href="#">Pages</a>
                                     <ul class="ul-style dropdown box-shadow white-bg forge-list text-capitalize">
-                                        <li><a href="404.html">404 Page</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="checkout.html">checkout</a></li>
+                                        <!-- <li><a href="404.html">404 Page</a></li> -->
+                                        <li><a href="about.html">About</a></li>         
+                                        <li><a href="{{url('/show-cart')}}">Cart</a></li>
+                                        <!-- <li><a href="checkout.html">checkout</a></li> -->
+                                                             <?php
+                                                             $customer_id=Session::get('customer_id');
+                                                          ?> 
+                                                         <?php if($customer_id !=NULL){?>
+                                                                <li> <a href="{{URL::to('/checkout')}}">Checkout</a></li>
+                                                         <?php }else{?>
+                                                           <li> <a href="{{URL::to('/login-check')}}">Checkout</a></li>
+                                                         <?php } ?>
                                         <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="order-complete.html">Order Complete</a></li>
-                                        <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="my-account.html">My Account</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="product-details.html">Product Details</a></li>
-                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                        <!-- <li><a href="order-complete.html">Order Complete</a></li> -->
+                                        <li><a href="{{url('/shop')}}">Shop</a></li>
+                                        <!-- <li><a href="my-account.html">My Account</a></li> -->
+                                        <li><a href="{{url('/login-check')}}">Login</a></li>
+                                        <!-- <li><a href="product-details.html">Product Details</a></li> -->
+                                        <!-- <li><a href="wishlist.html">Wishlist</a></li> -->
                                     </ul>
                                 </li>
-                                <li><a href="{{URL::to('/shop')}}">shop</a></li>
+                                
                                 <!-- <li>
                                     <a href="#">blog</a>
                                     <ul class="ul-style dropdown box-shadow white-bg forge-list text-capitalize">
@@ -701,13 +638,13 @@
                                     <img src="{{asset('frontend/images/footer/logo.png')}}" alt="">
                                 </a>
                                 <p class="pb-30">The Paddy88 is the best ecommerce site for bundle in the world</p>
-                                <ul class="social-icon">
+                                <!-- <ul class="social-icon">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
@@ -752,16 +689,16 @@
                             <div class="single-footer-inner">
                                 <h5 class="footer-title text-white">CONTACT</h5>
                                 <ul class="footer-menu">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="{{URL::to('/')}}">Home</a></li>
                                     <li><a href="about.html">About us</a></li>
                                     <li><a href="contact.html">Contact us</a></li>
-                                    <li><a href="blog.html">Our blog</a></li>
+                                    <!-- <li><a href="blog.html">Our blog</a></li>
                                     <li><a href="#">Support centre</a></li>
-                                    <li><a href="#">Privacy policy</a></li>
+                                    <li><a href="#">Privacy policy</a></li> -->
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-3">
+                        <!-- <div class="col-md-2 col-sm-3">
                             <div class="single-footer-inner">
                                 <h5 class="footer-title text-white">SUPPORT</h5>
                                 <ul class="footer-menu">
@@ -773,7 +710,7 @@
                                     <li><a href="#">Online support</a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-md-5 col-sm-9">
                             <!-- <h2 class="footer-title">LATEST TWEETS</h2>
                             <div class="tweet-list">
@@ -835,10 +772,10 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="copyright">
-                                <p>Copyright <i class="fa fa-copyright"></i> 2018 <span>The Paddy88</a></span> . </p>
+                                <p>Copyright <i class="fa fa-copyright"></i> 2019 <span>The Paddy88</a></span> . </p>
                             </div>
                         </div>
-                        <div class="col-md-5 hidden-sm hidden-xs">
+                        <!-- <div class="col-md-5 hidden-sm hidden-xs">
                             <nav>
                                 <ul class="footer-bottom-menu">
                                     <li><a href="#">Site Map</a></li>
@@ -847,12 +784,12 @@
                                     <li><a href="#">Newsletter</a></li>
                                 </ul>
                             </nav>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-12">
+                        </div> -->
+                        <!-- <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="payment-method b-img">
                                 <img alt="" src="{{asset('frontend/images/footer/footer-bottom.png')}}">
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

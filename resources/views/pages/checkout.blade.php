@@ -118,6 +118,98 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-list tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="cart">
+                                    <form action="#">
+                                        <div class="table-content table-responsive text-uppercase mb-50">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="product-thumbnail text-left">PRODUCT NAME</th>
+                                                        <th class="product-name"></th>
+                                                        <th class="product-price text-center">UNIT PRICE</th>
+                                                        <th class="product-quantity text-center">QUANTITY</th>
+                                                        <th class="product-subtotal text-center">TOTAL</th>
+                                                        <th class="product-remove"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    <?php foreach (Cart::content() as $row) :?>
+                                                    <form action="{{URL('/update-cart')}}" method="post">
+                                                    <tr>
+                                                        <td class="product-thumbnail">
+                                                            <a href="#"><img src="{{URL::to($row->options->image)}}" height="50px" width="50px" alt=""></a>
+                                                        </td>
+                                                        <td class="cart-product-name">
+                                                            <a href="#"><h6><strong>{{$row->name}}</strong></h6></a>
+
+                                                            <label>
+                                                                Size :
+                                                                <span> L</span>
+                                                            </label>
+                                                        </td>
+                                                        <td class="cart-product-size text-center">
+                                                            <h6><strong>RM {{$row->price}}</strong></h6>
+                                                        </td>
+                                                        <td class="cart-product-price text-center">
+                                                            <div class="cart-quantity-button">
+
+                                                                      {{ csrf_field() }}
+                                                                      <h6 class="amount"><strong>X{{$row->qty}}</strong></h6>
+                                                                    <!-- <input type="text" class="cart-quantity-input" name="qty" value="{{$row->qty}}"> -->
+                                                            </div>
+                                                        </td>
+                                                        <td class="cart-product-total text-center">
+                                                            <h6><strong>RM {{$row->total}}</strong></h6>
+                                                        </td>
+                                                    </tr>
+                                                    </form>
+                                                   <?php endforeach;?>
+                                                </tbody>
+                                                <p></p>
+                                            </table>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-10">
+                                                <div class="cart-total clearfix">
+                                                    <h6 class="cart-title text-uppercase mb-30"><strong>CART TOTAL</strong></h6>
+                                                    <div class="table-content-total table-responsive mb-20">
+                                                        <table>
+                                                            <tbody>
+                                                                <tr class="cart-subtotal">
+                                                                    <th>Subtotal</th>
+                                                                    <td>
+                                                                        <h6 class="amount"><strong>RM {{Cart::subtotal()}}</strong></h6>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="cart-subtotal">
+                                                                    <th>Shipping</th>
+                                                                    <td>
+                                                                        <h6 class="amount"><strong>RM 0.00</strong></h6>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="cart-grand-total">
+                                                                    <th>Grand Total</th>
+                                                                    <td>
+                                                                        <h5 class="amount"><strong>RM {{Cart::total()}}</strong></h5>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <br>
+                                </div>
+                        </div>
+                    </div>
+
                                 <!-- <div class="col-md-offset-1 col-sm-offset-1 col-sm-5">
                                     <div class="checkout-total mb-60">
                                         <h5 class="text-uppercase mb-40"><strong>CART TOTAL</strong></h5>

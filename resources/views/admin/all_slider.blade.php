@@ -85,7 +85,7 @@
                                             <tr>
                                                 <td>{{$v_slider->slider_id}}</td>
                                                 
-												<td><img src="{{$v_slider->slider_image}}" style="height: 80; width: 200;"></td>
+												<td><img src="{{$v_slider->slider_image}}" style="height: 80px; width: 200px;"></td>
                                                 <td>{{$v_slider->slider_title}}</td>
                                                 <td class="center">
                                                     @if($v_slider->publication_status==1)

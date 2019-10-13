@@ -97,7 +97,7 @@
             </div>
             <!-- End About us Area -->
             <!-- Start Banner Area -->
-            <div class="banner-area">
+            <!-- <div class="banner-area">
                 <div class="container">
                     <div class="row rp-style">
                         <div class="col-sm-4 cp-style">
@@ -164,7 +164,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Banner Area -->
             <!-- Start Featured product Area -->
             <div class="featured-product-area section-padding">

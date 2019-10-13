@@ -80,6 +80,7 @@
                                         </div>
                                     </div>
                                 </form>
+                                <br>
                                    
                                     <div class="product-tab-list tab-pane fade" id="INFORMATION">
                                         <div class="row">

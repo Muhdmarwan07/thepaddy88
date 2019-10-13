@@ -47,14 +47,14 @@
                                  <h5 class="product-name-list">
                                     <a href="#" title="Zelletria ostma"><strong>{{$product_by_detail->product_name}}</strong></a>
                                 </h5>
-                                <ul class="pull-left list-inline ratings rating-list pb-20">
+                                <!-- <ul class="pull-left list-inline ratings rating-list pb-20">
                                     <li><i class="rated fa fa-star"></i></li>
                                     <li><i class="rated fa fa-star"></i></li>
                                     <li><i class="rated fa fa-star"></i></li>
                                     <li><i class="rated fa fa-star"></i></li>
                                     <li><i class="rated fa fa-star"></i></li>
                                     <li class="reviews text-theme"><span>10</span>Review(s)</li>
-                                </ul>
+                                </ul> -->
                                 <ul>
                                 	<li>
                                 		<div class="pd-quantity-available mb-10">
@@ -134,7 +134,7 @@
 		                                    </form>
 		                                </ul>
 	                            	
-                                <div class="socailsharing-product mt-40">
+                                <!-- <div class="socailsharing-product mt-40">
                                     <label>Share :</label>
                                     <ul>
                                         <li class="icon-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -142,7 +142,7 @@
                                         <li class="icon-google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
                                         <li class="icon-linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                         </div>                     
                     </div>
@@ -152,7 +152,7 @@
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li role="presentation" class="active"><a href="#more-info" aria-controls="more-info" role="tab" data-toggle="tab">MORE INFO</a></li>
                                     <!-- <li role="presentation"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">DATA SHEET</a></li> -->
-                                    <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">REVIEWS</a></li>
+                                    <!-- <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">REVIEWS</a></li> -->
                                 </ul>
                             </div>
                             <div class="clear"></div>

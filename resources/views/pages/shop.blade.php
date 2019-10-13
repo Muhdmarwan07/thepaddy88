@@ -4,6 +4,8 @@
             <!-- Banner Area Start -->
             <!-- Banner Area End -->
             <!-- Start Shop View Area -->
+            <br>
+            <br><!-- 
             <div class="shop-view-area pt-90">
                 <div class="container">
                     <div class="row">
@@ -55,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Shop View Area -->
             <!-- Start Product List -->
             <div class="product-list-tab modify-tnm">
@@ -66,7 +68,7 @@
                                 <div class="product-container-list rp-style-2">
                                    <?php foreach ($all_published_product as $v_published_product) {?>
                                     <div class="product-inner cp-style-2 mt-30 col-2">
-                                        <a href="#">
+                                        <a href="{{URL::to('/view_product/'.$v_published_product->product_id)}}">
                                             <div class="product-img b-img">
                                                 <img alt="" src="{{asset($v_published_product->product_image)}}" style="height: 200px;">
                                             </div>
@@ -99,9 +101,10 @@
                     </div>
                 </div>
             </div>
+            <br>
             <!-- End Product List -->
             <!-- Start Shop View Area -->
-            <div class="shop-view-area pt-30">
+            <!-- <div class="shop-view-area pt-30">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 col-sm-2 col-xs-4">
@@ -152,7 +155,8 @@
                         </div>
                     </div>
                 </div>
-            </div><br>
+            </div> -->
+            <br>
             <!-- End Shop View Area -->
            
         </section>

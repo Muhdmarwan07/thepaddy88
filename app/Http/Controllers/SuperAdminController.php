@@ -13,7 +13,7 @@ class SuperAdminController extends Controller
     
     public function index()
     {
-    	// $this->AdminAuthCheck();
+    	$this->AdminAuthCheck();
     	return view('admin.dashboard');
     }
 
@@ -23,16 +23,16 @@ class SuperAdminController extends Controller
     	return Redirect::to('/admin');
     }
 
-    // public function AdminAuthCheck()
-    // {
-    // 	$admin_id=Session::get('admin_id');
-    // 	if ($admin_id)
-    //     {
-    // 		return;
-    // 	}
-    // 	else
-    // 	{
-    // 		return Redirect::to('/admin')->send();
-    // 	}
-    // }
+    public function AdminAuthCheck()
+    {
+    	$admin_id=Session::get('admin_id');
+    	if ($admin_id)
+        {
+    		return;
+    	}
+    	else
+    	{
+    		return Redirect::to('/admin')->send();
+    	}
+    }
 }

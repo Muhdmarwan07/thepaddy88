@@ -8,9 +8,10 @@
                         <div class="col-md-12">
                             <div class="cart-tab-pill text-center text-uppercase mb-50">
                                 <ul>
-                                    <li class="active"><a data-toggle="pill" href="#cart"><span>1</span> SHOPPING CART</a></li>
+                                    <li class="active"><a data-toggle="active" href="#cart"><span>1</span> SHOPPING CART</a></li>
                                     <li><a data-toggle="pill" href="#checkout"><span>2</span> CHECKOUT</a></li>
-                                    <li><a data-toggle="pill" href="#order"><span>3</span> ORDER COMPLETE</a></li>
+                                    <li><a data-toggle="pill" href="#order"><span>3</span> PAYMENT</a></li>
+                                    <li><a data-toggle="pill" href="#order"><span>4</span> ORDER COMPLETE</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -21,6 +22,9 @@
                                 <div role="tabpanel" class="tab-pane fade in active" id="cart">
                                     <form action="#">
                                         <div class="table-content table-responsive text-uppercase mb-50">
+                                            <?php 
+                                                $contents=Cart::content();
+                                             ?>
                                             <table>
                                                 <thead>
                                                     <tr>
@@ -28,13 +32,13 @@
                                                         <th class="product-name"></th>
                                                         <th class="product-price text-center">UNIT PRICE</th>
                                                         <th class="product-quantity text-center">QUANTITY</th>
-                                                        <th class="product-subtotal text-center">Total</th>
+                                                        <th class="product-subtotal text-center">TOTAL</th>
                                                         <th class="product-remove"></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
 
-                                                    <?php foreach (Cart::content() as $row) :?>
+                                                    <?php foreach ($contents as $row) :?>
                                                     <form action="{{URL('/update-cart')}}" method="post">
                                                     <tr>
                                                         <td class="product-thumbnail">
@@ -54,10 +58,11 @@
                                                         <td class="cart-product-price text-center">
                                                             <div class="cart-quantity-button">
 
-                                                                      {{ csrf_field() }}
-                                                                    <input type="text" class="cart-quantity-input" name="qty" value="{{$row->qty}}">
-                                                                    <input type="hidden" name="rowId" value="{{$row->rowId}}">
-                                                                    <input type="submit" value="Update" class="btn btn-sm btn-default">
+                                                                     <!--  {{ csrf_field() }} -->
+                                                                    <h6><strong>X {{$row->qty}}</strong></h6>
+                                                                    <!-- <input type="text" class="cart-quantity-input" name="qty" value="{{$row->qty}}">
+                                                                    <input type="hidden" name="rowId" value="{{$row->rowId}}"> -->
+                                                                    <!-- <input type="submit" value="Update" class="btn btn-sm btn-default"> -->
 
                                                             </div>
                                                         </td>
@@ -73,8 +78,7 @@
                                                     </tr>
                                                     </form>
                                                    <?php endforeach;?>
-                                                </tbody>
-                                                <p></p>
+                                                </tbody> 
                                             </table>
                                         </div>
                                         <div class="row">
@@ -106,7 +110,7 @@
                                                         </table>
                                                     </div>
                                                     <div class="update-checkout pull-right">
-                                                        <a href="#">UPDATE</a>
+                                                        <!-- <a href="#">UPDATE</a> -->
 
                                                          <?php
                                                              $customer_id=Session::get('customer_id');

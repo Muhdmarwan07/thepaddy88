@@ -19,7 +19,7 @@
                                         <ul class="breadcome-menu">
                                             <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                             </li>
-                                            <li><span class="bread-blod">Data Table</span>
+                                            <li><span class="bread-blod">All Manufacture</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -50,19 +50,19 @@
                         <div class="sparkline13-list">
                             <div class="sparkline13-hd">
                                 <div class="main-sparkline13-hd">
-                                    <h1><font color="white">Manufacture</font> <span class="table-project-n"><font color="white">Data</font></span> <font color="white">Table</font></h1>
+                                    <h1><font color="white">All</font> <span class="table-project-n"><font color="white">Manufacture</font></span> </h1>
                                 </div>
                             </div>
 
                             <div class="sparkline13-graph">
                                 <div class="datatable-dashv1-list custom-datatable-overright">
-                                    <div id="toolbar">
+                                    <!-- <div id="toolbar">
                                         <select class="form-control">
 												<option value=""><font color="white">Export Basic</font></option>
 												<option value="all"><font color="white">Export All</font></option>
 												<option value="selected"><font color="white">Export Selected</font></option>
 											</select>
-                                    </div>
+                                    </div> -->
                                     <table border=1px id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
                                         data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                         <thead>

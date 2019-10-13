@@ -16,6 +16,8 @@
 Route::get('/', 'HomeController@index');
 
 
+Route::get('/order-complete', 'PaymentController@order_complete');
+
 //show category wise product here
 Route::get('/product_by_category/{category_id}', 'HomeController@show_product_by_category');
 Route::get('/product_by_manufacture/{manufacture_id}', 'HomeController@show_product_by_manufacture');
@@ -101,7 +103,8 @@ Route::post ( '/payment', function (Request $request)
 				"description" => "Test payment."
 			) );
 			Session::flash ( 'success-message', 'Payment done successfully !' );
-			return Redirect::back ();
+			Cart::destroy();
+			return Redirect::to('/order-complete');
 		}
 	 catch ( \Exception $e )
 	{
