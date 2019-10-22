@@ -16,6 +16,11 @@ class ManufactureController extends Controller
     	return view('admin.add_manufacture');
     }
 
+    public function indexx()
+    {
+        return view('seller.seller_add_manufacture');
+    }
+
     public function save_manufacture(Request $request)
     {
     	$data=array();
@@ -40,6 +45,19 @@ class ManufactureController extends Controller
 
 
     	// return view('admin.all_category');
+    }
+
+    public function seller_all_manufacture()
+    {
+        $all_manufacture_info=DB::table('tbl_manufacture')->get();
+        $manage_manufacture=view('seller.seller_all_manufacture')
+            ->with('all_manufacture_info',$all_manufacture_info);
+        return view('seller_layout')
+            ->with('seller.seller_all_manufacture',$manage_manufacture);
+
+
+
+        // return view('admin.all_category');
     }
 
     public function delete_manufacture($manufacture_id)

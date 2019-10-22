@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dashboard | The Paddy88</title>
+    <title> Seller Dashboard | The Paddy88</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -95,9 +95,9 @@
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li class="active">
-                            <a class="has-arrow" href="{{('/dashboard')}}">
+                            <a class="has-arrow" href="{{('/sellerdashboard')}}">
 								   <i class="icon nalika-home icon-wrap"></i>
-								   <span class="mini-click-non">Dashboard</span>
+								   <span class="mini-click-non">Seller Dashboard</span>
 								</a>
                             <!-- <ul class="submenu-angle" aria-expanded="true">
                             
@@ -113,74 +113,33 @@
                         <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-mail icon-wrap"></i> <span class="mini-click-non">Category</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Category" href="{{URL::to('/all-category')}}"><span class="mini-sub-pro">All Category </span></a></li>
-                                <li><a title="Add Category" href="{{URL::to('/add-category')}}"><span class="mini-sub-pro">Add Category </span></a></li>
+                                <li><a title="All Category" href="{{URL::to('/seller-all-category')}}"><span class="mini-sub-pro">All Category </span></a></li>
+                                <li><a title="Add Category" href="{{URL::to('/seller-add-category')}}"><span class="mini-sub-pro">Add Category </span></a></li>
                                 
-                               <!--  <li><a title="Product Payment" href="product-payment.html"><span class="mini-sub-pro">Edit Category</span></a></li> -->
+                       
                             </ul>
                         </li>
                         <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-diamond icon-wrap"></i> <span class="mini-click-non">Manufacture</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Manufacture" href="{{URL::to('/all-manufacture')}}"><span class="mini-sub-pro">All Manufacture</span></a></li>
-                                <li><a title="Add Product" href="{{URL::to('/add-manufacture')}}"><span class="mini-sub-pro">Add Manufacture</span></a></li>
-                                <!-- <li><a title="Product Detail" href="product-detail.html"><span class="mini-sub-pro">Edit Brand</span></a></li> --> 
+                                <li><a title="All Manufacture" href="{{URL::to('/seller-all-manufacture')}}"><span class="mini-sub-pro">All Manufacture</span></a></li>
+                                <li><a title="Add Product" href="{{URL::to('/seller-add-manufacture')}}"><span class="mini-sub-pro">Add Manufacture</span></a></li>
+                                
                             </ul>
                         </li>
                         <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-pie-chart icon-wrap"></i> <span class="mini-click-non">Product</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                 <li><a title="All Product" href="{{URL::to('/all-product')}}"><span class="mini-sub-pro">All Product</span></a></li>
-                                <li><a title="Add Product" href="{{URL::to('/add-product')}}"><span class="mini-sub-pro">Add Product</span></a></li>
-                            </ul>
-                        </li>
-                        <!-- <li>
-                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-bar-chart icon-wrap"></i> <span class="mini-click-non">Charts</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Bar Charts" href="bar-charts.html"><span class="mini-sub-pro">Bar Charts</span></a></li>
-                                <li><a title="Line Charts" href="line-charts.html"><span class="mini-sub-pro">Line Charts</span></a></li>
-                                <li><a title="Area Charts" href="area-charts.html"><span class="mini-sub-pro">Area Charts</span></a></li>
-                                <li><a title="Rounded Charts" href="rounded-chart.html"><span class="mini-sub-pro">Rounded Charts</span></a></li>
-                                <li><a title="C3 Charts" href="c3.html"><span class="mini-sub-pro">C3 Charts</span></a></li>
-                                <li><a title="Sparkline Charts" href="sparkline.html"><span class="mini-sub-pro">Sparkline Charts</span></a></li>
-                                <li><a title="Peity Charts" href="peity.html"><span class="mini-sub-pro">Peity Charts</span></a></li>
-                            </ul>
-                        </li> -->
-                        <li>
-                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-table icon-wrap"></i> <span class="mini-click-non">Slider</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <ul class="submenu-angle" aria-expanded="false">
-                                 <li><a title="All Slider" href="{{URL::to('/all-slider')}}"><span class="mini-sub-pro">All Slider</span></a></li>
-                                <li><a title="Add Slider" href="{{URL::to('/add-slider')}}"><span class="mini-sub-pro">Add Slider</span></a></li>
-                            </ul>
+                                 <li><a title="All Product" href="{{URL::to('/seller-all-product')}}"><span class="mini-sub-pro">All Product</span></a></li>
+                                <li><a title="Add Product" href="{{URL::to('/seller-add-product')}}"><span class="mini-sub-pro">Add Product</span></a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-forms icon-wrap"></i> <span class="mini-click-non">Order</span></a>
+                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-pie-chart icon-wrap"></i> <span class="mini-click-non">Order</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Manage Order" href="{{URL::to('/manage-order')}}"><span class="mini-sub-pro">Manage Order</span></a></li>
+                                 <li><a title="All Product" href="{{URL::to('/seller-manage-order')}}"><span class="mini-sub-pro">Manage Order</span></a></li>
                             </ul>
                         </li>
-                        <!-- <li>
-                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-smartphone-call icon-wrap"></i> <span class="mini-click-non">App views</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Notifications" href="notifications.html"><span class="mini-sub-pro">Notifications</span></a></li>
-                                <li><a title="Alerts" href="alerts.html"><span class="mini-sub-pro">Alerts</span></a></li>
-                                <li><a title="Modals" href="modals.html"><span class="mini-sub-pro">Modals</span></a></li>
-                                <li><a title="Buttons" href="buttons.html"><span class="mini-sub-pro">Buttons</span></a></li>
-                                <li><a title="Tabs" href="tabs.html"><span class="mini-sub-pro">Tabs</span></a></li>
-                                <li><a title="Accordion" href="accordion.html"><span class="mini-sub-pro">Accordion</span></a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li id="removable">
-                            <a class="has-arrow" href="#" aria-expanded="false"><i class="icon nalika-new-file icon-wrap"></i> <span class="mini-click-non">Pages</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Login" href="login.html"><span class="mini-sub-pro">Login</span></a></li>
-                                <li><a title="Register" href="register.html"><span class="mini-sub-pro">Register</span></a></li>
-                                <li><a title="Lock" href="lock.html"><span class="mini-sub-pro">Lock</span></a></li>
-                                <li><a title="Password Recovery" href="password-recovery.html"><span class="mini-sub-pro">Password Recovery</span></a></li>
-                            </ul>
-                        </li> -->
                     </ul>
                 </nav>
             </div>
@@ -194,7 +153,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro">
-                        <!-- <a href="index.html"><img class="main-logo" src="{{asset('backend/img/logo/logo.png')}}" alt="" /> --></a>
+                        
                     </div>
                 </div>
             </div>
@@ -229,7 +188,7 @@
                                                 <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
 															<i class="icon nalika-user nalika-user-rounded header-riht-inf" aria-hidden="true"></i>
-															<span class="admin-name">{{Session::get('admin_name')}}</span>
+															<span class="admin-name">{{Session::get('seller_name')}}</span>
 															<i class="icon nalika-down-arrow nalika-angle-dw nalika-icon"></i>
 														</a>
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
@@ -255,7 +214,7 @@
                 </div>
             </div>
             
-            @yield('admin_content')
+            @yield('seller_content')
 
         <div class="footer-copyright-area">
             <div class="container-fluid">

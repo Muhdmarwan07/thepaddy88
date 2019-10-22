@@ -16,6 +16,12 @@ class CategoryController extends Controller
     	return view('admin.add_category');
     }
 
+    public function indexx()
+    {
+        // $this->AdminAuthCheck();
+        return view('seller.seller_add_category');
+    }
+
     public function all_category()
     {
         $this->AdminAuthCheck();
@@ -28,6 +34,20 @@ class CategoryController extends Controller
 
 
     	// return view('admin.all_category');
+    }
+
+     public function seller_all_category()
+    {
+        // $this->AdminAuthCheck();
+        $all_category_info=DB::table('tbl_category')->get();
+        $manage_category=view('seller.seller_all_category')
+            ->with('all_category_info',$all_category_info);
+        return view('seller_layout')
+            ->with('seller.seller_all_category',$manage_category);
+
+
+
+        // return view('admin.all_category');
     }
 
     public function save_category(Request $request)
@@ -76,6 +96,20 @@ class CategoryController extends Controller
     	// return view('admin.edit_category');
     }
 
+    public function seller_edit_category($category_id)
+    {
+        // $this->AdminAuthCheck();
+        $category_info=DB::table('tbl_category')
+                        ->where('category_id',$category_id)
+                        ->first();
+            $category_info=view('seller.seller_edit_category')
+            ->with('category_info',$category_info);
+        return view('seller_layout')
+            ->with('seller.seller_edit_category',$category_info);
+        return view('seller.seller_edit_category');
+    }
+
+
     public function update_category(Request $request,$category_id)
     {
     	$data=array();
@@ -88,6 +122,20 @@ class CategoryController extends Controller
 
     		Session::get('message','Category Update Successfully !');
     		return Redirect::to('/all-category');
+    }
+
+    public function seller_update_category(Request $request,$category_id)
+    {
+        $data=array();
+        $data['category_name']=$request->category_name;
+        $data['category_description']=$request->category_description;
+
+        DB::table('tbl_category')
+            ->where('category_id',$category_id)
+            ->update($data);
+
+            Session::get('message','Category Update Successfully !');
+            return Redirect::to('/seller-all-category');
     }
 
     public function delete_category($category_id)

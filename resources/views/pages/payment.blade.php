@@ -43,10 +43,10 @@
                                                         <td class="cart-product-name">
                                                             <a href="#"><h6><strong>{{$row->name}}</strong></h6></a>
 
-                                                            <label>
+                                                            <!-- <label>
                                                                 Size :
                                                                 <span> L</span>
-                                                            </label>
+                                                            </label> -->
                                                         </td>
                                                         <td class="cart-product-size text-center">
                                                             <h6><strong>RM {{$row->price}}</strong></h6>
@@ -55,8 +55,9 @@
                                                             <div class="cart-quantity-button">
 
                                                                       {{ csrf_field() }}
-                                                                    <input type="text" class="cart-quantity-input" name="qty" value="{{$row->qty}}">
-                                                                    <input type="hidden" name="rowId" value="{{$row->rowId}}">
+                                                                    <!-- <input type="text" class="cart-quantity-input" name="qty" value="{{$row->qty}}">
+                                                                    <input type="hidden" name="rowId" value="{{$row->rowId}}"> -->
+                                                                    <h6><strong>X {{$row->qty}}</strong></h6>
                                                             </div>
                                                         </td>
                                                         <td class="cart-product-total text-center">

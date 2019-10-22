@@ -96,6 +96,35 @@ class CheckoutController extends Controller
             ->with('pages.payment',$manage_published_category);
     }
 
+    public function manage_order()
+    {
+        $all_order_info=DB::table('tbl_order')
+                        ->join('tbl_customer','tbl_order.customer_id','=','tbl_customer.customer_id')
+                        ->select('tbl_order.*','tbl_customer.customer_name','tbl_order_details.*')
+                        ->join('tbl_order_details','tbl_order.order_id','=','tbl_order_details.order_details_id')
+                        ->get();
+
+        $manage_order=view('admin.manage_order')
+            ->with('all_order_info',$all_order_info);
+        return view('admin_layout')
+            ->with('admin.manage_order',$manage_order);
+    }
+
+     public function seller_manage_order()
+    {
+        $all_order_info=DB::table('tbl_order')
+                        ->join('tbl_customer','tbl_order.customer_id','=','tbl_customer.customer_id')
+                        ->select('tbl_order.*','tbl_customer.customer_name','tbl_order_details.*')
+                        ->join('tbl_order_details','tbl_order.order_id','=','tbl_order_details.order_details_id')
+                        ->get();
+
+        $manage_order=view('admin.manage_order')
+            ->with('all_order_info',$all_order_info);
+        return view('seller_layout')
+            ->with('seller.seller_manage_order',$manage_order);
+    }
+
+
     public function customer_logout()
     {
     	Session::flush();

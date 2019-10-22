@@ -2,6 +2,7 @@
 @section('content')
 
 <!-- Start of slider area -->
+<br>
         <section class="slider-container">
             <!-- Slider Image -->
             <div id="mainSlider" class="nivoSlider slider-image">
@@ -10,7 +11,7 @@
                                     ->where('publication_status',1)
                                      ->get();
                      foreach ($all_published_slider as $v_slider) {?>
-                <img src="{{URL::to($v_slider->slider_image)}}" alt="main slider" title="#htmlcaption1"/>
+                <img src="{{URL::to($v_slider->slider_image)}}" alt="main slider" height="400px" width="400px" title="#htmlcaption1"/>
                 <!-- <img src="{{asset('frontend/images/slider/3.jpg')}}" alt="main slider" title="#htmlcaption2"/> -->
                 <?php }?>
             </div>

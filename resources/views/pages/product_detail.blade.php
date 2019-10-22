@@ -56,7 +56,7 @@
                                     <li class="reviews text-theme"><span>10</span>Review(s)</li>
                                 </ul> -->
                                 <ul>
-                                	<li>
+                                	<!-- <li>
                                 		<div class="pd-quantity-available mb-10">
                                     	<p id="product-available">
                                         <span>Available : </span>
@@ -65,7 +65,7 @@
                                         <span> In stock</span>
                                    		 </p>
                                 		</div>
-                                	</li>
+                                	</li> -->
                                 	<li>
                                  		<div class="pd-quantity-available mb-10">
                                    		 <p id="product-available">
@@ -195,7 +195,7 @@
             </div>
             <!-- End Of Product Details -->
             <!-- Start Related Product -->
-            <div class="featured-product-area">
+            <!-- <div class="featured-product-area">
                 <div class="container">
                     <div class="row rp-style">
                         <div class="col-md-12">
@@ -473,7 +473,7 @@
                         </div>                        
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Of Related Product -->
 
             

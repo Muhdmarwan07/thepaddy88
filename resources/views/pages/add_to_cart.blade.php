@@ -47,10 +47,10 @@
                                                         <td class="cart-product-name">
                                                             <a href="#"><h6><strong>{{$row->name}}</strong></h6></a>
 
-                                                            <label>
+                                                            <!-- <label>
                                                                 Size :
                                                                 <span> L</span>
-                                                            </label>
+                                                            </label> -->
                                                         </td>
                                                         <td class="cart-product-size text-center">
                                                             <h6><strong>RM {{$row->price}}</strong></h6>
