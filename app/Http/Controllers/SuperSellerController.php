@@ -18,16 +18,16 @@ class SuperSellerController extends Controller
     	return Redirect::to('/seller');
     }
 
-    // public function AdminAuthCheck()
-    // {
-    // 	$admin_id=Session::get('seller_id');
-    // 	if ($seller_id)
-    //     {
-    // 		return;
-    // 	}
-    // 	else
-    // 	{
-    // 		return Redirect::to('/seller')->send();
-    // 	}
-    // }
+    public function AdminAuthCheck()
+    {
+    	$seller_id=Session::get('seller_id');
+    	if ($seller_id)
+        {
+    		return;
+    	}
+    	else
+    	{
+    		return Redirect::to('/seller')->send();
+    	}
+    }
 }
