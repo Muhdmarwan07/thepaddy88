@@ -21,6 +21,15 @@ class CreateTblAdminTable extends Migration
             $table->string('admin_phone');
             $table->timestamps();
         }); 
+
+        DB::table('users')->insert([
+                'admin_id' => '1',
+                'admin_email' => 'muhdmarwan07@gmail.com',
+                'admin_password' => '12345'
+                'admin_name' => 'marwan'
+                'admin_phone' => '01111111'
+            ]
+        );
     }
 
     /**

@@ -525,7 +525,7 @@
                                         <h5 class="text-capitalize mb-40"><strong>Order Details</strong></h5>
                                         <form action="#">
                                             <div class="table-content-total table-responsive">
-                                                <table>
+                                                <!-- <table>
                                                     <tbody>
                                                         <tr class="check-product-list border-bottom">
                                                             <td class="singel-check total-check">
@@ -551,16 +551,9 @@
                                                                 RM {{Cart::total()}}
                                                             </td>
                                                         </tr>
-                                                        <!-- <tr class="check-product-list">
-                                                            <td class="singel-check total-check">
-                                                                Payment Method
-                                                            </td>
-                                                            <td class="singel-check total-check pull-right">
-                                                                Check Payment
-                                                            </td>
-                                                        </tr> -->
+                                                       
                                                     </tbody>
-                                                </table>
+                                                </table> -->
                                                 <div class="order-button-payment mt-30">
                                             <a href="{{URL::to('/')}}" class="cart-button mr-20 text-uppercase">Return To Home</a>
                                             <a href="{{URL::to('/shop')}}" class="cart-button text-uppercase">Continue Shopping</a>
