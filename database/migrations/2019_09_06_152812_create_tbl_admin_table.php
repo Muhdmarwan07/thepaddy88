@@ -27,7 +27,7 @@ class CreateTblAdminTable extends Migration
                 'admin_email' => 'muhdmarwan07@gmail.com',
                 'admin_password' => '12345'
                 'admin_name' => 'marwan'
-                'admin_phone' => '01111111'
+                'admin_phone' => '011111111'
             ]
         );
     }
