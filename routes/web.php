@@ -14,6 +14,8 @@
 
 //frontend site.................................................................
 Route::get('/', 'HomeController@index');
+Route::get('/contact', 'SendEmailController@index');
+Route::post('/contact/sent', 'SendEmailController@sent');
 
 //seller route
 Route::get('/sellerdashboard', 'SuperSellerController@indexx');

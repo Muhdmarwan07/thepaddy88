@@ -24,11 +24,19 @@
     <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">
     <!-- User style -->
     <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
-
-
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  
 
     <!-- Modernizr JS -->
     <script src="{{asset('frontend/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
 </head>
 
 <body>
@@ -130,7 +138,6 @@
                                 <li>
                                     <a href="{{URL::to('/')}}">home</a>
                                 </li>
-                                 <li><a href="about.html">about</a></li>
                                 <li class="mega-container">
                                     <a href="#" class="menu-tag">OUR PRODUCT</a>
                                     <div class="megamenu-area ul-style box-shadow white-bg">
@@ -201,6 +208,7 @@
                                         <!-- <li><a href="product-details.html">Product Details</a></li> -->
                                         <!-- <li><a href="wishlist.html">Wishlist</a></li> -->
                                     </ul>
+                                    <li><a href="{{url('/contact')}}">Contact Us</a></li>
                                 </li>
                                 
                                 <!-- <li>

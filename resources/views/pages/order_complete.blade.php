@@ -522,7 +522,7 @@
                                 </div>
                                 <div class="col-sm-5">
                                     <div class="order-complete-area">
-                                        <h5 class="text-capitalize mb-40"><strong>Order Details</strong></h5>
+                                        <!-- <h5 class="text-capitalize mb-40"><strong>Order Details</strong></h5> -->
                                         <form action="#">
                                             <div class="table-content-total table-responsive">
                                                 <!-- <table>
