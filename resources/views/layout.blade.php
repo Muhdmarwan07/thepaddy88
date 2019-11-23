@@ -25,14 +25,14 @@
     <!-- User style -->
     <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
   
 
     <!-- Modernizr JS -->
     <script src="{{asset('frontend/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
 
 
@@ -189,7 +189,7 @@
                                     <a href="#">Pages</a>
                                     <ul class="ul-style dropdown box-shadow white-bg forge-list text-capitalize">
                                         <!-- <li><a href="404.html">404 Page</a></li> -->
-                                        <li><a href="about.html">About</a></li>         
+                                                
                                         <li><a href="{{url('/show-cart')}}">Cart</a></li>
                                         <!-- <li><a href="checkout.html">checkout</a></li> -->
                                                              <?php
@@ -200,7 +200,7 @@
                                                          <?php }else{?>
                                                            <li> <a href="{{URL::to('/login-check')}}">Checkout</a></li>
                                                          <?php } ?>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="{{url('/contact')}}">Contact</a></li>
                                         <!-- <li><a href="order-complete.html">Order Complete</a></li> -->
                                         <li><a href="{{url('/shop')}}">Shop</a></li>
                                         <!-- <li><a href="my-account.html">My Account</a></li> -->
@@ -232,7 +232,6 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul>
-                                        <li><a href="about.html">about</a></li>
                                         <li><a href="shop.html">Man</a>
                                             <ul>
                                                 <li><a href="#">Categories</a>
@@ -663,7 +662,7 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
                             <div class="single-footer-inner">
-                                <h5 class="footer-title text-white">CONTACT</h5>
+                                <h5 class="footer-title text-white"></h5>
                                 <ul class="footer-contact">
                                     <li class="contact-icon">
                                         <img alt="" src="{{asset('frontend/images/footer/icon/1.png')}}">
@@ -693,19 +692,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-6">
-                            <div class="single-footer-inner">
-                                <h5 class="footer-title text-white">CONTACT</h5>
-                                <ul class="footer-menu">
-                                    <li><a href="{{URL::to('/')}}">Home</a></li>
-                                    <li><a href="about.html">About us</a></li>
-                                    <li><a href="contact.html">Contact us</a></li>
-                                    <!-- <li><a href="blog.html">Our blog</a></li>
-                                    <li><a href="#">Support centre</a></li>
-                                    <li><a href="#">Privacy policy</a></li> -->
-                                </ul>
-                            </div>
-                        </div>
+                        
                         <!-- <div class="col-md-2 col-sm-3">
                             <div class="single-footer-inner">
                                 <h5 class="footer-title text-white">SUPPORT</h5>
