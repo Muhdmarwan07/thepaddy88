@@ -78,10 +78,14 @@
         ],
         "post-install-cmd": [
             "@php artisan clear-compiled",
+<<<<<<< HEAD
             "@php artisan optimize",
             "@chmod -R 777 public/",
             "@chmod -R 777 resources/"
 >>>>>>> no message
+=======
+            "@php artisan optimize"
+>>>>>>> Update composer.json
         ]
     }
 }
