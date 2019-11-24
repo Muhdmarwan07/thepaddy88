@@ -73,6 +73,15 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+<<<<<<< HEAD
+=======
+        ],
+        "post-install-cmd": [
+            "@php artisan clear-compiled",
+            "@php artisan optimize",
+            "@chmod -R 777 public/",
+            "@chmod -R 777 resources/"
+>>>>>>> no message
         ]
     }
 }
