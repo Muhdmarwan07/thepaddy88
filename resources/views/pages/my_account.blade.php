@@ -141,7 +141,6 @@
                                                 <p></p>
                                             </table>
                                         </div>
-
                                                 <div class="theme-bg">
                                                     <p class="alert text-white">You have not placed any orders.</p>
                                                 </div>
@@ -161,11 +160,11 @@
                                             <div class="panel-body">
                                                 
                                                         <div class="shop-select mb-15">
-                                                            <label><span class="required">*</span>Your Full Name</label>
+                                                            <label><span class="required">*</span>{{Session::get('customer_name')}}</label>
                                                             <input type="text">
                                                         </div>
                                                         <div class="shop-select mb-15">
-                                                            <label><span class="required">*</span>E-mail address</label>
+                                                            <label><span class="required">*</span>{{Session::get('customer_email')}}</label>
                                                             <input type="text">
                                                         </div>
                                                         <a title="Add to Cart" href="#" class="button extra-small">

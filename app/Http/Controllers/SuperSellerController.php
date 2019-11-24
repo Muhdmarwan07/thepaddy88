@@ -19,11 +19,8 @@ class SuperSellerController extends Controller
     	return Redirect::to('/seller');
     }
 
-<<<<<<< HEAD
     public function SellerAuthCheck()
-=======
-    public function AdminAuthCheck()
->>>>>>> no message
+
     {
     	$seller_id=Session::get('seller_id');
     	if ($seller_id)

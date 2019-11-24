@@ -20,7 +20,7 @@ class   ProductController extends Controller
 
     public function indexx()
     {
-        $this->AdminAuthCheck();
+        $this->SellerAuthCheck();
         return view('seller.seller_add_product');
     }
 
@@ -46,7 +46,7 @@ class   ProductController extends Controller
 
     public function seller_all_product()
     {
-        // $this->AdminAuthCheck();
+        $this->SellerAuthCheck();
         $all_product_info=DB::table('tbl_products')
                         ->join('tbl_category','tbl_products.category_id','=','tbl_category.category_id')
                         ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')
@@ -177,6 +177,15 @@ class   ProductController extends Controller
             return Redirect::to('/all-product');
     }
 
+     public function seller_unactive_product($product_id)
+    {
+        DB::table('tbl_products')
+            ->where('product_id',$product_id)
+            ->update(['publication_status' =>0]);
+            Session::put('message','Product Unactive Sucessfully ');
+            return Redirect::to('/seller-all-product');
+    }
+
     public function active_product($product_id)
     {
         DB::table('tbl_products')
@@ -184,6 +193,15 @@ class   ProductController extends Controller
             ->update(['publication_status' =>1]);
             Session::put('message','Product Active Sucessfully ');
             return Redirect::to('/all-product');
+    }
+
+    public function seller_active_product($product_id)
+    {
+        DB::table('tbl_products')
+            ->where('product_id',$product_id)
+            ->update(['publication_status' =>1]);
+            Session::put('message','Product Active Sucessfully ');
+            return Redirect::to('/seller-all-product');
     }
 
     public function delete_product($product_id)
@@ -196,6 +214,16 @@ class   ProductController extends Controller
             return Redirect::to('/all-product');
     }
 
+    public function seller_delete_product($product_id)
+    {
+
+        DB::table('tbl_products')
+            ->where('product_id',$product_id)
+            ->delete();
+            Session::get('message','Product Delete Successfully !');
+            return Redirect::to('/seller-all-product');
+    }
+
     public function edit_product($product_id)
     {
         $product_info=DB::table('tbl_products')
@@ -205,6 +233,18 @@ class   ProductController extends Controller
             ->with('product_info',$product_info);
         return view('admin_layout')
             ->with('admin.edit_product',$product_info);
+        // return view('admin.edit_product');
+    }
+
+    public function seller_edit_product($product_id)
+    {
+        $product_info=DB::table('tbl_products')
+                        ->where('product_id',$product_id)
+                        ->first();
+            $product_info=view('seller.seller_edit_product')
+            ->with('product_info',$product_info);
+        return view('seller_layout')
+            ->with('seller.seller_edit_product',$product_info);
         // return view('admin.edit_product');
     }
 
@@ -228,6 +268,27 @@ class   ProductController extends Controller
             return Redirect::to('/all-product');
     }
 
+
+    public function seller_update_product(Request $request,$product_id)
+    {
+        $data=array();
+        $data['product_name'] = $request->product_name;
+        $data['category_id'] = $request->category_id;
+        $data['manufacture_id'] = $request->manufacture_id;
+        $data['product_description'] = $request->product_description;
+        $data['publication_status'] = $request->publication_status;
+        $data['product_price'] = $request->product_price;
+        $data['product_size'] = $request->product_size;
+        $data['product_color'] = $request->product_color;
+
+        DB::table('tbl_products')
+            ->where('product_id',$product_id)
+            ->update($data);
+
+            Session::get('message','product Update Successfully !');
+            return Redirect::to('/seller-all-product');
+    }
+
     public function AdminAuthCheck()
     {
         $admin_id=Session::get('admin_id');
@@ -243,7 +304,7 @@ class   ProductController extends Controller
 
     public function SellerAuthCheck()
     {
-        $admin_id=Session::get('seller_id');
+        $seller_id=Session::get('seller_id');
         if ($seller_id)
         {
             return;

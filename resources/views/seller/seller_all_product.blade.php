@@ -92,19 +92,19 @@
 												
 												<td class="center">
                                                     @if($v_product->publication_status==1)
-                                                        <a class="btn btn-danger" href="{{URL::to('/unactive_product/'.$v_product->product_id)}}">
+                                                        <a class="btn btn-danger" href="{{URL::to('/seller-unactive_product/'.$v_product->product_id)}}">
                                                          KO
 
                                                         </a>
                                                     @else
-                                                         <a class="btn btn-success" href="{{URL::to('/active_product/'.$v_product->product_id)}}">
+                                                         <a class="btn btn-success" href="{{URL::to('/seller-active_product/'.$v_product->product_id)}}">
                                                             OK
                                                          </a>
                                                     @endif
                                                         
-                                                    <a class="btn btn-info" href="{{URL::to('/edit-product/'.$v_product->product_id)}}">Edit</a>
+                                                    <a class="btn btn-info" href="{{URL::to('/seller-edit-product/'.$v_product->product_id)}}">Edit</a>
                                                    
-                                                    <a class="btn btn-danger" href="{{URL::to('/delete-product/'.$v_product->product_id)}}" id="delete" onclick="return confirm('Are you sure you want to delete this item?')">
+                                                    <a class="btn btn-danger" href="{{URL::to('/seller-delete-product/'.$v_product->product_id)}}" id="delete" onclick="return confirm('Are you sure you want to delete this item?')">
                                                       Delete  
 
                                                     </a>                                   

@@ -39,7 +39,12 @@ Route::get('/seller-all-manufacture','ManufactureController@seller_all_manufactu
 //seller product
 Route::get('/seller-add-product','ProductController@indexx');
 Route::get('/seller-all-product','ProductController@seller_all_product');
-
+Route::post('/seller-save-product','ProductController@seller_save_product');
+Route::get('/seller-unactive_product/{product_id}','ProductController@seller_unactive_product');
+Route::get('/seller-active_product/{product_id}','ProductController@seller_active_product');
+Route::get('/seller-delete-product/{product_id}','ProductController@seller_delete_product');
+Route::get('/seller-edit-product/{product_id}','ProductController@seller_edit_product');
+Route::post('/seller-update-product/{product_id}','ProductController@seller_update_product');
 
 //payment
 Route::get('/order-complete', 'PaymentController@order_complete');
@@ -48,6 +53,7 @@ Route::get('/order-complete', 'PaymentController@order_complete');
 Route::get('/product_by_category/{category_id}', 'HomeController@show_product_by_category');
 Route::get('/product_by_manufacture/{manufacture_id}', 'HomeController@show_product_by_manufacture');
 Route::get('/view_product/{product_id}', 'HomeController@product_detail_by_id');
+Route::get('/shop', 'HomeController@shop');
 
 //cart are here
 Route::post('/add-to-cart','CartController@add_to_cart');
@@ -67,8 +73,6 @@ Route::post('/customer-login','CheckoutController@customer_login');
 Route::get('/customer-logout','CheckoutController@customer_logout');
 
 Route::get('/payment','CheckoutController@payment');
-
-
 
 //backend route...............................................................
 Route::get('/logout','SuperAdminController@logout');

@@ -11,11 +11,11 @@
                                     ->where('publication_status',1)
                                      ->get();
                      foreach ($all_published_slider as $v_slider) {?>
-<<<<<<< HEAD
+
                 <img src="{{URL::to($v_slider->slider_image)}}" alt="main slider" height="400px" width="400px" title="#htmlcaption1"/>
-=======
+
                 <img src="{{URL::to($v_slider->slider_image)}}"alt="main slider" title="#htmlcaption1"/>
->>>>>>> parent of 86cdb6e... no message
+
                 <!-- <img src="{{asset('frontend/images/slider/3.jpg')}}" alt="main slider" title="#htmlcaption2"/> -->
                 <?php }?>
             </div>
@@ -34,7 +34,7 @@
                                             ->get();
                                          foreach ($all_published_slider as $v_slider) {?>
 
-                                        <h3>{{$v_slider->slider_title}}</h3>
+                                        
 
                                         <?php }?>
                                     </div>  

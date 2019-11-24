@@ -30,6 +30,7 @@
                 </div>
             </div>
         </div>
+        
         <p class="alert-success">
                      <?php
                                                 $message=Session::get('message');

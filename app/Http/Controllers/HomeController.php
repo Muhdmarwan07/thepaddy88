@@ -90,7 +90,7 @@ class HomeController extends Controller
             ->with('pages.shop',$manage_published_product);
     }
 
-<<<<<<< HEAD
+
     public function my_account()
     {
          return view ('pages.my_account');
@@ -98,7 +98,7 @@ class HomeController extends Controller
 
 
 
-=======
+
     // public function AdminAuthCheck()
     // {
     //     $admin_id=Session::get('admin_id');
@@ -111,5 +111,5 @@ class HomeController extends Controller
     //         return Redirect::to('/admin')->send();
     //     }
     // }
->>>>>>> no message
+
 }
