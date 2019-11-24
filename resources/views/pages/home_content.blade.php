@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- Start of slider area -->
-<br>
+<br> 
         <section class="slider-container">
             <!-- Slider Image -->
             <div id="mainSlider" class="nivoSlider slider-image">
