@@ -16,6 +16,7 @@
 Route::get('/', 'HomeController@index');
 Route::get('/contact', 'SendEmailController@index');
 Route::post('/contact/sent', 'SendEmailController@sent');
+Route::get('/my_account', 'HomeController@my_account');
 
 //seller route
 Route::get('/sellerdashboard', 'SuperSellerController@indexx');
@@ -114,6 +115,7 @@ Route::get('/unactive_slider/{slider_id}','SliderController@unactive_slider');
 Route::get('/active_slider/{slider_id}','SliderController@active_slider');
 Route::get('/delete-slider/{slider_id}','SliderController@delete_slider');
 
+
 //stripe payment
 use Illuminate\Http\Request;
 Route::post ( '/payment', function (Request $request)
@@ -138,3 +140,6 @@ Route::post ( '/payment', function (Request $request)
 		return Redirect::back ();
 	 }
 });
+
+
+

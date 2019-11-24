@@ -110,7 +110,7 @@
                                 <li><a title="Widgets" href="widgets.html"><span class="mini-sub-pro">Widgets</span></a></li>
                             </ul> -->
                         </li>
-                        <li>
+                        <!-- <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-mail icon-wrap"></i> <span class="mini-click-non">Category</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
                                 <li><a title="All Category" href="{{URL::to('/seller-all-category')}}"><span class="mini-sub-pro">All Category </span></a></li>
@@ -118,15 +118,15 @@
                                 
                        
                             </ul>
-                        </li>
-                        <li>
+                        </li> -->
+                        <!-- <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-diamond icon-wrap"></i> <span class="mini-click-non">Manufacture</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
                                 <li><a title="All Manufacture" href="{{URL::to('/seller-all-manufacture')}}"><span class="mini-sub-pro">All Manufacture</span></a></li>
                                 <li><a title="Add Product" href="{{URL::to('/seller-add-manufacture')}}"><span class="mini-sub-pro">Add Manufacture</span></a></li>
                                 
                             </ul>
-                        </li>
+                        </li> -->
                         <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-pie-chart icon-wrap"></i> <span class="mini-click-non">Product</span></a>
                             <ul class="submenu-angle" aria-expanded="false">

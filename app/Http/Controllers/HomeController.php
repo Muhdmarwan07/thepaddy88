@@ -91,18 +91,10 @@ class HomeController extends Controller
             ->with('pages.shop',$manage_published_product);
     }
 
-    // public function AdminAuthCheck()
-    // {
-    //     $admin_id=Session::get('admin_id');
-    //     if ($admin_id)
-    //     {
-    //         return;
-    //     }
-    //     else
-    //     {
-    //         return Redirect::to('/admin')->send();
-    //     }
-    // }
+    public function my_account()
+    {
+         return view ('pages.my_account');
+    }
 
 
 

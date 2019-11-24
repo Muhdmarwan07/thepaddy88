@@ -64,12 +64,14 @@
                                             <?php }else{?>
                                                     <li><a href="{{URL::to('/login-check')}}">Checkout</a></li>
                                             <?php } ?>
-
-                                            
+                                            <li><a href="{{URL::to('/my_orders')}}">Profile</a></li>
+                                            <li><a href="{{URL::to('/my_orders')}}">My Order</a></li>
+                                            <li><a href="{{URL::to('/my_account')}}">My Account</a></li>
                                              
                                         </ul>
                                     </li>
                                 </ul>
+
                                 <!-- <ul class="header-top-style pl-10">
                                     <li>
                                         
@@ -78,6 +80,7 @@
                                 </ul> -->
                             </div>
                         </div>
+                        
                         <div class="col-sm-3 col-xs-6">
                             <div class="header-top-middle">
                                 <ul class="header-top-style">

@@ -101,12 +101,12 @@
                         	{{csrf_field()}}
                             <div class="form-group">
                                 <label class="control-label" for="username">Seller Username</label>
-                                <input type="text" placeholder="example@gmail.com" title="Please enter you username" required="" value="" name="admin_email"  class="form-control">
+                                <input type="text" placeholder="example@gmail.com" title="Please enter you username" required="" value="" name="seller_email"  class="form-control">
                                 <span class="help-block small">Your unique username to system</span>
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="password">Password</label>
-                                <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="admin_password" id="password" class="form-control">
+                                <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="seller_password" id="password" class="form-control">
                                 <span class="help-block small">Your strong password</span>
                             </div>
                             <div class="checkbox login-checkbox">

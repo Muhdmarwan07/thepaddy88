@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
 
 class SuperSellerController extends Controller
 {
     public function indexx()
     {
-    	// $this->AdminAuthCheck();
+    	$this->SellerAuthCheck();
     	return view('seller.seller_dashboard');
     }
 
@@ -18,16 +19,16 @@ class SuperSellerController extends Controller
     	return Redirect::to('/seller');
     }
 
-    // public function AdminAuthCheck()
-    // {
-    // 	$admin_id=Session::get('seller_id');
-    // 	if ($seller_id)
-    //     {
-    // 		return;
-    // 	}
-    // 	else
-    // 	{
-    // 		return Redirect::to('/seller')->send();
-    // 	}
-    // }
+    public function SellerAuthCheck()
+    {
+    	$seller_id=Session::get('seller_id');
+    	if ($seller_id)
+        {
+    		return;
+    	}
+    	else
+    	{
+    		return Redirect::to('/seller')->send();
+    	}
+    }
 }

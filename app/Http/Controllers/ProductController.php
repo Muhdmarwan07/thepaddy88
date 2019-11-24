@@ -20,7 +20,7 @@ class   ProductController extends Controller
 
     public function indexx()
     {
-        // $this->AdminAuthCheck();
+        $this->AdminAuthCheck();
         return view('seller.seller_add_product');
     }
 
@@ -238,6 +238,19 @@ class   ProductController extends Controller
         else
         {
             return Redirect::to('/admin')->send();
+        }
+    }
+
+    public function SellerAuthCheck()
+    {
+        $admin_id=Session::get('seller_id');
+        if ($seller_id)
+        {
+            return;
+        }
+        else
+        {
+            return Redirect::to('/seller')->send();
         }
     }
 }
