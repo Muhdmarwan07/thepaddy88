@@ -200,7 +200,7 @@
                                                         </li> -->
                                                         <!-- <li><a href="#"><span class="icon nalika-settings author-log-ic"></span> Settings</a>
                                                         </li> -->
-                                                        <li><a href="{{URL::to('/logout')}}"><span class="icon nalika-unlocked author-log-ic"></span> Log Out</a>
+                                                        <li><a href="{{URL::to('/seller-logout')}}"><span class="icon nalika-unlocked author-log-ic"></span> Log Out</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -215,6 +215,7 @@
             </div>
             
             @yield('seller_content')
+            
 
         <div class="footer-copyright-area">
             <div class="container-fluid">

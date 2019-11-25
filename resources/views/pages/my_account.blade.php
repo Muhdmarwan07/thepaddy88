@@ -160,6 +160,7 @@
                                             <div class="panel-body">
                                                 
                                                         <div class="shop-select mb-15">
+                                                            
                                                             <label><span class="required">*</span>{{Session::get('customer_name')}}</label>
                                                             <input type="text">
                                                         </div>

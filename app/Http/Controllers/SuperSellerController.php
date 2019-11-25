@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Session;
+use Illuminate\Support\Facades\Redirect;
 
 class SuperSellerController extends Controller
 {
@@ -13,10 +14,11 @@ class SuperSellerController extends Controller
     	return view('seller.seller_dashboard');
     }
 
-    public function logout()
+    public function seller_logout()
     {
     	Session::flush();
-    	return Redirect::to('/seller');
+         return Redirect::to('/seller');
+
     }
 
     public function SellerAuthCheck()

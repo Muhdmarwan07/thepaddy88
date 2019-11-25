@@ -46,13 +46,14 @@ class   ProductController extends Controller
 
     public function seller_all_product()
     {
+        $seller_id = Session::get('seller_id');
         $this->SellerAuthCheck();
         $all_product_info=DB::table('tbl_products')
                         ->join('tbl_category','tbl_products.category_id','=','tbl_category.category_id')
                         ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')
                         ->select('tbl_products.*','tbl_category.category_name','tbl_manufacture.manufacture_name')
+                        ->where('seller_id',$seller_id)
                         ->get();
-
         $manage_product=view('seller.seller_all_product')
             ->with('all_product_info',$all_product_info);
         return view('seller_layout')
@@ -125,6 +126,7 @@ class   ProductController extends Controller
         $data['product_price'] = $request->product_price;
         $data['product_size'] = $request->product_size;
         $data['product_color'] = $request->product_color;
+        $data['seller_id'] = $request->seller_id;
 
 
         // $image=$request->file('product_image');
@@ -241,11 +243,10 @@ class   ProductController extends Controller
         $product_info=DB::table('tbl_products')
                         ->where('product_id',$product_id)
                         ->first();
-            $product_info=view('seller.seller_edit_product')
-            ->with('product_info',$product_info);
-        return view('seller_layout')
-            ->with('seller.seller_edit_product',$product_info);
-        // return view('admin.edit_product');
+
+        $product_info=view('seller.seller_edit_product')->with('product_info',$product_info);
+
+        return view('seller_layout')->with('seller.seller_edit_product',$product_info);
     }
 
      public function update_product(Request $request,$product_id)

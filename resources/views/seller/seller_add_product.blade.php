@@ -59,7 +59,7 @@
 
                                 <div id="myTabContent" class="tab-content custom-product-edit">
                                     <div class="product-tab-list tab-pane fade active in" id="description">
-                                     <form action="{{ url('/save-product') }}" method="post" enctype="multipart/form-data">
+                                     <form action="{{ url('/seller-save-product') }}" method="post" enctype="multipart/form-data">
                                             {{csrf_field()}}
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -113,6 +113,9 @@
                                                         <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
                                                         <input type="text" class="form-control" name="product_description" placeholder="Product Description" required="">
                                                     </div>
+
+                                                    <input type="hidden" name="seller_id"  value="{{Session::get('seller_id')}}">
+
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
                                                         <label class="control-label" for="fileInput"><font color=white>Product Image</font></label>

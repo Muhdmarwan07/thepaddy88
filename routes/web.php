@@ -14,16 +14,14 @@
 
 //frontend site.................................................................
 Route::get('/', 'HomeController@index');
-Route::get('/contact', 'SendEmailController@index');
-Route::post('/contact/sent', 'SendEmailController@sent');
 Route::get('/my_account', 'HomeController@my_account');
 
 //seller route
 Route::get('/sellerdashboard', 'SuperSellerController@indexx');
-Route::get('/logout','SuperSellerController@seller_logout');
+Route::get('/seller-logout','SuperSellerController@seller_logout');
 Route::get('/seller', 'SellerController@indexx');
 Route::post('/seller-dashboard', 'SellerController@sellerdashboard');
-Route::get('/seller-manage-order','CheckoutController@manage_order');
+Route::get('/seller-manage-order','CheckoutController@seller_manage_order');
 
 //seller category
 Route::get('/seller-add-category','CategoryController@indexx');

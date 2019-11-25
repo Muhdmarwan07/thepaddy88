@@ -66,6 +66,7 @@ class CheckoutController extends Controller
 
     public function customer_login(Request $request)
     {
+        Session::flush();
     	$customer_email=$request->customer_email;
     	$password=md5($request->password);
     	$result=DB::table('tbl_customer')
@@ -76,6 +77,9 @@ class CheckoutController extends Controller
     		if ($result) 
     		{
     			Session::put('customer_id',$result->customer_id);
+                Session::put('customer_name',$result->customer_name);
+                Session::put('customer_email',$result->customer_email);
+
     			return Redirect::to('/');
     		}
     		else
@@ -112,13 +116,14 @@ class CheckoutController extends Controller
 
      public function seller_manage_order()
     {
+        $seller_id = Session::get('seller_id');
         $all_order_info=DB::table('tbl_order')
-                        ->join('tbl_customer','tbl_order.customer_id','=','tbl_customer.customer_id')
-                        ->select('tbl_order.*','tbl_customer.customer_name','tbl_order_details.*')
+                        ->select('tbl_order.*','tbl_order_details.*')
                         ->join('tbl_order_details','tbl_order.order_id','=','tbl_order_details.order_details_id')
+                        ->where('seller_id',$seller_id)
                         ->get();
-
-        $manage_order=view('seller.manage_order')
+        dd($all_order_info);
+        $manage_order=view('seller.seller_manage_order')
             ->with('all_order_info',$all_order_info);
         return view('seller_layout')
             ->with('seller.seller_manage_order',$manage_order);

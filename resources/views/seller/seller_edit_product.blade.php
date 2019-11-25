@@ -1,5 +1,5 @@
-@extends('admin_layout')
-@section('admin_content')
+@extends('seller_layout')
+@section('seller_content')
 
 <div class="breadcome-area">
                 <div class="container-fluid">
