@@ -161,12 +161,12 @@
                                                 
                                                         <div class="shop-select mb-15">
                                                             
-                                                            <label><span class="required">*</span>{{Session::get('customer_name')}}</label>
-                                                            <input type="text">
+                                                            <label><span class="required">*</span>Name</label>
+                                                            <input type="text"value="{{Session::get('customer_name')}}">
                                                         </div>
                                                         <div class="shop-select mb-15">
-                                                            <label><span class="required">*</span>{{Session::get('customer_email')}}</label>
-                                                            <input type="text">
+                                                            <label><span class="required">*</span>Email</label>
+                                                            <input type="text" value="{{Session::get('customer_email')}}">
                                                         </div>
                                                         <a title="Add to Cart" href="#" class="button extra-small">
                                                             <span>Save</span>

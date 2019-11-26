@@ -64,10 +64,7 @@
                                             <?php }else{?>
                                                     <li><a href="{{URL::to('/login-check')}}">Checkout</a></li>
                                             <?php } ?>
-                                            <li><a href="{{URL::to('/my_orders')}}">Profile</a></li>
-                                            <li><a href="{{URL::to('/my_orders')}}">My Order</a></li>
-                                            <li><a href="{{URL::to('/my_account')}}">My Account</a></li>
-                                             
+
                                         </ul>
                                     </li>
                                 </ul>
@@ -213,6 +210,7 @@
                                         <!-- <li><a href="wishlist.html">Wishlist</a></li> -->
                                     </ul>
                                     <li><a href="{{url('/contact')}}">Contact Us</a></li>
+                                    <li><a href="{{URL::to('/my_account')}}">My Account</a></li>
                                 </li>
                                 
 

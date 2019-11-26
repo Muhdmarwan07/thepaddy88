@@ -15,6 +15,8 @@
 //frontend site.................................................................
 Route::get('/', 'HomeController@index');
 Route::get('/my_account', 'HomeController@my_account');
+Route::get('/contact', 'MailController@contact');
+Route::post('/send/email', 'MailController@sendmail');
 
 //seller route
 Route::get('/sellerdashboard', 'SuperSellerController@indexx');
@@ -22,6 +24,7 @@ Route::get('/seller-logout','SuperSellerController@seller_logout');
 Route::get('/seller', 'SellerController@indexx');
 Route::post('/seller-dashboard', 'SellerController@sellerdashboard');
 Route::get('/seller-manage-order','CheckoutController@seller_manage_order');
+Route::post('/seller_registration','SuperAdminController@seller_registration');
 
 //seller category
 Route::get('/seller-add-category','CategoryController@indexx');

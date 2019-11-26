@@ -45,7 +45,7 @@
                                         <p>saya anak malaysia </p>
                                     </div> -->
                                     <div class="cap-shop wow text-uppercase fadeInDown" data-wow-duration="2.5s" data-wow-delay="1.5s">
-                                        <a href="#">Shop now</a>
+                                        <a href="{{URL::to('/shop')}}">Shop now</a>
                                     </div>  
                                 </div>  
                             </div>
