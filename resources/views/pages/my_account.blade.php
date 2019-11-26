@@ -109,36 +109,33 @@
                                                         <th class="product-remove"></th>
                                                     </tr>
                                                 </thead>
+                                                @foreach($all_order_info2 as $v_order)
                                                 <tbody>
-
-                                                    <?php foreach (Cart::content() as $row) :?>
-                                                    <form action="{{URL('/update-cart')}}" method="post">
                                                     <tr>
-                                                        <td class="product-thumbnail">
+                                                        <!-- <td class="product-thumbnail">
                                                             <a href="#"><img src="{{URL::to($row->options->image)}}" height="150px" width="150px" alt=""></a>
-                                                        </td>
+                                                        </td> -->
                                                         <td class="cart-product-name">
-                                                            <a href="#"><h6><strong>{{$row->name}}</strong></h6></a>
+                                                            <h6><strong>{{$v_order->product_name}}</strong></h6>
                                                         </td>
                                                         
                                                         <td class="cart-product-price text-center">
-                                                            <div class="cart-quantity-button">
-
-                                                                      {{ csrf_field() }} 
-                                                                    <h6><strong>X {{$row->qty}}</strong></h6>
+                                                            <div class="cart-quantity-button"> 
+                                                                    <h6><strong>X {{$v_order->product_sales_quantity}}</strong></h6>
                                                             </div>
                                                         </td>
                                                         <td class="cart-product-total text-center">
-                                                            <h6><strong>RM {{$row->total}}</strong></h6>
+                                                            <h6><strong>RM {{$v_order->product_price}}</strong></h6>
                                                         </td>
                                                         <td class="cart-product-size text-center">
-                                                            <h6><strong>RM {{$row->price}}</strong></h6>
+                                                            <h6><strong>{{$v_order->order_id}}</strong></h6>
                                                         </td>
                                                     </tr>
-                                                    </form>
-                                                   <?php endforeach;?>
+                                                    
+                                                   
                                                 </tbody>
-                                                <p></p>
+                                                @endforeach
+                                                
                                             </table>
                                         </div>
                                                 <div class="theme-bg">
@@ -168,9 +165,9 @@
                                                             <label><span class="required">*</span>Email</label>
                                                             <input type="text" value="{{Session::get('customer_email')}}">
                                                         </div>
-                                                        <a title="Add to Cart" href="#" class="button extra-small">
+                                                        <!-- <a title="Add to Cart" href="#" class="button extra-small">
                                                             <span>Save</span>
-                                                        </a>
+                                                        </a> -->
                                                     </form>
                                                 </div>
                                             </div>

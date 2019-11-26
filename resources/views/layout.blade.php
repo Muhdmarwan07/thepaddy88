@@ -50,7 +50,7 @@
                         <div class="col-sm-5 hidden-xs">
                             <div class="header-top-left">
                                 <ul class="header-top-style text-capitalize mr-25">
-                                    <li><a href="{{URL::to('/show-cart')}}"><span class="mr-10">My Cart</span><i class="fa fa-angle-down"></i></a>
+                                    <!-- <li><a href="{{URL::to('/show-cart')}}"><span class="mr-10">My Cart</span><i class="fa fa-angle-down"></i></a> -->
                                         <ul class="ul-style my-account box-shadow white-bg">
                                             <!-- <li><a href="my-account.html">My Account</a></li>
                                             <li><a href="wishlist.html">My Wishlist</a></li> -->
@@ -92,16 +92,17 @@
                                             </a>
                                         <?php }else{?>
                                            <a href="{{URL::to('/login-check')}}"><i class="fa fa-lock"></i>
-                                                <span>Login</span>
+                                                <span>Login | Register</span>
                                             </a> <?php } ?>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> 
                         </div>
+
                         <div class="col-sm-4 col-xs-6">
                             <div class="header-top-right">
-                                <span class="mr-20"><a href="#"><img alt="" src="{{asset('frontend/images/header/search-icon.png')}}"></a></span>
-                                <span><input type="text" class="pl-10" placeholder="Search..."></span>
+                               <!--  <span class="mr-20"><a href="#"><img alt="" src="{{asset('frontend/images/header/search-icon.png')}}"></a></span>
+                                <span><input type="text" class="pl-10" placeholder="Search..."></span> -->
                             </div>
                         </div>
                     </div>

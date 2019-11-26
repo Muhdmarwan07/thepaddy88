@@ -161,12 +161,6 @@
                                 <li><a title="Manage Order" href="{{URL::to('/manage-order')}}"><span class="mini-sub-pro">Manage Order</span></a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-mail icon-wrap"></i> <span class="mini-click-non">Email</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Manage Order" href=""><span class="mini-sub-pro">List Email</span></a></li>
-                            </ul>
-                        </li>
                         <!-- <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-smartphone-call icon-wrap"></i> <span class="mini-click-non">App views</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
@@ -223,8 +217,7 @@
                                         <div class="header-top-menu tabl-d-n">
                                             <div class="breadcome-heading">
 												<form role="search" class="">
-													<input type="text" placeholder="Search..." class="form-control">
-													<a href=""><i class="fa fa-search"></i></a>
+													
 												</form>
 											</div>
                                         </div>

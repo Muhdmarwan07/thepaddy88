@@ -31,7 +31,7 @@
                                                         <th class="product-thumbnail text-left">PRODUCT NAME</th>
                                                         <th class="product-name"></th>
                                                         <th class="product-price text-center">UNIT PRICE</th>
-                                                        <th class="product-quantity text-center">QUANTITY</th>
+                                                        <!-- <th class="product-quantity text-center">QUANTITY</th> -->
                                                         <th class="product-subtotal text-center">TOTAL</th>
                                                         <th class="product-remove"></th>
                                                     </tr>
@@ -60,6 +60,8 @@
 
                                                                      <!--  {{ csrf_field() }} -->
                                                                     <h6><strong>X {{$row->qty}}</strong></h6>
+
+                                                                    
                                                                     <!-- <input type="text" class="cart-quantity-input" name="qty" value="{{$row->qty}}">
                                                                     <input type="hidden" name="rowId" value="{{$row->rowId}}"> -->
                                                                     <!-- <input type="submit" value="Update" class="btn btn-sm btn-default"> -->

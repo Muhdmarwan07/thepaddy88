@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use mail;
+use Mail;
 use Session;	
 use App\Mail\SendEmail;
 
@@ -14,20 +14,13 @@ class MailController extends Controller
    	 return view ("mail.contactus");
    }
 
-   public function sendmail(Request $get)
+   public function sendmail(Request $request)
    {
-   		$this->validate($get,[
+   	 	$name = $request->name;
+   	 	$email = $request->email;
+   	 	$message = $request->message;
 
-   			"name" => "required",
-   			"email" => "required",
-   			"message" => "required",
-
-   		]);
-   	 	$name = $get->name;
-   	 	$email = $get->email;
-   	 	$message = $get->message;
-
-   	 	mail::to($email)->send(new SendEmail($name,$message));
+   	 	Mail::to($email)->send(new SendEmail($name,$message));
    	 	Session::flash("success");
    	 	return back();
    }

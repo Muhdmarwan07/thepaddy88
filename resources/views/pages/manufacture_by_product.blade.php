@@ -27,7 +27,7 @@
                                             <img alt="" src="{{asset($v_manufacture_by_product->product_image)}}" style="height: 200px;">
                                         </div>
                                     </a>
-                                    <span class="product-tag text-uppercase orang-bg">-20%</span>
+                                    
                                     <ul class="quick-veiw text-center">
                                         <li><a href="{{URL::to('/view_product/'.$v_manufacture_by_product->product_id)}}"><i class="fa fa-shopping-cart"></i></a></li>
                                         <li><a href="{{URL::to('/view_product/'.$v_manufacture_by_product->product_id)}}"><i class="fa fa-eye"></i></a></li>

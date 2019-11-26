@@ -78,25 +78,30 @@
                 </div>
                 <div class="hpanel">
                     <div class="panel-body">
-                        <form action="{{URL('/seller_registration')}}" id="loginForm" method="post">
+                        <form action="{{URL('/seller_registration')}}" method="post">
                           {{csrf_field()}}
                             <div class="row">
+                                <input class="form-control" name="seller_id" type="hidden"/>
                                 <div class="form-group col-lg-12">
                                     <label>Seller Username</label>
-                                    <input class="form-control">
+                                    <input class="form-control" name="seller_name">
+                                </div>
+                                <div class="form-group col-lg-12">
+                                    <label>Seller Username</label>
+                                    <input class="form-control" name="seller_phone">
                                 </div>
                                 <div class="form-group col-lg-6">
                                     <label>Password</label>
-                                    <input type="password" class="form-control">
+                                    <input type="password" class="form-control" name="seller_password">
                                 </div>
                                
                                 <div class="form-group col-lg-6">
                                     <label>Email Address</label>
-                                    <input class="form-control">
+                                    <input class="form-control" name="seller_email">
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button class="btn btn-success loginbtn">Register</button>
+                                <button type="submit" class="btn btn-success loginbtn">Register</button>
                                 <button class="btn btn-default">Cancel</button>
                             </div>
                         </form>

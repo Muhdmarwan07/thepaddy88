@@ -33,6 +33,6 @@ class SendEmail extends Mailable
     {
         $e_name = $this ->name;
         $e_message = $this ->mes;
-        return $this->view('mail.sendemail',compact("e_message"))->name($e_name);
+        return $this->view('mail.sendemail',compact("e_message"));
     }
 }

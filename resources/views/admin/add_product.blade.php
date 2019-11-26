@@ -40,7 +40,7 @@
                             <div class="review-tab-pro-inner">
                                 <ul id="myTab3" class="tab-review-design">
                                     <li class="active"><a href="#description"><i class="icon nalika-edit" aria-hidden="true"></i> Add Product</a></li>
-                                    <li><a href="#reviews"><i class="icon nalika-picture" aria-hidden="true"></i> Pictures</a></li>
+                                    <!-- <li><a href="#reviews"><i class="icon nalika-picture" aria-hidden="true"></i> Pictures</a> --></li>
                                     <!-- <li><a href="#INFORMATION"><i class="icon nalika-chat" aria-hidden="true"></i> Review</a></li> -->
                                 </ul>
                                 <p class="alert-success">
@@ -103,7 +103,7 @@
                                                     </div>
 
                                                     <div class>
-                                                        <input type="checkbox" name="publication_status" value="1"><font color="white">Publication Status</font>
+                                                        <input type="checkbox" name="publication_status" value="1" required=""><font color="white">Publication Status</font>
                                                     </div>
                                                 </div>
                                             </div>

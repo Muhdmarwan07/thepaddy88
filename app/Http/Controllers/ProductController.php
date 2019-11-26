@@ -73,6 +73,7 @@ class   ProductController extends Controller
         $data['product_price'] = $request->product_price;
         $data['product_size'] = $request->product_size;
         $data['product_color'] = $request->product_color;
+        $data['product_quantity'] = $request->product_quantity;
 
 
         // $image=$request->file('product_image');
@@ -126,6 +127,7 @@ class   ProductController extends Controller
         $data['product_price'] = $request->product_price;
         $data['product_size'] = $request->product_size;
         $data['product_color'] = $request->product_color;
+        $data['product_quantity'] = $request->product_quantity;
         $data['seller_id'] = $request->seller_id;
 
 

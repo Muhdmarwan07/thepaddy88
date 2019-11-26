@@ -274,7 +274,9 @@
             <br>
             <div class="col-md-12">
                 <div class="shop-select mb-10">
+                    <form action="{{URL::to('/shop')}}">
                      <center><input type="submit" class="btn btn-warning" value="More"></center>
+                 </form>
                  </div>                                                
             </div>
             <br>

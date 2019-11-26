@@ -24,6 +24,7 @@ Route::get('/seller-logout','SuperSellerController@seller_logout');
 Route::get('/seller', 'SellerController@indexx');
 Route::post('/seller-dashboard', 'SellerController@sellerdashboard');
 Route::get('/seller-manage-order','CheckoutController@seller_manage_order');
+Route::get('/seller_regis','SuperAdminController@seller_regis');
 Route::post('/seller_registration','SuperAdminController@seller_registration');
 
 //seller category
@@ -121,29 +122,8 @@ Route::get('/delete-slider/{slider_id}','SliderController@delete_slider');
 
 
 //stripe payment
-use Illuminate\Http\Request;
-Route::post ( '/payment', function (Request $request)
-{
+Route::post ( '/payment','StripePaymentController@stripe');
 
-	\Stripe\Stripe::setApiKey ( 'sk_test_9EjIb0s1ijfAQMsI8bEZctfY00fQ89Csk2' );
-	try {
-			\Stripe\Charge::create ( array (
-
-				"amount" => $request->input('amount')*100,
-				"currency" => "usd",
-				"source" => $request->input ( 'stripeToken' ), // obtained with Stripe.js
-				"description" => "Test payment."
-			) );
-			Session::flash ( 'success-message', 'Payment done successfully !' );
-			Cart::destroy();
-			return Redirect::to('/order-complete');
-		}
-	 catch ( \Exception $e )
-	{
-		Session::flash ( 'fail-message', "Error! Please Try again." );
-		return Redirect::back ();
-	 }
-});
 
 
 

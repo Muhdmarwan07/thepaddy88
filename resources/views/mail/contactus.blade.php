@@ -59,7 +59,7 @@
 
                     		<div class="form-group">
                     		  <label>Enter Your Message</label>
-                    		  <textarea name="Message" class="form-control" ></textarea> 
+                    		  <textarea name="message" class="form-control" ></textarea> 
                     		</div>
 
                     		<div class="form-group">

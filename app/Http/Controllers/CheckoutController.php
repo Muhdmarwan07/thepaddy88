@@ -122,7 +122,7 @@ class CheckoutController extends Controller
                         ->join('tbl_order_details','tbl_order.order_id','=','tbl_order_details.order_details_id')
                         ->where('seller_id',$seller_id)
                         ->get();
-        dd($all_order_info);
+        // dd($all_order_info);
         $manage_order=view('seller.seller_manage_order')
             ->with('all_order_info',$all_order_info);
         return view('seller_layout')

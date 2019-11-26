@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Session;
+use App\Http\Requests;
+use Illuminate\Support\Facades\Redirect;
+
 class HomeController extends Controller
 {
     public function index()
@@ -70,10 +73,8 @@ class HomeController extends Controller
                         ->where('tbl_products.publication_status',1)
                         ->first();
 
-        $manage_product_by_detail=view('pages.product_detail')
-            ->with('product_by_detail',$product_by_detail);
-        return view('layout')
-            ->with('pages.product_detail',$manage_product_by_detail);
+        $manage_product_by_detail=view('pages.product_detail')->with('product_by_detail',$product_by_detail);
+        return view('layout')->with('pages.product_detail',$manage_product_by_detail);
     }
     public function shop()
     {
@@ -93,7 +94,19 @@ class HomeController extends Controller
 
     public function my_account()
     {
-         return view ('pages.my_account');
+        $customer_id = Session::get('customer_id');
+        $all_order_info2=DB::table('tbl_order')
+                        ->select('tbl_order.*','tbl_order_details.*')
+                        ->join('tbl_order_details','tbl_order.order_id','=','tbl_order_details.order_details_id')
+                        ->where('customer_id',$customer_id)
+                        ->get();
+        
+        $manage_order2=view('pages.my_account')
+            ->with('all_order_info2',$all_order_info2);
+        return view('pages.my_account')
+            ->with('pages.my_account',$manage_order2);
+
+         // return view ('pages.my_account');
     }
 
 

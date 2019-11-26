@@ -115,8 +115,9 @@
                                 <p class="help-block small">(if this is a private computer)</p>
                             </div>
                             <button class="btn btn-success btn-block loginbtn">Login</button>
-                            <a class="btn btn-default btn-block" href="{{URL('/seller_registration')}}">Register</a>
+                            
                         </form>
+                        <a class="btn btn-default btn-block" href="{{URL('/seller_regis')}}">Register</a>
                     </div>
                 </div>
             </div>

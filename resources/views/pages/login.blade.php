@@ -5,7 +5,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="registered-customers">
-                                <h4 class="text-uppercase mb-20"><strong>REGISTERED CUSTOMERS</strong></h4><BR>
+                                <h4 class="text-uppercase mb-20"><strong>LOGIN</strong></h4><BR>
                                 <form action="{{URL('/customer-login')}}" method="post">
                                     {{ csrf_field() }}
                                     <div class="login-account p-30 box-shadow">
@@ -38,18 +38,7 @@
                                         <input type="text" placeholder="Email address here..." required="" name="customer_email">
                                         <input type="password" placeholder="Password" required="" name="password">
                                         <!-- <input type="password" placeholder="Confirm Password"> -->
-                                        <div class="checkbox">
-                                            <label class="mr-10"> 
-                                                <small>
-                                                    <input type="checkbox" name="signup">Sign up for our newsletter!
-                                                </small>
-                                            </label>
-                                            <label> 
-                                                <small>
-                                                    <input type="checkbox" name="signup">Receive special offers from our partners!
-                                                </small>
-                                            </label>
-                                        </div>
+                                        
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <button value="register" type="submit" class="cart-button text-uppercase mt-20">Register</button>

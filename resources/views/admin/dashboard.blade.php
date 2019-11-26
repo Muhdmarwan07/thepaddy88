@@ -30,183 +30,214 @@
                 </div>
             </div>
         </div>
-        <div class="section-admin container-fluid">
-            <div class="row admin text-center">
-                <div class="col-md-12">
+        
+       <div class="single-pro-review-area">
+                <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
-                                <h4 class="text-left text-uppercase"><b>Orders</b></h4>
-                                <div class="row vertical-center-box vertical-center-box-tablet">
-                                    <div class="col-xs-3 mar-bot-15 text-left">
-                                        <label class="label bg-green">30% <i class="fa fa-level-up" aria-hidden="true"></i></label>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="review-tab-pro-inner">
+                                <ul id="myTab3" class="tab-review-design">
+                                    <li class="active"><a href="#description"><i class="icon nalika-edit" aria-hidden="true"></i> Add category</a></li>
+                                </ul>
+                                <div id="myTabContent" class="tab-content custom-product-edit" >
+                                    <p class="alert-success">
+                                        <?php
+                                            $message=Session::get('message');
+
+                                            if ($message) 
+                                            {
+                                                echo $message;
+                                                Session::put('message',NULL);
+                                            }
+                                            ?>
+                                    </p>    
+                                    
+                                    <div class="product-tab-list tab-pane fade active in" id="description">
+                                        <form action="{{ url('/save-category') }}" method="post">
+                                            {{csrf_field()}}
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="review-content-section">
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control"name="category_name" placeholder="Category Name" required="">
+                                                    </div>
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
+                                                        <input type="textarea" class="form-control" name="category_description" placeholder="Category Description" required="">
+                                                    </div>
+                                                    <div class>
+                                                        <input type="checkbox" name="publication_status" value="1"><font color="white">Publication Status</font>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="text-center custom-pro-edt-ds">
+                                                    <button type="submit" class="btn btn-ctl-bt waves-effect waves-light m-r-10">Save
+                                                        </button>
+                                                    <button type="" class="btn btn-ctl-bt waves-effect waves-light">Discard
+                                                        </button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-xs-9 cus-gh-hd-pro">
-                                        <h2 class="text-right no-margin">10,000</h2>
+                                </form>
+                                <br>
+                                   
+                                    <div class="product-tab-list tab-pane fade" id="INFORMATION">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="review-content-section">
+                                                    <div class="card-block">
+                                                        <div class="text-muted f-w-400">
+                                                            <p>No reviews yet.</p>
+                                                        </div>
+                                                        <div class="m-t-10">
+                                                            <div class="txt-primary f-18 f-w-600">
+                                                                <p>Your Rating</p>
+                                                            </div>
+                                                            <div class="stars stars-example-css detail-stars">
+                                                                <div class="review-rating">
+                                                                    <fieldset class="rating">
+                                                                        <input type="radio" id="star5" name="rating" value="5">
+                                                                        <label class="full" for="star5"></label>
+                                                                        <input type="radio" id="star4half" name="rating" value="4 and a half">
+                                                                        <label class="half" for="star4half"></label>
+                                                                        <input type="radio" id="star4" name="rating" value="4">
+                                                                        <label class="full" for="star4"></label>
+                                                                        <input type="radio" id="star3half" name="rating" value="3 and a half">
+                                                                        <label class="half" for="star3half"></label>
+                                                                        <input type="radio" id="star3" name="rating" value="3">
+                                                                        <label class="full" for="star3"></label>
+                                                                        <input type="radio" id="star2half" name="rating" value="2 and a half">
+                                                                        <label class="half" for="star2half"></label>
+                                                                        <input type="radio" id="star2" name="rating" value="2">
+                                                                        <label class="full" for="star2"></label>
+                                                                        <input type="radio" id="star1half" name="rating" value="1 and a half">
+                                                                        <label class="half" for="star1half"></label>
+                                                                        <input type="radio" id="star1" name="rating" value="1">
+                                                                        <label class="full" for="star1"></label>
+                                                                        <input type="radio" id="starhalf" name="rating" value="half">
+                                                                        <label class="half" for="starhalf"></label>
+                                                                    </fieldset>
+                                                                </div>
+                                                                <div class="clear"></div>
+                                                            </div>
+                                                        </div>   
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 78%;" class="progress-bar bg-green"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="margin-bottom:1px;">
-                            <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
-                                <h4 class="text-left text-uppercase"><b>Tax Deduction</b></h4>
-                                <div class="row vertical-center-box vertical-center-box-tablet">
-                                    <div class="text-left col-xs-3 mar-bot-15">
-                                        <label class="label bg-red">15% <i class="fa fa-level-down" aria-hidden="true"></i></label>
-                                    </div>
-                                    <div class="col-xs-9 cus-gh-hd-pro">
-                                        <h2 class="text-right no-margin">5,000</h2>
-                                    </div>
-                                </div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 38%;" class="progress-bar progress-bar-danger bg-red"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
-                                <h4 class="text-left text-uppercase"><b>Revenue</b></h4>
-                                <div class="row vertical-center-box vertical-center-box-tablet">
-                                    <div class="text-left col-xs-3 mar-bot-15">
-                                        <label class="label bg-blue">50% <i class="fa fa-level-up" aria-hidden="true"></i></label>
-                                    </div>
-                                    <div class="col-xs-9 cus-gh-hd-pro">
-                                        <h2 class="text-right no-margin">$70,000</h2>
-                                    </div>
-                                </div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 60%;" class="progress-bar bg-blue"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
-                                <h4 class="text-left text-uppercase"><b>Yearly Sales</b></h4>
-                                <div class="row vertical-center-box vertical-center-box-tablet">
-                                    <div class="text-left col-xs-3 mar-bot-15">
-                                        <label class="label bg-purple">80% <i class="fa fa-level-up" aria-hidden="true"></i></label>
-                                    </div>
-                                    <div class="col-xs-9 cus-gh-hd-pro">
-                                        <h2 class="text-right no-margin">$100,000</h2>
-                                    </div>
-                                </div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 60%;" class="progress-bar bg-purple"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="traffic-analysis-area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="white-box tranffic-als-inner">
-                            <h3 class="box-title"><small class="pull-right m-t-10 last-month-sc cl-one"><i class="fa fa-sort-asc"></i> 18% last month</small> Site Traffic</h3>
-                            <div class="stats-row">
-                                <div class="stat-item">
-                                    <h6>Overall Growth</h6>
-                                    <b>80.40%</b></div>
-                                <div class="stat-item">
-                                    <h6>Montly</h6>
-                                    <b>15.40%</b></div>
-                                <div class="stat-item">
-                                    <h6>Day</h6>
-                                    <b>5.50%</b></div>
-                            </div>
-                            <div id="sparkline8"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="white-box tranffic-als-inner res-mg-t-30">
-                            <h3 class="box-title"><small class="pull-right m-t-10 last-month-sc cl-two"><i class="fa fa-sort-desc"></i> 18% last month</small>Site Traffic</h3>
-                            <div class="stats-row">
-                                <div class="stat-item">
-                                    <h6>Overall Growth</h6>
-                                    <b>80.40%</b></div>
-                                <div class="stat-item">
-                                    <h6>Montly</h6>
-                                    <b>15.40%</b></div>
-                                <div class="stat-item">
-                                    <h6>Day</h6>
-                                    <b>5.50%</b></div>
-                            </div>
-                            <div id="sparkline9"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="white-box tranffic-als-inner res-mg-t-30">
-                            <h3 class="box-title"><small class="pull-right m-t-10 last-month-sc cl-three"><i class="fa fa-sort-asc"></i> 18% last month</small>Site Traffic</h3>
-                            <div class="stats-row">
-                                <div class="stat-item">
-                                    <h6>Overall Growth</h6>
-                                    <b>80.40%</b></div>
-                                <div class="stat-item">
-                                    <h6>Montly</h6>
-                                    <b>15.40%</b></div>
-                                <div class="stat-item">
-                                    <h6>Day</h6>
-                                    <b>5.50%</b></div>
-                            </div>
-                            <div id="sparkline10"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="product-sales-area mg-tb-30">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                        <div class="product-sales-chart">
-                            <div class="portlet-title">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="caption pro-sl-hd">
-                                            <span class="caption-subject text-uppercase"><b>Order Statistic</b></span>
+        <div class="single-pro-review-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="review-tab-pro-inner">
+                                <ul id="myTab3" class="tab-review-design">
+                                    <li class="active"><a href="#description"><i class="icon nalika-edit" aria-hidden="true"></i> Add Manufacture</a></li>
+                                </ul>
+                                <div id="myTabContent" class="tab-content custom-product-edit" >
+                                    <p class="alert-success">
+                                        <?php
+                                            $message=Session::get('message');
+
+                                            if ($message) 
+                                            {
+                                                echo $message;
+                                                Session::put('message',NULL);
+                                            }
+                                            ?>
+                                    </p>    
+                                    
+                                    <div class="product-tab-list tab-pane fade active in" id="description">
+                                        <form action="{{ url('/save-manufacture') }}" method="post">
+                                            {{csrf_field()}}
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="review-content-section">
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control"name="manufacture_name" placeholder="Manufacture Name" required="">
+                                                    </div>
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
+                                                        <input type="textarea" class="form-control" name="manufacture_description" placeholder="Manufacture Description" required="">
+                                                    </div>
+                                                    <div class>
+                                                        <input type="checkbox" name="publication_status" value="1"><font color="white">Publication Status</font>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="text-center custom-pro-edt-ds">
+                                                    <button type="submit" class="btn btn-ctl-bt waves-effect waves-light m-r-10">Save
+                                                        </button>
+                                                    <button type="" class="btn btn-ctl-bt waves-effect waves-light">Discard
+                                                        </button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="actions graph-rp">
-                                            <a href="#" class="btn btn-dark-blue btn-circle active tip-top" data-toggle="tooltip" title="Upload">
-													<i class="fa fa-cloud-download" aria-hidden="true"></i>
-												</a>
-                                            <a href="#" class="btn btn-dark btn-circle active tip-top" data-toggle="tooltip" title="Refresh">
-													<i class="fa fa-reply" aria-hidden="true"></i>
-												</a>
-                                            <a href="#" class="btn btn-blue-grey btn-circle active tip-top" data-toggle="tooltip" title="Delete">
-													<i class="fa fa-trash-o" aria-hidden="true"></i>
-												</a>
+                                </form>
+                                   
+                                    <div class="product-tab-list tab-pane fade" id="INFORMATION">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="review-content-section">
+                                                    <div class="card-block">
+                                                        <div class="text-muted f-w-400">
+                                                            <p>No reviews yet.</p>
+                                                        </div>
+                                                        <div class="m-t-10">
+                                                            <div class="txt-primary f-18 f-w-600">
+                                                                <p>Your Rating</p>
+                                                            </div>
+                                                            <div class="stars stars-example-css detail-stars">
+                                                                <div class="review-rating">
+                                                                    <fieldset class="rating">
+                                                                        <input type="radio" id="star5" name="rating" value="5">
+                                                                        <label class="full" for="star5"></label>
+                                                                        <input type="radio" id="star4half" name="rating" value="4 and a half">
+                                                                        <label class="half" for="star4half"></label>
+                                                                        <input type="radio" id="star4" name="rating" value="4">
+                                                                        <label class="full" for="star4"></label>
+                                                                        <input type="radio" id="star3half" name="rating" value="3 and a half">
+                                                                        <label class="half" for="star3half"></label>
+                                                                        <input type="radio" id="star3" name="rating" value="3">
+                                                                        <label class="full" for="star3"></label>
+                                                                        <input type="radio" id="star2half" name="rating" value="2 and a half">
+                                                                        <label class="half" for="star2half"></label>
+                                                                        <input type="radio" id="star2" name="rating" value="2">
+                                                                        <label class="full" for="star2"></label>
+                                                                        <input type="radio" id="star1half" name="rating" value="1 and a half">
+                                                                        <label class="half" for="star1half"></label>
+                                                                        <input type="radio" id="star1" name="rating" value="1">
+                                                                        <label class="full" for="star1"></label>
+                                                                        <input type="radio" id="starhalf" name="rating" value="half">
+                                                                        <label class="half" for="starhalf"></label>
+                                                                    </fieldset>
+                                                                </div>
+                                                                <div class="clear"></div>
+                                                            </div>
+                                                        </div>   
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div id="line-chart" class="flot-chart flot-chart-sts line-chart-statistic"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                        <div class="analytics-rounded mg-b-30 res-mg-t-30">
-                            <div class="analytics-rounded-content">
-                                <h5>Percentage distribution</h5>
-                                <h2><span class="counter">60</span>/20</h2>
-                                <div class="text-center">
-                                    <div id="sparkline51"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="analytics-rounded">
-                            <div class="analytics-rounded-content">
-                                <h5>Percentage division</h5>
-                                <h2><span class="counter">150</span>/<span class="counter">54</span></h2>
-                                <div class="text-center">
-                                    <div id="sparkline52"></div>
                                 </div>
                             </div>
                         </div>

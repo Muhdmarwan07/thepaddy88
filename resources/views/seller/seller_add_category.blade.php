@@ -63,7 +63,7 @@
                                                         <input type="textarea" class="form-control" name="category_description" placeholder="Category Description" required="">
                                                     </div>
                                                     <div class>
-                                                        <input type="checkbox" name="publication_status" value="1"><font color="white">Publication Status</font>
+                                                        <input type="checkbox" name="publication_status" value="1" required=""><font color="white">Publication Status</font>
                                                     </div>
                                                 </div>
                                             </div>

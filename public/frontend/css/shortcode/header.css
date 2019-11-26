@@ -306,7 +306,7 @@ li.media a.cart-btn:hover {
   background: #ff0000 none repeat scroll 0 0;
   border-radius: 3px;
   color: #ffffff;
-  content: "HOT";
+  /*content: "HOT";*/
   font-family: "Open Sans",sans-serif;
   font-size: 9px;
   font-weight: normal;
@@ -320,7 +320,7 @@ li.media a.cart-btn:hover {
   border-left: 0 solid rgba(0, 0, 0, 0);
   border-right: 5px solid rgba(0, 0, 0, 0);
   border-top: 10px solid #ff0000;
-  content: "";
+  /*content: "";*/
   height: 0;
   position: absolute;
   right: 9%;

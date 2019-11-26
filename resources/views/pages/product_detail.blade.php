@@ -81,32 +81,34 @@
                                 <div class="shop-select-details">
                                     <div class="shop-tab-pill">
                                         <div class="show-label">
-                                            <label>Size : </label>
-                                            <select>
-                                                <option selected="selected" value="position">Select Size</option>
-                                                <option value="small">{{$product_by_detail->product_size}}</option>
-                                            </select>
+                                            <label>Size : </label> <b>{{$product_by_detail->product_size}}</b>
+                                            
                                         </div>
-                                        <!-- <div class="show-label showing" name="qty">
+
+                                        <div class="show-label showing" name="qty">
                                             <label>Quantity : </label>
                                             <select>
                                                 <option selected="selected" value="position">1</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                                <option>6</option>
-                                                <option>7</option>
-                                                <option>8</option>
-                                                <option>9</option>
+                                                <option>{{$product_by_detail->product_quantity}}</option>
                                             </select>
-                                        </div> -->
+                                        </div>
                                     </div>
+                                    <br>
+                                    <br>
+                                    <div class="show-label">
+                                            <label>Availablity: </label> 
+                                             @if($product_by_detail->product_quantity < 0 )
+                                                    <b>Out Of Stock</b>
+                                                @else
+                                                    <b>Available</b>
+                                                @endif
+                                            
+                                        </div>
+
                                 </div>
                                 <ul class="pricing pricing-list">
                                     <li class="text-right c-price text-defualt text-center">RM {{$product_by_detail->product_price}}</li>
-                                </ul>
+                                 </ul>
 	                                <div class="clear"></div>
 	                                
 		                                <ul class="quick-veiw-list">
@@ -114,19 +116,8 @@
                                 				{{ csrf_field() }}
 		                                    	<!-- <li><a href="{{URL::to('add-to-cart')}}"><i class="fa fa-shopping-cart"></i></a></li> -->
                                               <div>
-                                                <label>Quantity : </label>
-                                                <select name="qty">
-                                                    <option selected="selected" value="position">0</option>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                    <option>6</option>
-                                                    <option>7</option>
-                                                    <option>8</option>
-                                                    <option>9</option>
-                                                </select>
+                                                
+                                                <input type="hidden" name="qty" value=1>
                                               </div>
                                               <br></br>
                                                 <input type="hidden" name="product_id" value="{{$product_by_detail->product_id}}">
