@@ -17,7 +17,7 @@ class PaymentController extends Controller
     	$odata=array();
     	$odata['customer_id']=Session::get('customer_id');
     	$odata['shipping_id']=Session::get('shipping_id');
-    	// $odata['payment_id']=$payment_id;
+    	
     	$order_id=DB::table('tbl_order')
     				->insertGetId($odata);
 
@@ -26,16 +26,18 @@ class PaymentController extends Controller
 
     	foreach ($contents as $row) 
     	{
+            $odata['seller_id']=$row->seller_id;
     		$odata['order_id']=$order_id;
     		$odata['product_id']=$row->id;
     		$odata['product_name']=$row->name;
     		$odata['product_price']=$row->price;
     		$odata['product_sales_quantity']=$row->qty;
-
+           
+            
     		DB::table('tbl_order_details')
     			->insert($odata);
     	}
-
+        Cart::destroy();
     	return view('pages.order_complete');
 
     }

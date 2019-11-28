@@ -210,7 +210,7 @@
                                         <!-- <li><a href="product-details.html">Product Details</a></li> -->
                                         <!-- <li><a href="wishlist.html">Wishlist</a></li> -->
                                     </ul>
-                                    <li><a href="{{url('/contact')}}">Contact Us</a></li>
+                                    <!-- <li><a href="{{url('/contact')}}">Contact Us</a></li> -->
                                     <li><a href="{{URL::to('/my_account')}}">My Account</a></li>
                                 </li>
                                 

@@ -166,7 +166,7 @@
 													<div class='form-row'>
 														<div class='col-md-12 form-group'>
 															<button class='form-control btn btn-primary submit-button'
-																type='submit' style="margin-top: 10px;">Pay »</button>
+																type='submit' style="margin-top: 10px;">Click to Pay</button>
 														</div>
 													</div>
 													<div class='form-row'>

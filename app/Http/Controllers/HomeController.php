@@ -97,13 +97,14 @@ class HomeController extends Controller
         $customer_id = Session::get('customer_id');
         $all_order_info2=DB::table('tbl_order')
                         ->select('tbl_order.*','tbl_order_details.*')
-                        ->join('tbl_order_details','tbl_order.order_id','=','tbl_order_details.order_details_id')
+                        ->join('tbl_order_details','tbl_order_details.order_id','=','tbl_order.order_id')
                         ->where('customer_id',$customer_id)
                         ->get();
         
+
         $manage_order2=view('pages.my_account')
             ->with('all_order_info2',$all_order_info2);
-        return view('pages.my_account')
+        return view('layout')
             ->with('pages.my_account',$manage_order2);
 
          // return view ('pages.my_account');

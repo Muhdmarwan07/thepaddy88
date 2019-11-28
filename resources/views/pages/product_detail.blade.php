@@ -100,7 +100,7 @@
                                              @if($product_by_detail->product_quantity < 0 )
                                                     <b>Out Of Stock</b>
                                                 @else
-                                                    <b>Available</b>
+                                                    <font color="Red"><b>Available</b></font>
                                                 @endif
                                             
                                         </div>

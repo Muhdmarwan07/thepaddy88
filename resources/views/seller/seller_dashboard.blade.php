@@ -147,8 +147,8 @@
                                                 <div class="text-center custom-pro-edt-ds">
                                                     <button type="submit" class="btn btn-ctl-bt waves-effect waves-light m-r-10">Add Product
                                                         </button>
-                                                    <button type="button" class="btn btn-ctl-bt waves-effect waves-light">Discard
-                                                        </button>
+                                                   <!--  <button type="button" class="btn btn-ctl-bt waves-effect waves-light">Discard
+                                                        </button> -->
                                                 </div>
                                             </div>
                                         </div>

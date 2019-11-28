@@ -82,8 +82,7 @@
             <div class="col-md-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="text-center m-b-md custom-login">
                 	<br></br>
-                  <!--   <h3>PLEASE LOGIN TO APP</h3>
-                    <p>This is the best app ever!</p> -->
+                 <h3><font color="white">Admin Login</font></h3>
                 </div>
                 <div class="hpanel">
                     <div class="panel-body">
@@ -115,16 +114,17 @@
                                 <p class="help-block small">(if this is a private computer)</p>
                             </div> -->
                             <button class="btn btn-success btn-block loginbtn">Login</button>
-                            <a class="btn btn-default btn-block" href="#">Register</a>
+                            <!-- <a class="btn btn-default btn-block" href="#">Register</a> -->
                         </form>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
         </div>
+        <br>
         <div class="row">
             <div class="col-md-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <p>Copyright © 2018 The Paddy88</a> All rights reserved.</p>
+               <p><font color="white">Copyright © 2018 The Paddy88</a> All rights reserved.</font></p>
             </div>
         </div>
     </div>

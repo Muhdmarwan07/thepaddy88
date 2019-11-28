@@ -8,18 +8,18 @@
                             <div class="breadcome-list single-page-breadcome">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                        <div class="breadcome-heading">
+                                        <!-- <div class="breadcome-heading">
                                             <form role="search" class="">
                                                 <input type="text" placeholder="Search..." class="form-control">
                                                 <a href=""><i class="fa fa-search"></i></a>
                                             </form>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                         <ul class="breadcome-menu">
                                             <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                             </li>
-                                            <li><span class="bread-blod">Add Category</span>
+                                            <li><span class="bread-blod">All Category</span>
                                             </li>
                                         </ul>
                                     </div>

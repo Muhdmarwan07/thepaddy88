@@ -134,12 +134,12 @@
                                 <li><a title="Add Product" href="{{URL::to('/seller-add-product')}}"><span class="mini-sub-pro">Add Product</span></a></li>
                             </ul>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><i class="icon nalika-pie-chart icon-wrap"></i> <span class="mini-click-non">Order</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
                                  <li><a title="All Product" href="{{URL::to('/seller-manage-order')}}"><span class="mini-sub-pro">Manage Order</span></a></li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
             </div>

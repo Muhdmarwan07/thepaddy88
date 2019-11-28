@@ -22,7 +22,7 @@ class StripePaymentController extends Controller
 				"description" => "Test payment."
 			));
 			Session::flash( 'success-message', 'Payment done successfully !' );
-			Cart::destroy();
+			
 			return Redirect::to('/order-complete');
 		}
 	 catch ( \Exception $e )

@@ -82,6 +82,7 @@
                         <div class="addresses-lists">
                             <div class="col-xs-12 col-sm-12 col-lg-12">
                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingTwo">
                                             <h4 class="panel-title">
@@ -102,7 +103,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th class="product-thumbnail text-left">PRODUCT NAME</th>
-                                                        <th class="product-name"></th>
+                                                        <!-- <th class="product-name"></th> -->
                                                         <th class="product-quantity text-center">QUANTITY</th>
                                                         <th class="product-subtotal text-center">TOTAL</th>
                                                         <th class="product-price text-center">ORDER ID</th>
@@ -112,9 +113,7 @@
                                                 @foreach($all_order_info2 as $v_order)
                                                 <tbody>
                                                     <tr>
-                                                        <!-- <td class="product-thumbnail">
-                                                            <a href="#"><img src="{{URL::to($row->options->image)}}" height="150px" width="150px" alt=""></a>
-                                                        </td> -->
+                                                        
                                                         <td class="cart-product-name">
                                                             <h6><strong>{{$v_order->product_name}}</strong></h6>
                                                         </td>
@@ -138,12 +137,13 @@
                                                 
                                             </table>
                                         </div>
-                                                <div class="theme-bg">
+                                                <!-- <div class="theme-bg">
                                                     <p class="alert text-white">You have not placed any orders.</p>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingFour">
                                             <h4 class="panel-title">

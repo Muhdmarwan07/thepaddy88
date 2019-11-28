@@ -20,9 +20,9 @@ class CartController extends Controller
     	$data['id']=$product_info->product_id;
         $data['name']=$product_info->product_name;
         $data['price']=$product_info->product_price;
+        $data['seller_id']=$product_info->seller_id;
         $data['options']['image']=$product_info->product_image;
-
-
+        
         Cart::add($data);
         return Redirect::to('/show-cart');
     }

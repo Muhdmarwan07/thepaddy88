@@ -40,7 +40,7 @@
                             <div class="review-tab-pro-inner">
                                 <ul id="myTab3" class="tab-review-design">
                                     <li class="active"><a href="#description"><i class="icon nalika-edit" aria-hidden="true"></i> Add Product</a></li>
-                                    <li><a href="#reviews"><i class="icon nalika-picture" aria-hidden="true"></i> Pictures</a></li>
+                                    <!-- <li><a href="#reviews"><i class="icon nalika-picture" aria-hidden="true"></i> Pictures</a></li> -->
                                     <!-- <li><a href="#INFORMATION"><i class="icon nalika-chat" aria-hidden="true"></i> Review</a></li> -->
                                 </ul>
                                 <p class="alert-success">
@@ -145,8 +145,8 @@
                                                 <div class="text-center custom-pro-edt-ds">
                                                     <button type="submit" class="btn btn-ctl-bt waves-effect waves-light m-r-10">Add Product
 														</button>
-                                                    <button type="button" class="btn btn-ctl-bt waves-effect waves-light">Discard
-														</button>
+                                                    <!-- <button type="button" class="btn btn-ctl-bt waves-effect waves-light">Discard
+														</button> -->
                                                 </div>
                                             </div>
                                         </div>

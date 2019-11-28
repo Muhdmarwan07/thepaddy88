@@ -73,8 +73,8 @@
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
             <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="text-center custom-login">
-                    <h3>Registration</h3>
-                    <p>Admin template with very clean and aesthetic style prepared for your next app. </p>
+                    <h3><font color="white">Seller Registration</font></h3>
+                    
                 </div>
                 <div class="hpanel">
                     <div class="panel-body">
@@ -87,7 +87,7 @@
                                     <input class="form-control" name="seller_name">
                                 </div>
                                 <div class="form-group col-lg-12">
-                                    <label>Seller Username</label>
+                                    <label>Seller Phone Number</label>
                                     <input class="form-control" name="seller_phone">
                                 </div>
                                 <div class="form-group col-lg-6">
@@ -102,7 +102,7 @@
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-success loginbtn">Register</button>
-                                <button class="btn btn-default">Cancel</button>
+                                <!-- <button class="btn btn-default">Cancel</button> -->
                             </div>
                         </form>
                     </div>
@@ -110,9 +110,10 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
         </div>
+        <br>
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>Copyright © 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
+                <p><font color="white">Copyright © 2018 The Paddy88</a> All rights reserved.</font></p>
             </div>
         </div>
     </div>

@@ -82,8 +82,7 @@
             <div class="col-md-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="text-center m-b-md custom-login">
                 	<br></br>
-                  <!--   <h3>PLEASE LOGIN TO APP</h3>
-                    <p>This is the best app ever!</p> -->
+                  <h3><font color="White">Seller Login</font></h3></b>
                 </div>
                 <div class="hpanel">
                     <div class="panel-body">
@@ -109,11 +108,11 @@
                                 <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="seller_password" id="password" class="form-control">
                                 <span class="help-block small">Your strong password</span>
                             </div>
-                            <div class="checkbox login-checkbox">
+                            <!-- <div class="checkbox login-checkbox">
                                 <label>
 										<input type="checkbox" class="i-checks"> Remember me </label>
                                 <p class="help-block small">(if this is a private computer)</p>
-                            </div>
+                            </div> -->
                             <button class="btn btn-success btn-block loginbtn">Login</button>
                             
                         </form>
@@ -123,9 +122,11 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
         </div>
+        <br>
+        
         <div class="row">
             <div class="col-md-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <p>Copyright © 2018 The Paddy88</a> All rights reserved.</p>
+                <p><font color="white">Copyright © 2018 The Paddy88</a> All rights reserved.</font></p>
             </div>
         </div>
     </div>
