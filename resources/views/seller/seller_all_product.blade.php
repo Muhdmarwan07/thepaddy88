@@ -93,12 +93,12 @@
 												<td class="center">
                                                     @if($v_product->publication_status==1)
                                                         <a class="btn btn-danger" href="{{URL::to('/seller-unactive_product/'.$v_product->product_id)}}">
-                                                         KO
+                                                         Unpublish
 
                                                         </a>
                                                     @else
                                                          <a class="btn btn-success" href="{{URL::to('/seller-active_product/'.$v_product->product_id)}}">
-                                                            OK
+                                                            Publish
                                                          </a>
                                                     @endif
                                                         

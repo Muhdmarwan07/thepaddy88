@@ -50,7 +50,7 @@
                         <div class="sparkline13-list">
                             <div class="sparkline13-hd">
                                 <div class="main-sparkline13-hd">
-                                    <h1><font color="white">Slider</font> <span class="table-project-n"><font color="white">Data</font></span> <font color="white">Table</font></h1>
+                                    <h1><font color="white">All</font> <span class="table-project-n"><font color="white">Slider</font></span> <font color="white"></font></h1>
                                 </div>
                             </div>
 
@@ -100,12 +100,12 @@
 												<td class="center">
                                                     @if($v_slider->publication_status==1)
                                                         <a class="btn btn-danger" href="{{URL::to('/unactive_slider/'.$v_slider->slider_id)}}">
-                                                         KO
+                                                         Unpublish
 
                                                         </a>
                                                     @else
                                                          <a class="btn btn-success" href="{{URL::to('/active_slider/'.$v_slider->slider_id)}}">
-                                                            OK
+                                                            Publish
                                                          </a>
                                                     @endif
                                                         
